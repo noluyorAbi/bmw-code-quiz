@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default, dark, night --prefersdark;
+}
+
+/* BMW blue override for night theme */
+[data-theme="night"] {
+  --color-primary: oklch(45.2% 0.181 248.07);
+  --color-primary-content: oklch(100% 0 0);
+}
