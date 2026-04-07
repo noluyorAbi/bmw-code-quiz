@@ -545,7 +545,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2013–2022",
     series: "i Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_i3_facelift_%281%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_i3_facelift_%281%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_i3_facelift_%281%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_i3_white_front_view.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2018_New_York_ePrix_td_Saturday_034_-_eVillage%2C_BMW.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_i3_%28rear%29.jpg&w=800" },
   },
   {
     id: "i-i12",
@@ -554,7 +554,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2014–2020",
     series: "i Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_i8_%28I12%29_front.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_i8_%28I12%29_front.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_i8_%28I12%29_front.JPG&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2015-11-05_BMW_i8_vorne.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2015-11-05_BMW_i8_Seite_links.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2015-11-05_BMW_i8_hinten_rechts.JPG&w=800" },
   },
   {
     id: "i-g26",
@@ -563,7 +563,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2021–present",
     series: "i Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_i4_IMG_6695.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_i4_IMG_6695.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_i4_IMG_6695.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_i4_eDrive35_M_Sport_%28G26%29_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_4_SERIES_GRAN_COUPE_%28G26%29_China_%285%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_i4_eDrive35_M_Sport_%28G26%29_rear.jpg&w=800" },
   },
   {
     id: "i-i20",
@@ -572,7 +572,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2021–present",
     series: "i Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_iX_IAA_2021_1X7A0204.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_iX_IAA_2021_1X7A0204.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_iX_IAA_2021_1X7A0204.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2022_BMW_iX_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2022_BMW_iX_side.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=0902%E5%8F%B0%E5%8D%97%E7%B6%A0%E8%89%B2%E7%94%A2%E6%A5%AD%E5%B1%95%E9%96%8B%E5%B9%9509.jpg&w=800" },
   },
   {
     id: "i-g08",
@@ -592,7 +592,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "1966–1977",
     series: "02 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=Blackrock%2C_Co_Dublin_-_Ireland_%284799982672%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=Blackrock%2C_Co_Dublin_-_Ireland_%284799982672%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=Blackrock%2C_Co_Dublin_-_Ireland_%284799982672%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_2002_%2838235626051%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_2002_%2838235627311%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=1974_BMW_2002_%28E10%29_Tii.JPG&w=800" },
   },
   {
     id: "classic-e9",
@@ -601,7 +601,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "1968–1975",
     series: "E9",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMWE9CSc.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMWE9CSc.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMWE9CSc.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E9_Cabrio_Front.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=1973_BMW_E9_Coupe_%40_Motor_Museum_of_WA.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E9_Cabrio_Heck.JPG&w=800" },
   },
   {
     id: "classic-isetta",
@@ -610,7 +610,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "1955–1962",
     series: "Isetta",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_Isetta_-_Flickr_-_mick_-_Lumix.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_Isetta_-_Flickr_-_mick_-_Lumix.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_Isetta_-_Flickr_-_mick_-_Lumix.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=09-21-1959_15989_Garage_W.W._Smit_%284097369317%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=1955_BMW_Isetta_300_%2812403119013%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_Isetta%2C_Heck_%282015-08-24_2882_Sp%29.JPG&w=800" },
   },
   {
     id: "classic-e3",
@@ -619,7 +619,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "1968–1977",
     series: "New Six",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2800frnt-weiss_Villa-Erba-2022-05-23_resized.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2800frnt-weiss_Villa-Erba-2022-05-23_resized.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2800frnt-weiss_Villa-Erba-2022-05-23_resized.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E9-Cabrio_front-resized.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=20250731_Youth_residential_complex_in_Zelenograd_territory_09_%2821304%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E9_Cabrio_Heck.JPG&w=800" },
   },
 
   // ── Z Series additional (comprehensive) ───────────────────────────────────
@@ -630,7 +630,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "1989–1991",
     series: "Z Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=Red_BMW_Z1_HCC21.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=Red_BMW_Z1_HCC21.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=Red_BMW_Z1_HCC21.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2018-04-28-Z1-Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2018-04-28-Z1-Fahrerseite.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2018-04-28-Z1-Heck.jpg&w=800" },
   },
   {
     id: "z8-e52",
@@ -639,7 +639,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2000–2003",
     series: "Z Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_Z8_front_20100508.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_Z8_front_20100508.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_Z8_front_20100508.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=Z8_und_507_frontal.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_Z8_%28E52%2C_2002%29_%2852127770892%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_Z8_Rear-view.JPG&w=800" },
   },
 
   // ── 2 Series additional variants (comprehensive) ───────────────────────────
@@ -650,7 +650,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2014–2021",
     series: "2 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_218i_%28F45%29_Active_Tourer_hatchback_%282017-11-28%29_01.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_218i_%28F45%29_Active_Tourer_hatchback_%282017-11-28%29_01.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_218i_%28F45%29_Active_Tourer_hatchback_%282017-11-28%29_01.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2-BMW_Active_Tourer%2C_GIMS_2018_front_%281X7A1875%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=00_bmw_220d_1.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_216d_SE_1.5_Rear.jpg&w=800" },
   },
   {
     id: "2-u06",
@@ -659,7 +659,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2022–present",
     series: "2 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_U06_IMG_6802.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_U06_IMG_6802.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_U06_IMG_6802.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2022_BMW_220i_Active_Tourer_Luxury_MHEV_Automatic_1.5_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2022_BMW_220i_M_Sport_Active_Tourer.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2022_BMW_220i_Active_Tourer_Luxury_MHEV_Automatic_1.5_Rear.jpg&w=800" },
   },
   {
     id: "2-f46",
@@ -668,7 +668,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2015–2021",
     series: "2 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_218d_Gran_Tourer_Luxury_%28F46%29_front.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_218d_Gran_Tourer_Luxury_%28F46%29_front.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_218d_Gran_Tourer_Luxury_%28F46%29_front.JPG&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_220d_Gran_Tourer_xDrive_M_Sport_Automatic_2.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_218d_Luxury_Automatic_2.0.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_220d_Gran_Tourer_xDrive_M_Sport_Automatic_2.0_Rear.jpg&w=800" },
   },
   {
     id: "2-f44",
@@ -677,7 +677,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2019–present",
     series: "2 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_F44_1X7A6109.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_F44_1X7A6109.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_F44_1X7A6109.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_228i_xDrive_Gran_Coupe_in_Black_Sapphire_Metallic%2C_Front_Left%2C_07-10-2023.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_2-Series_218i_Gran_Coup%C3%A9_M_Sport.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_228i_xDrive_Gran_Coupe_in_Black_Sapphire_Metallic%2C_Rear_Left%2C_07-10-2023.jpg&w=800" },
   },
 
   // ── M Cars (comprehensive) ─────────────────────────────────────────────────
@@ -688,7 +688,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "1986–1991",
     series: "M3",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=1991_BMW_M3_Evo_II_BS_O24.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=1991_BMW_M3_Evo_II_BS_O24.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=1991_BMW_M3_Evo_II_BS_O24.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_E30_front_20090514.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_Evo_II.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_E30_Roberto_Ravaglia_Rear.jpg&w=800" },
   },
   {
     id: "m-e36m3",
@@ -697,7 +697,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "1992–1999",
     series: "M3",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=1998_BMW_M3_Coupe_3.2.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=1998_BMW_M3_Coupe_3.2.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=1998_BMW_M3_Coupe_3.2.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=Action_Day_Renntaxi_Drift_BMW_M3_mod-3907.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_E36_Estoril_Blue.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_Coup%C3%A9_%28E36%29_Washington_DC_Metro_Area%2C_USA.jpg&w=800" },
   },
   {
     id: "m-e46m3",
@@ -706,7 +706,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2000–2006",
     series: "M3",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_M3_Phoenix_Yellow_%281%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_M3_Phoenix_Yellow_%281%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_M3_Phoenix_Yellow_%281%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_CSL_%28E46%29_front.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_%28E46%29_Touring_Retro_Classics_2025_DSC_7690.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_CSL_%28E46%29_rear.JPG&w=800" },
   },
   {
     id: "m-e9xm3",
@@ -715,7 +715,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2007–2013",
     series: "M3",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2008-2010_BMW_M3_%28E90%29_sedan_04.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2008-2010_BMW_M3_%28E90%29_sedan_04.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2008-2010_BMW_M3_%28E90%29_sedan_04.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_Sedan_%28E90%29_front.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_%28E90%29_Washington_DC_Metro_Area%2C_USA.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2011_BMW_M3_E90.jpg&w=800" },
   },
   {
     id: "m-f80",
@@ -724,7 +724,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2014–2018",
     series: "M3",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=18_BMW_M3_Base.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=18_BMW_M3_Base.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=18_BMW_M3_Base.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_%28F80%29_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_CS_1X7A6394.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_%28F80%29_rear.jpg&w=800" },
   },
   {
     id: "m-g80",
@@ -733,7 +733,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2021–present",
     series: "M3",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_CS_4.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_CS_4.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_CS_4.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_Competition_%28G80%29_1X7A1573.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_Competition_%28G80%29_1X7A0170.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_Competition_%28G80%29_IMG_1176.jpg&w=800" },
   },
   {
     id: "m-f82",
@@ -742,7 +742,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2014–2020",
     series: "M4",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_M4_%28UK%29_front_view.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_M4_%28UK%29_front_view.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_M4_%28UK%29_front_view.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_M4_%28UK%29_front_view.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M4%2C_EMS_23%2C_Essen_%28P1170092%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M4_Coupe_%28F82%29_rear.JPG&w=800" },
   },
   {
     id: "m-g82",
@@ -751,7 +751,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2021–present",
     series: "M4",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2021_BMW_M4_Competition_Automatic_3.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2021_BMW_M4_Competition_Automatic_3.0_Front.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2021_BMW_M4_Competition_Automatic_3.0_Front.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2021_BMW_M4_Competition_Automatic_3.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=DTM_Champions_Edition.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2021_BMW_M4_Competition_G82_rear.jpg&w=800" },
   },
   {
     id: "m-e28m5",
@@ -760,7 +760,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "1985–1988",
     series: "M5",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=Techno-Classica_2018%2C_Essen_%28IMG_8969%29_%28cropped%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=Techno-Classica_2018%2C_Essen_%28IMG_8969%29_%28cropped%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=Techno-Classica_2018%2C_Essen_%28IMG_8969%29_%28cropped%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_E28_in_BMW-Museum_in_Munich%2C_Bayern.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_E28_Minervablau.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_E28_Minervablau_Heck.jpg&w=800" },
   },
   {
     id: "m-e34m5",
@@ -769,7 +769,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "1988–1995",
     series: "M5",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_%282462057151%29_%28cropped%29_%28cropped%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_%282462057151%29_%28cropped%29_%28cropped%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_%282462057151%29_%28cropped%29_%28cropped%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_3.8_E34_%288517447471%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_E34_grille_detail.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_E34_%287146455599%29.jpg&w=800" },
   },
   {
     id: "m-e39m5",
@@ -778,7 +778,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "1998–2003",
     series: "M5",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_E39_twins_%28cropped%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_E39_twins_%28cropped%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_E39_twins_%28cropped%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_mule%2C_Munich_%28P1190468%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5%2C_IAA_2017%2C_Frankfurt_%281Y7A3537%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=M5_E39_rear.JPG&w=800" },
   },
   {
     id: "m-e60m5",
@@ -787,7 +787,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2005–2010",
     series: "M5",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2007_BMW_M5_E60.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2007_BMW_M5_E60.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2007_BMW_M5_E60.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_%28E60%29_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_E60_side.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_%28E60%29_rear.jpg&w=800" },
   },
   {
     id: "m-f10m5",
@@ -796,7 +796,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2011–2016",
     series: "M5",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_F10_%288694398487%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_F10_%288694398487%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_F10_%288694398487%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_%28F10%29_front.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_F10.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_%28F10%29_rear.JPG&w=800" },
   },
   {
     id: "m-f90",
@@ -805,7 +805,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2018–2023",
     series: "M5",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_M5_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_M5_front.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_M5_front.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_%28F90%29_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=M5_F90_Side.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_F90_without_licence_plate_%28rear%29.jpg&w=800" },
   },
   {
     id: "m-g90",
@@ -814,7 +814,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2024–present",
     series: "M5",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_%28G90%29_IMG_3266.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_%28G90%29_IMG_3266.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_%28G90%29_IMG_3266.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_%28G90%29_MYLE_Festival_2025_DSC_9648.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_%28G90%29_MYLE_Festival_2025_DSC_9764.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M5_mule%2C_Munich_%28P1190468%29.jpg&w=800" },
   },
   {
     id: "m-f87",
@@ -823,7 +823,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2016–2021",
     series: "M2",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_M2_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_M2_front.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_M2_front.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M2_Competition_%28F87%29_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M2%2C_IAA_2017%2C_Frankfurt_%281Y7A3531%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M2_Competition_%28F87%29_rear.jpg&w=800" },
   },
   {
     id: "m-g87",
@@ -832,7 +832,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2023–present",
     series: "M2",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G87_M2_1X7A1838.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G87_M2_1X7A1838.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G87_M2_1X7A1838.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2024_BMW_M2_G87%2C_front_left%2C_05-31-2024.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M2_CS_%28G87%29_DSC_9730.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2023-12_BMW_M2-G87-white-rear-l.jpg&w=800" },
   },
   {
     id: "m-e24m6",
@@ -841,7 +841,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "1983–1989",
     series: "M6",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=1985_BMW_M_635_CSi_%28E24%29_Solitude_Revival_2022_1X7A0101.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=1985_BMW_M_635_CSi_%28E24%29_Solitude_Revival_2022_1X7A0101.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=1985_BMW_M_635_CSi_%28E24%29_Solitude_Revival_2022_1X7A0101.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E24_Langenberg_Front2.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E24_Langenberg_Seite.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E24_rear_20080301.jpg&w=800" },
   },
   {
     id: "m-e63m6",
@@ -850,7 +850,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2005–2010",
     series: "M6",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M6_E63_-_Flickr_-_Alexandre_Pr%C3%A9vot_%2815%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M6_E63_-_Flickr_-_Alexandre_Pr%C3%A9vot_%2815%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M6_E63_-_Flickr_-_Alexandre_Pr%C3%A9vot_%2815%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M6_E63_-_Flickr_-_Alexandre_Pr%C3%A9vot_%285%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M6_E63_-_Flickr_-_Alexandre_Pr%C3%A9vot_%2812%29_%28cropped%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M6_E63_rear.jpg&w=800" },
   },
   {
     id: "m-f13m6",
@@ -859,7 +859,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2012–2018",
     series: "M6",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2012_BMW_M6_%28F13%29_coupe_%282018-11-27%29_01.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2012_BMW_M6_%28F13%29_coupe_%282018-11-27%29_01.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2012_BMW_M6_%28F13%29_coupe_%282018-11-27%29_01.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M6_%28F13%29_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M6_%28F13%29_China.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M6_Coupe_%28F13%29_rear.JPG&w=800" },
   },
   {
     id: "m-f9xm8",
@@ -868,7 +868,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2019–present",
     series: "M8",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M8_Competition_IMG_3364.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M8_Competition_IMG_3364.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M8_Competition_IMG_3364.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2019_BMW_M8_Competition_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=The_rightside_of_BMW_M8_Coup%C3%A9_Competition_%28F92%29_with_M_Performance_Parts.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2019_BMW_M8_Competition_Rear.jpg&w=800" },
   },
   {
     id: "m-e82-1m",
@@ -877,7 +877,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2011–2012",
     series: "1 Series M",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_1er_M_Coup%C3%A9_%28E82%29_%E2%80%93_Frontansicht%2C_1._Juni_2013%2C_D%C3%BCsseldorf.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_1er_M_Coup%C3%A9_%28E82%29_%E2%80%93_Frontansicht%2C_1._Juni_2013%2C_D%C3%BCsseldorf.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_1er_M_Coup%C3%A9_%28E82%29_%E2%80%93_Frontansicht%2C_1._Juni_2013%2C_D%C3%BCsseldorf.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_1_Series_M_Coupe_%28front_quarter%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_1M_Coup%C3%A9_%289857826983-resized%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E82_1M_notchback_2979cc_registered_November_2011.jpg&w=800" },
   },
 
   // ── X Series M variants (comprehensive) ───────────────────────────────────
@@ -888,7 +888,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2015–2018",
     series: "X5 M",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X5_M_%28MSP15%29.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X5_M_%28MSP15%29.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X5_M_%28MSP15%29.JPG&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X5_M_F85.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X5M_%28F85%29_Miami_Metro_Area%2C_USA.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X5M_%28F85%29_Miami_Metro_Area%2C_USA_%281%29.jpg&w=800" },
   },
   {
     id: "m-f95",
@@ -897,7 +897,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2020–present",
     series: "X5 M",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X5M_Competition_%2851334217781%29_%28cropped%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X5M_Competition_%2851334217781%29_%28cropped%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X5M_Competition_%2851334217781%29_%28cropped%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X5_M_%28F95%29_China.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X5M_%28F95%29_Greater_Toronto_Area%2C_Canada.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X5M_%28F95%29_Washington_DC_Metro_Area%2C_USA.jpg&w=800" },
   },
   {
     id: "m-f86",
@@ -906,7 +906,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2015–2019",
     series: "X6 M",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X6M_F86_%2828004084531%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X6M_F86_%2828004084531%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X6M_F86_%2828004084531%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X6M_F86_%2828004084531%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=Bmw-f16-x6m-bc-20150501-act-alx.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_X6_M_4.4L_rear_6.13.18.jpg&w=800" },
   },
   {
     id: "m-f96",
@@ -915,7 +915,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2020–present",
     series: "X6 M",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X6_M_%28G06%29_IMG_3374.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X6_M_%28G06%29_IMG_3374.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X6_M_%28G06%29_IMG_3374.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X6M_Competition_%28F96%29_Washington_DC_%281%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X6M_%28F96%29_Washington_DC_Metro_Area%2C_USA.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X6M_%28F96%29_Washington_DC_Metro_Area%2C_USA_%281%29.jpg&w=800" },
   },
 
   // ── X3 new gen (comprehensive) ─────────────────────────────────────────────
@@ -926,7 +926,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2024–present",
     series: "X3",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G45_20_DSC_7119.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G45_20_DSC_7119.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G45_20_DSC_7119.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2024_BMW_X3_20d_xDrive_M_Sport_Pro.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G45_20_DSC_7119_%28cropped%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2025_BMW_X3_30_xDrive%2C_rear_3.24.25.jpg&w=800" },
   },
 
   // ── Exhaustive: 3 Series body variants ───────────────────────────────────
@@ -937,7 +937,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "1987–1994",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E30_Touring_CIMG5253.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E30_Touring_CIMG5253.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E30_Touring_CIMG5253.JPG&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E30_Touring_front_20080625.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_%28E30%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E30_Touring_rear_20080625.jpg&w=800" },
   },
   {
     id: "3-e36-coupe",
@@ -946,7 +946,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "1992–1999",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=1994_BMW_318is_%28E36%29_coupe_%2823805534193%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=1994_BMW_318is_%28E36%29_coupe_%2823805534193%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=1994_BMW_318is_%28E36%29_coupe_%2823805534193%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=Tuned_BMW_320i_Coup%C3%A9_%28E36%29_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=1994_BMW_318is_%28E36%29_coupe_%2823805534193%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_Coupe_E36_rear.jpg&w=800" },
   },
   {
     id: "3-e36-touring",
@@ -955,7 +955,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "1995–1999",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E36_Touring_Heck.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E36_Touring_Heck.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E36_Touring_Heck.JPG&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_3-Series_E36_Touring_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=Bmw_e36_touring_%28kombi%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E36_Touring_Heck.JPG&w=800" },
   },
   {
     id: "3-e36-cabrio",
@@ -964,7 +964,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "1993–1999",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_320i_Cabriolet_%28E36_2C%2C_Facelift%29_%E2%80%93_Heckansicht%2C_8._Juni_2011%2C_W%C3%BClfrath.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_320i_Cabriolet_%28E36_2C%2C_Facelift%29_%E2%80%93_Heckansicht%2C_8._Juni_2011%2C_W%C3%BClfrath.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_320i_Cabriolet_%28E36_2C%2C_Facelift%29_%E2%80%93_Heckansicht%2C_8._Juni_2011%2C_W%C3%BClfrath.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E36_front_95.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E36_7_LCI_Z3_2.0_Bright_Red_%282%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E36_rear_95.jpg&w=800" },
   },
   {
     id: "3-e36-compact",
@@ -973,7 +973,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "1994–2000",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_3er_Compact_rear_20090920.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_3er_Compact_rear_20090920.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_3er_Compact_rear_20090920.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E36_Compact_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_Compact_E36_1X7A0158.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E36_Compact_rear.jpg&w=800" },
   },
   {
     id: "3-e46-touring",
@@ -982,7 +982,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "1999–2005",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_320d_Touring_E46_%281998%E2%80%932001%29_front_MJ.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_320d_Touring_E46_%281998%E2%80%932001%29_front_MJ.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_320d_Touring_E46_%281998%E2%80%932001%29_front_MJ.JPG&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_Touring_front_20080612.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_%28E46%29_Touring_Retro_Classics_2025_DSC_7690.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_Touring_rear_20080612.jpg&w=800" },
   },
   {
     id: "3-e46-coupe",
@@ -991,7 +991,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "1999–2006",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=1999-2000_BMW_323Ci_%28E46%29_coupe_01.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=1999-2000_BMW_323Ci_%28E46%29_coupe_01.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=1999-2000_BMW_323Ci_%28E46%29_coupe_01.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_Coupe_farngr%C3%BCn_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_ZHP_Coupe_TiAg_Side.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_3_SERIES_COUPE_%28E46%29_China_%282%29.jpg&w=800" },
   },
   {
     id: "3-e46-cabrio",
@@ -1000,7 +1000,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2000–2006",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_Cabrio_rear_20070914.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_Cabrio_rear_20070914.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_Cabrio_rear_20070914.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_Cabriolet_front_20080723.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_E46_Cabrio_side.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_Cabriolet_rear_20080723.jpg&w=800" },
   },
   {
     id: "3-e46-compact",
@@ -1009,7 +1009,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2001–2005",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2003_BMW_318ti_%28E46_MY02%29_hatchback_%282012-06-04%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2003_BMW_318ti_%28E46_MY02%29_hatchback_%282012-06-04%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2003_BMW_318ti_%28E46_MY02%29_hatchback_%282012-06-04%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_compact_front_20070522.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_316ti_Compact_M-Sportpaket_side-2004.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_compact_rear_20070522.jpg&w=800" },
   },
   {
     id: "3-e91",
@@ -1018,7 +1018,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2005–2012",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_3er_Touring_20090308_rear.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_3er_Touring_20090308_rear.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_3er_Touring_20090308_rear.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_3er_Touring_%28E91%29_Facelift_front_20100725.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BWM3_E91_right_inner_tail_light_IMG_7223.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_3er_Touring_%28E91%29_Facelift_rear_20100725.jpg&w=800" },
   },
   {
     id: "3-e92",
@@ -1027,7 +1027,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2006–2013",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2006-2010_BMW_335i_%28E92%29_coupe_%282011-07-17%29_02.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2006-2010_BMW_335i_%28E92%29_coupe_%282011-07-17%29_02.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2006-2010_BMW_335i_%28E92%29_coupe_%282011-07-17%29_02.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_E92_coupe_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=%2707-%2708_BMW_3-Series_Coupe.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M3_E92_coupe_backside.jpg&w=800" },
   },
   {
     id: "3-e93",
@@ -1036,7 +1036,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2007–2013",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E93_325i_Saphirschwarz_offen_Heck.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E93_325i_Saphirschwarz_offen_Heck.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E93_325i_Saphirschwarz_offen_Heck.JPG&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2008_BMW_328i_Convertible_in_Platinum_Bronze_Metallic%2C_Front_Left%2C_09-06-2022.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=%2709_BMW_3-Series_Convertible_%28MIAS%29.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_318i_Cabriolet_%28E93%29_Facelift_rear_20100718.jpg&w=800" },
   },
   {
     id: "3-f31",
@@ -1045,7 +1045,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2012–2019",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2015_BMW_320d_Business_EfficientDynamics_2.0_Rear.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2015_BMW_320d_Business_EfficientDynamics_2.0_Rear.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2015_BMW_320d_Business_EfficientDynamics_2.0_Rear.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2015_BMW_320d_Business_EfficientDynamics_2.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2013-03-05_Geneva_Motor_Show_8143.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2014_BMW_328xi%2C_Rear_Left%2C_08-21-2020.jpg&w=800" },
   },
   {
     id: "3-f34",
@@ -1054,7 +1054,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2013–2020",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=White_BMW_320i_Gran_Turismo_F34_in_Ap_Lei_Chau_%28Rear%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=White_BMW_320i_Gran_Turismo_F34_in_Ap_Lei_Chau_%28Rear%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=White_BMW_320i_Gran_Turismo_F34_in_Ap_Lei_Chau_%28Rear%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2014_BMW_330i_Gran_Turismo_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=00_BMW_F34_1.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2014_BMW_330i_Gran_Turismo_rear.jpg&w=800" },
   },
   {
     id: "3-g21",
@@ -1063,7 +1063,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2019–present",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G21_IMG_0365.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G21_IMG_0365.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G21_IMG_0365.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_3-Series_%28G21%2C_front%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_3-Series_%28G21%2C_side%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_3-Series_%28G21%2C_rear%29.jpg&w=800" },
   },
 
   // ── Exhaustive: 4 Series variants ────────────────────────────────────────
@@ -1074,7 +1074,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2014–2020",
     series: "4 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_435i_Cabriolet_M_Sport_%28F33%29_%E2%80%93_Heckansicht%2C_18._Oktober_2015%2C_D%C3%BCsseldorf.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_435i_Cabriolet_M_Sport_%28F33%29_%E2%80%93_Heckansicht%2C_18._Oktober_2015%2C_D%C3%BCsseldorf.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_435i_Cabriolet_M_Sport_%28F33%29_%E2%80%93_Heckansicht%2C_18._Oktober_2015%2C_D%C3%BCsseldorf.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_420i_M_Sport_Automatic_2.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW4_Cabrio_Seite.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_420i_M_Sport_Automatic_2.0_Rear.jpg&w=800" },
   },
   {
     id: "4-f36",
@@ -1083,7 +1083,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2014–2020",
     series: "4 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_440i_%28F36%29_M_Sport_Gran_Coupe_fastback_%282018-10-12%29_02.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_440i_%28F36%29_M_Sport_Gran_Coupe_fastback_%282018-10-12%29_02.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_440i_%28F36%29_M_Sport_Gran_Coupe_fastback_%282018-10-12%29_02.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2015-bmw-4-series-gran-coupe-front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2014_BMW_420D_Gran_Coupe_M_Sport_Auto_%28WT14_KGA%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_420i_Gran_Coupe_M_Sport_Automatic_2.0_Rear.jpg&w=800" },
   },
   {
     id: "4-g23",
@@ -1092,7 +1092,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2021–present",
     series: "4 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2022_BMW_430i_xDrive_Convertible_in_Alpine_White%2C_rear_left.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2022_BMW_430i_xDrive_Convertible_in_Alpine_White%2C_rear_left.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2022_BMW_430i_xDrive_Convertible_in_Alpine_White%2C_rear_left.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_420i_Cabriolet_M_Sport_%28G23%29_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2021_BMW_420d_M_Sport_MHEV_Automatic.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2021_BMW_430i_Cabrio%2C_rear_6.2.22.jpg&w=800" },
   },
   {
     id: "4-g26",
@@ -1101,7 +1101,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2021–present",
     series: "4 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G26_IMG_6565.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G26_IMG_6565.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G26_IMG_6565.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_420i_GranCoup%C3%A9_%28G26%29_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2024_BMW_4_Series_Gran_Coup%C3%A9_%28G26%29_IMG_2400.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_420i_GranCoup%C3%A9_%28G26%29_rear.jpg&w=800" },
   },
 
   // ── Exhaustive: 5 Series variants ────────────────────────────────────────
@@ -1112,7 +1112,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2004–2010",
     series: "5 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_5er_Touring_rear_grey.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_5er_Touring_rear_grey.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_5er_Touring_rear_grey.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=%2706-%2707_BMW_530xi_--_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=530i_Touring_Msport_LCI_59.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=%2706-%2707_BMW_530xi_--_Rear.jpg&w=800" },
   },
   {
     id: "5-f11",
@@ -1121,7 +1121,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2010–2017",
     series: "5 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_520d_Touring_%28F11%29_rear_20100731.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_520d_Touring_%28F11%29_rear_20100731.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_520d_Touring_%28F11%29_rear_20100731.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_520d_Touring_%28F11%29_front_20100821.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=20120701_tourdefrance318.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_520d_Touring_%28F11%29_rear_20100731.jpg&w=800" },
   },
   {
     id: "5-f07",
@@ -1130,7 +1130,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2009–2017",
     series: "5 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_535i_GT_%28F07%29_front-2_20101016.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_535i_GT_%28F07%29_front-2_20101016.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_535i_GT_%28F07%29_front-2_20101016.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2010_BMW_550i_Gran_Turismo_front_--_2010_DC.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_530d_Gran_Turismo_%282009%29_-_side.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2010_BMW_550i_Gran_Turismo_rear_--_2010_DC.jpg&w=800" },
   },
   {
     id: "5-g31",
@@ -1139,7 +1139,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2017–2023",
     series: "5 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_520i_SE_Automatic_Estate_2.0_Rear.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_520i_SE_Automatic_Estate_2.0_Rear.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_520i_SE_Automatic_Estate_2.0_Rear.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_520d_M_Sport_Automatic_Estate_2.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G31_right.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_520d_M_Sport_Automatic_Estate_2.0_Rear.jpg&w=800" },
   },
   {
     id: "5-g61",
@@ -1148,7 +1148,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2024–present",
     series: "5 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G61_520d_Ditzingen_Mobil_IMG_9764_%28cropped%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G61_520d_Ditzingen_Mobil_IMG_9764_%28cropped%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_G61_520d_Ditzingen_Mobil_IMG_9764_%28cropped%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2024_BMW_520i_M_Sport_-_1998cc_2.0_%28208PS%29_Petrol_-_Alpine_White_-_02-2025%2C_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_5er_Touring_M_Sportpaket_%28G61%29_%E2%80%93_f_04072025.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_5_Series_Touring_%282024%29_Rear.jpg&w=800" },
   },
 
   // ── Exhaustive: 6 Series variants ────────────────────────────────────────
@@ -1159,7 +1159,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2004–2010",
     series: "6 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_645i_20090525_rear.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_645i_20090525_rear.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_645i_20090525_rear.JPG&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_645_E64_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_645_E64_side.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_645_E64_rear.jpg&w=800" },
   },
   {
     id: "6-f06",
@@ -1168,7 +1168,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2012–2018",
     series: "6 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_640d_Gran_Coup%C3%A9_%28F06%29_%E2%80%93_Frontansicht%2C_23._September_2012%2C_D%C3%BCsseldorf.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_640d_Gran_Coup%C3%A9_%28F06%29_%E2%80%93_Frontansicht%2C_23._September_2012%2C_D%C3%BCsseldorf.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_640d_Gran_Coup%C3%A9_%28F06%29_%E2%80%93_Frontansicht%2C_23._September_2012%2C_D%C3%BCsseldorf.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_640_3.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=%22_%28a_picture_by_david_adam_kess%2C_really_nice_BMW_Madrid.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2013_BMW_640i_Gran_Coup%C3%A9_rear.jpg&w=800" },
   },
   {
     id: "6-f12",
@@ -1177,7 +1177,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2011–2018",
     series: "6 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_640i_Cabriolet_%285622324165%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_640i_Cabriolet_%285622324165%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_640i_Cabriolet_%285622324165%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2012_BMW_650i_in_Vermilion_Red_Metallic%2C_Front_Left%2C_06-17-2022.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=%2714_BMW_6-Series_Convertible_%28MIAS_%2714%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2014_BMW_650i_Xdrive_rear.jpg&w=800" },
   },
   {
     id: "6-g32",
@@ -1186,7 +1186,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2017–present",
     series: "6 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_640d_GT_xDrive_1X7A0311.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_640d_GT_xDrive_1X7A0311.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_640d_GT_xDrive_1X7A0311.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_630i_M_Sport_Gran_Turismo_-_1998cc_2.0_%28258PS%29_Petrol_-_Grey_-_03-2024%2C_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2021_BMW_6-Series_630i_GT_M_Sport.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_630i_M_Sport_Gran_Turismo_-_1998cc_2.0_%28258PS%29_Petrol_-_Grey_-_03-2024%2C_Rear.jpg&w=800" },
   },
 
   // ── Exhaustive: 7 Series variants ────────────────────────────────────────
@@ -1206,7 +1206,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2008–2015",
     series: "7 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2008-2011_BMW_740Li_%28F02%29_sedan_%282017-11-28%29_02.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2008-2011_BMW_740Li_%28F02%29_sedan_%282017-11-28%29_02.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2008-2011_BMW_740Li_%28F02%29_sedan_%282017-11-28%29_02.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2009_silver_BMW_750Li_sedan_front.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2009_silver_BMW_750Li_sedan_left_side.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_730Li_LCI_rear.jpg&w=800" },
   },
   {
     id: "7-g12",
@@ -1215,7 +1215,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2015–2022",
     series: "7 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_750i_%28G12%29_front_3.23.18.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_750i_%28G12%29_front_3.23.18.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_750i_%28G12%29_front_3.23.18.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_7_Series%28G12%29_LWB_Front-side.png&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_7-Series_730Ld_sDrvie_M_Sport.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_7_Series%28G12%29_LWB_Rear-side.png&w=800" },
   },
 
   // ── Exhaustive: 8 Series variants ────────────────────────────────────────
@@ -1226,7 +1226,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2019–present",
     series: "8 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2019_BMW_840d_xDrive_Automatic_3.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2019_BMW_840d_xDrive_Automatic_3.0_Front.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2019_BMW_840d_xDrive_Automatic_3.0_Front.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2019_BMW_840d_xDrive_Automatic_3.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=22_BMW_840i_xDrive_Convertible.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2019_BMW_840d_xDrive_Automatic_3.0_Rear.jpg&w=800" },
   },
   {
     id: "8-g16",
@@ -1235,7 +1235,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2019–present",
     series: "8 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_840d_xDrive_Automatic_Gran_Coupe_3.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_840d_xDrive_Automatic_Gran_Coupe_3.0_Front.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_840d_xDrive_Automatic_Gran_Coupe_3.0_Front.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_840d_xDrive_Automatic_Gran_Coupe_3.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2022_BMW_8_Series_Jeff_Koons.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_840d_xDrive_Automatic_Gran_Coupe_3.0_Rear_%281%29.jpg&w=800" },
   },
 
   // ── Exhaustive: 1 Series variants ────────────────────────────────────────
@@ -1246,7 +1246,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2007–2013",
     series: "1 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_123d_Coup%C3%A9_Sportpaket_BMW_Performance_(E82)_rear-2_20100914.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_123d_Coup%C3%A9_Sportpaket_BMW_Performance_(E82)_rear-2_20100914.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_123d_Coup%C3%A9_Sportpaket_BMW_Performance_(E82)_rear-2_20100914.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_1_Series_Coup%C3%A9_%28E82%29_front_Poznan_2011.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=%2709_BMW_128i_Coupe_%28Montreal%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_123d_Coup%C3%A9_Heck.JPG&w=800" },
   },
   {
     id: "1-e88",
@@ -1255,7 +1255,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2008–2013",
     series: "1 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_118i_Cabriolet_(E88)_%E2%80%93_Heckansicht%2C_15._April_2012%2C_Mettmann.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_118i_Cabriolet_(E88)_%E2%80%93_Heckansicht%2C_15._April_2012%2C_Mettmann.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_118i_Cabriolet_(E88)_%E2%80%93_Heckansicht%2C_15._April_2012%2C_Mettmann.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_118d_Cabriolet_front_20100411.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_118i_Cabriolet_%28E88%29_%E2%80%93_Seitenansicht%2C_15._April_2012%2C_Mettmann.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_118d_Cabriolet_rear_20100411.jpg&w=800" },
   },
   {
     id: "1-f21",
@@ -1264,7 +1264,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2012–2019",
     series: "1 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M135i_%28F21%29_in_Uruguay_-_rear.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M135i_%28F21%29_in_Uruguay_-_rear.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M135i_%28F21%29_in_Uruguay_-_rear.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_118d_Sport_-_1995cc_2.0_%28150PS%29_Diesel_-_Midnight_Blue_-_06-2024%2C_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_120i_M_Sport_Automatic_2.0.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_M135i-rear.jpg&w=800" },
   },
 
   // ── Exhaustive: 2 Series variants ────────────────────────────────────────
@@ -1275,7 +1275,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2014–2021",
     series: "2 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_225d_Cabriolet_M_Sport_%28F23%29_%E2%80%93_Heckansicht%2C_18._Oktober_2015%2C_D%C3%BCsseldorf.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_225d_Cabriolet_M_Sport_%28F23%29_%E2%80%93_Heckansicht%2C_18._Oktober_2015%2C_D%C3%BCsseldorf.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_225d_Cabriolet_M_Sport_%28F23%29_%E2%80%93_Heckansicht%2C_18._Oktober_2015%2C_D%C3%BCsseldorf.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_218d_M_Sport_2.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=15_BMW_F23.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_218d_M_Sport_2.0_Rear.jpg&w=800" },
   },
 
   // ── Exhaustive: X Series additional ──────────────────────────────────────
@@ -1286,7 +1286,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2019–2023",
     series: "X3 M",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X3M_%2849730059211%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X3M_%2849730059211%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X3M_%2849730059211%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X3M_%2849730059211%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X3M_%28F97%29_Greater_Toronto_Area%2C_Canada.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_X3M_Competition_Auto.jpg&w=800" },
   },
   {
     id: "x4m-f98",
@@ -1295,7 +1295,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2019–2023",
     series: "X4 M",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X4_M_Competition_%28G02%29_IMG_4971.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X4_M_Competition_%28G02%29_IMG_4971.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X4_M_Competition_%28G02%29_IMG_4971.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X4M_%28F98%29_Miami_Metro_Area%2C_USA.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X4M_Competition_%28F98%29_Washington_DC_%281.1%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X4M_Competition_%28F98%29_Washington_DC_Metro_Area%2C_USA_%281%29.jpg&w=800" },
   },
   {
     id: "x2-u10",
@@ -1304,7 +1304,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2024–present",
     series: "X2",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_U10_1X7A2456.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_U10_1X7A2456.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_U10_1X7A2456.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_iX2_xDrive30_M_Sport_%28U10%29_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=25_BMW_X2_xDrive28i.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_iX2_xDrive30_M_Sport_%28U10%29_rear.jpg&w=800" },
   },
 
   // ── Exhaustive: LCI (facelift) variants ──────────────────────────────────
@@ -1315,7 +1315,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2008–2011",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_320i_%28E90%29_Facelift_front_20100410.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_320i_%28E90%29_Facelift_front_20100410.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_320i_%28E90%29_Facelift_front_20100410.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_3_series_front.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E90_from_inside.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_3er_%28E90%29_Facelift_20090720_rear.JPG&w=800" },
   },
   {
     id: "3-e46-lci",
@@ -1324,7 +1324,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2001–2005",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2004_BMW_325Ci_%28E46_MY04%29_coupe_%282015-07-24%29_01_%28cropped%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2004_BMW_325Ci_%28E46_MY04%29_coupe_%282015-07-24%29_01_%28cropped%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2004_BMW_325Ci_%28E46_MY04%29_coupe_%282015-07-24%29_01_%28cropped%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_2C_LCI_3_Series_Convertible_Black_II_%283%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_2C_LCI_3_Series_Convertible_Black_II_%282%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_E46_2C_LCI_3_Series_Convertible_Black_II_%281%29.jpg&w=800" },
   },
   {
     id: "5-e60-lci",
@@ -1333,7 +1333,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2007–2010",
     series: "5 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2008_BMW_528i_--_NHTSA_01_%28cropped%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2008_BMW_528i_--_NHTSA_01_%28cropped%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2008_BMW_528i_--_NHTSA_01_%28cropped%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2003_BMW_520i_SE_2.2_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=%2710_BMW_5-Series_Sedan_%28MIAS_%2710%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2003_BMW_520i_SE_2.2_Rear.jpg&w=800" },
   },
   {
     id: "5-f10-lci",
@@ -1342,7 +1342,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2013–2017",
     series: "5 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=Facelifted_F10_BMW_5_series_in_Finland.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=Facelifted_F10_BMW_5_series_in_Finland.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=Facelifted_F10_BMW_5_series_in_Finland.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2014_BMW_520i_F10_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=%2714_BMW_5-Series_%28MIAS_%2714%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=Bintaro_Premiere_Hospital_Rear_Area.jpg&w=800" },
   },
   {
     id: "3-f30-lci",
@@ -1351,7 +1351,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2015–2019",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_318i_%28F30_LCI%29_Sports_Line_sedan_%282018-11-02%29_01.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_318i_%28F30_LCI%29_Sports_Line_sedan_%282018-11-02%29_01.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_318i_%28F30_LCI%29_Sports_Line_sedan_%282018-11-02%29_01.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_330i_xDrive_Sedan_in_Jet_Black%2C_front_right%2C_2025-10-17.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_316d_Sport.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_3-Series_320d_Sport_%28F30%29_-_2.0_%28160PS%29_diesel_automatic_-_2025-07-08%2C_rear_right.jpg&w=800" },
   },
   {
     id: "5-g30-lci",
@@ -1360,7 +1360,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2020–2023",
     series: "5 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_530d_M_Sport_facelift.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_530d_M_Sport_facelift.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_530d_M_Sport_facelift.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_520d_xDrive_M_Sport_Automatic_2.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=0_BMW_G30_1.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_5-Series_520d_M_Sport_%28Rear%29.jpg&w=800" },
   },
   {
     id: "3-g20-lci",
@@ -1369,7 +1369,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2022–present",
     series: "3 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=0_BMW_G20_%282022%29_1.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=0_BMW_G20_%282022%29_1.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=0_BMW_G20_%282022%29_1.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=0_BMW_G20_%282022%29_1.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2023-BMW-3-Series-EV-1.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2024_BMW_G20_DSC_7350.jpg&w=800" },
   },
   {
     id: "7-e65-lci",
@@ -1378,7 +1378,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2005–2008",
     series: "7 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_730d_%28E65%29_Facelift_front_20100718.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_730d_%28E65%29_Facelift_front_20100718.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_730d_%28E65%29_Facelift_front_20100718.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_7er_%28E65%29_front_20100918.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2002%E2%80%932005_BMW_735i_%28E65%29_sedan_%282016-08-27%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_7er_%28E65%29_rear_20100918.jpg&w=800" },
   },
   {
     id: "7-f01-lci",
@@ -1387,7 +1387,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2012–2015",
     series: "7 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_730d_xDrive_%28F01%29_%E2%80%93_Frontansicht%2C_31._Dezember_2012%2C_D%C3%BCsseldorf.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_730d_xDrive_%28F01%29_%E2%80%93_Frontansicht%2C_31._Dezember_2012%2C_D%C3%BCsseldorf.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_730d_xDrive_%28F01%29_%E2%80%93_Frontansicht%2C_31._Dezember_2012%2C_D%C3%BCsseldorf.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2009_BMW_750i_front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=14-02-04-Parlement-europ%C3%A9en-Strasbourg-RalfR-010.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2009_BMW_750i_rear.jpg&w=800" },
   },
   {
     id: "7-g11-lci",
@@ -1405,7 +1405,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2015–2019",
     series: "1 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2019_BMW_116d_SE_Business_1.5_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2019_BMW_116d_SE_Business_1.5_Front.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2019_BMW_116d_SE_Business_1.5_Front.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2014_BMW_116d_Sport_in_Alpine_White%2C_front_left%2C_06-08-2025.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=00_BMW_F20_1.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2012_BMW_125i_%28F20%29_5-door_hatchback_%282015-07-03%29_01.jpg&w=800" },
   },
   {
     id: "x5-e70-lci",
@@ -1414,7 +1414,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2010–2013",
     series: "X5",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2010-2011_BMW_X5_%28E70%29_xDrive35i_wagon_%282011-11-18%29_01.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2010-2011_BMW_X5_%28E70%29_xDrive35i_wagon_%282011-11-18%29_01.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2010-2011_BMW_X5_%28E70%29_xDrive35i_wagon_%282011-11-18%29_01.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2007_BMW_X5_SE_7S_Automatic_3.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=%2709_BMW_X5_%28MIAS%29.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2007_BMW_X5_SE_7S_Automatic_3.0_Rear.jpg&w=800" },
   },
   {
     id: "x5-f15-lci",
@@ -1423,7 +1423,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2015–2018",
     series: "X5",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_X5_xDrive40d_M_Sport_Automatic_3.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_X5_xDrive40d_M_Sport_Automatic_3.0_Front.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_X5_xDrive40d_M_Sport_Automatic_3.0_Front.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_X5_xDrive35i_%28US%29_front_3.9.18.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=%2714_BMW_X5_%28MIAS_%2714%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2016_BMW_X5_xDrive40d_M_Sport_Automatic_3.0_Rear.jpg&w=800" },
   },
   {
     id: "x3-f25-lci",
@@ -1432,7 +1432,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2014–2017",
     series: "X3",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2015_BMW_X3_%28F25_LCI%29_xDrive20d_wagon_%282015-06-27%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2015_BMW_X3_%28F25_LCI%29_xDrive20d_wagon_%282015-06-27%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2015_BMW_X3_%28F25_LCI%29_xDrive20d_wagon_%282015-06-27%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_X3_XDrive28i_in_Jet_Black%2C_Front_Right%2C_05-22-2022.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=%2712_BMW_X3_%28MIAS_%2712%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2015_BMW_X3_sDrive_F25_%28rear%29.jpg&w=800" },
   },
   {
     id: "x1-f48-lci",
@@ -1441,7 +1441,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2019–2022",
     series: "X1",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_X1_sDrive18i_xLine_Automatic_facelift_1.5_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_X1_sDrive18i_xLine_Automatic_facelift_1.5_Front.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_X1_sDrive18i_xLine_Automatic_facelift_1.5_Front.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_X1_xDrive28i_%28US%29_front_3.16.18.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=%2713-%2715_Ram_3500_Crew_Cab_%26_BMW_X1_F48.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_X1_xDrive28i_%28US%29_rear_3.16.18.jpg&w=800" },
   },
   {
     id: "4-f32-lci",
@@ -1450,7 +1450,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2017–2020",
     series: "4 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_420i_M_Sport_Automatic_2.0_Front_%281%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_420i_M_Sport_Automatic_2.0_Front_%281%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_420i_M_Sport_Automatic_2.0_Front_%281%29.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_420i_Sport_Automatic_2.0_Front.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=14_BMW_428i_Base.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2014_BMW_435i_Coup%C3%A9_xDrive_%28rear_left%29.jpg&w=800" },
   },
   {
     id: "x6-e71-lci",
@@ -1459,7 +1459,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2012–2014",
     series: "X6",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X6_E71_facelift_01_China_2015-04-13.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X6_E71_facelift_01_China_2015-04-13.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X6_E71_facelift_01_China_2015-04-13.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2008_red_BMW_X6_xDrive50i_front.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2008_red_BMW_X6_xDrive50i_left_side.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2009_BMW_X6_rear.jpg&w=800" },
   },
 ];
 

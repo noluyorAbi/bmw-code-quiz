@@ -18,7 +18,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 const siteUrl = "https://github.com/noluyorAbi/bmw-code-quiz";
 const title = "BMW Code Quiz — Test Your Chassis Code Knowledge";
 const description =
-  "How well do you know BMW's internal chassis codes? An interactive quiz covering 156 vehicles from the E30 to the G87. Not affiliated with BMW AG.";
+  "How well do you know BMW's internal chassis codes? An interactive quiz covering 155 vehicles from the E30 to the G87. Not affiliated with BMW AG.";
 
 export const metadata: Metadata = {
   title: {
