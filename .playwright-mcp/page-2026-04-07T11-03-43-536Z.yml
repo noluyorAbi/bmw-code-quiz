@@ -1,0 +1,130 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e7]: CanvasConvo
+        - generic [ref=e8]:
+          - generic [ref=e9]:
+            - link "Sign In" [ref=e10] [cursor=pointer]:
+              - /url: /login
+            - link "Sign Up" [ref=e11] [cursor=pointer]:
+              - /url: /signup
+          - button "Toggle theme" [ref=e12] [cursor=pointer]:
+            - generic [ref=e13]:
+              - img
+            - generic [ref=e14]: Toggle theme
+    - generic [ref=e24]:
+      - generic [ref=e26]: Bachelor Thesis Project
+      - heading "Canvas Convo" [level=1] [ref=e27]:
+        - generic [ref=e28]: Canvas
+        - generic [ref=e29]: Convo
+      - paragraph [ref=e30]: Real-time streaming, voice input, multi-modal files, and a spatial canvas for enhanced LLM interactions.
+      - generic [ref=e31]:
+        - link "Start Chatting" [ref=e33] [cursor=pointer]:
+          - /url: /chat
+          - text: Start Chatting
+          - img
+        - link "Try Demo" [ref=e35] [cursor=pointer]:
+          - /url: /demo
+          - img
+          - text: Try Demo
+        - link "Learn More" [ref=e37] [cursor=pointer]:
+          - /url: "#features"
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - heading "Core Features" [level=2] [ref=e42]
+        - paragraph [ref=e43]: Everything you need for an enhanced LLM interaction experience
+      - generic [ref=e44]:
+        - generic [ref=e47]:
+          - img [ref=e49]
+          - generic [ref=e51]: Streaming Chat
+          - generic [ref=e52]: Real-time token streaming with reasoning models for seamless LLM interactions
+        - generic [ref=e55]:
+          - img [ref=e57]
+          - generic [ref=e61]: Conversation History
+          - generic [ref=e62]: Sidebar with chat list, search, and tags for quick access to past conversations
+        - generic [ref=e65]:
+          - img [ref=e67]
+          - generic [ref=e71]: Media Shelf
+          - generic [ref=e72]: View and manage all images, PDFs, and files attached in your conversations
+        - generic [ref=e75]:
+          - img [ref=e77]
+          - generic [ref=e80]: Voice Input
+          - generic [ref=e81]: Real-time speech-to-text transcription with multi-language support
+        - generic [ref=e84]:
+          - img [ref=e86]
+          - generic [ref=e89]: Follow-up Suggestions
+          - generic [ref=e90]: AI-generated context-aware prompts to continue the conversation
+        - generic [ref=e93]:
+          - img [ref=e95]
+          - generic [ref=e100]: Spatial Canvas
+          - generic [ref=e101]: Non-linear workspace with branching and post-it notes to arrange conversation nodes visually
+        - generic [ref=e104]:
+          - img [ref=e106]
+          - generic [ref=e108]: Dynamic Widgets
+          - generic [ref=e109]: "Selection-based transformations: Magic Edit, Shorten, Expand, Rephrase for text and code"
+        - generic [ref=e112]:
+          - img [ref=e114]
+          - generic [ref=e120]: Prompt Templates
+          - generic [ref=e121]: Save and reuse effective prompts for recurring tasks without retyping
+        - generic [ref=e124]:
+          - img [ref=e126]
+          - generic [ref=e128]: In-App Feedback
+          - generic [ref=e129]: Submit bug reports, suggestions, or feature ideas directly from the interface
+        - generic [ref=e132]:
+          - img [ref=e134]
+          - generic [ref=e137]: Guided Demo
+          - generic [ref=e138]: Try the full interface with a guided or autonomous tour—no login required
+        - generic [ref=e141]:
+          - img [ref=e143]
+          - generic [ref=e145]: Feature Roadmap
+          - generic [ref=e146]: Public roadmap to track planned and shipped features with progress and filters
+    - generic [ref=e149]:
+      - heading "Ready to Experience the Future?" [level=2] [ref=e150]
+      - paragraph [ref=e151]: Built with Next.js, Supabase, and OpenAI. Chat with reasoning models, voice input, images, PDFs, branching, in-app feedback, guided demo, and a public feature roadmap.
+      - generic [ref=e152]:
+        - link "Launch Chat Interface" [ref=e154] [cursor=pointer]:
+          - /url: /chat
+        - link "Try Demo (no login)" [ref=e156] [cursor=pointer]:
+          - /url: /demo
+        - link "View Roadmap" [ref=e158] [cursor=pointer]:
+          - /url: /roadmap
+    - contentinfo [ref=e159]:
+      - generic [ref=e160]:
+        - generic [ref=e161]:
+          - generic [ref=e162]:
+            - heading "CanvasConvo" [level=3] [ref=e163]
+            - paragraph [ref=e164]: A modern AI chat interface with branching conversations, canvas visualization, and prompt templates.
+            - paragraph [ref=e165]: Bachelor Thesis · Built with Next.js, shadcn/ui & Tailwind CSS
+            - paragraph [ref=e166]:
+              - text: Questions or feedback?
+              - link "adatepe.alperen@campus.lmu.de" [ref=e167] [cursor=pointer]:
+                - /url: mailto:adatepe.alperen@campus.lmu.de
+          - generic [ref=e168]:
+            - button "Flip business card to back" [ref=e169] [cursor=pointer]:
+              - generic [ref=e170]:
+                - generic [ref=e171]:
+                  - img [ref=e176]
+                  - generic [ref=e182]:
+                    - generic [ref=e183]:
+                      - heading "Alperen Adatepe" [level=2] [ref=e184]
+                      - paragraph [ref=e185]: Full-Stack Engineer
+                      - paragraph [ref=e186]: Computer Scientist @ LMU
+                    - paragraph [ref=e187]: Creating powerful digital experiences through modern solutions.
+                - generic [ref=e191]:
+                  - paragraph [ref=e192]: Curious what else I'm building?
+                  - link "adatepe.dev" [ref=e193]:
+                    - /url: https://www.adatepe.dev
+                    - img [ref=e194]
+                    - generic [ref=e197]: adatepe.dev
+                  - generic [ref=e198]:
+                    - link "GitHub profile" [ref=e199]:
+                      - /url: https://git.adatepe.dev
+                      - img [ref=e200]
+                    - link "LinkedIn profile" [ref=e203]:
+                      - /url: https://in.adatepe.dev
+                      - img [ref=e204]
+            - paragraph [ref=e209]: Hover to Tilt • Click to Flip
+        - paragraph [ref=e211]: © 2026 CanvasConvo. All rights reserved.
+  - region "Notifications alt+T"
+  - alert [ref=e212]
