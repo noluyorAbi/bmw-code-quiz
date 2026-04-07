@@ -11,13 +11,23 @@ interface SafeImageProps {
   loading?: "eager" | "lazy";
 }
 
-export default function SafeImage({ src, alt, className, fallbackClassName, loading = "eager" }: SafeImageProps) {
+export default function SafeImage({
+  src,
+  alt,
+  className,
+  fallbackClassName,
+  loading = "eager",
+}: SafeImageProps) {
   const [failed, setFailed] = useState(false);
 
   if (failed) {
     return fallbackClassName ? (
-      <div className={cn("flex items-center justify-center", fallbackClassName)}>
-        <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider">NO_IMAGE_DATA</span>
+      <div
+        className={cn("flex items-center justify-center", fallbackClassName)}
+      >
+        <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider">
+          NO_IMAGE_DATA
+        </span>
       </div>
     ) : null;
   }

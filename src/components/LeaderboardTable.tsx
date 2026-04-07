@@ -13,8 +13,12 @@ export default function LeaderboardTable({ entries }: LeaderboardTableProps) {
     return (
       <div className="flex flex-col items-center justify-center py-20 text-muted-foreground gap-4">
         <Trophy className="h-10 w-10 text-outline-variant" />
-        <p className="font-mono text-sm uppercase tracking-wider">NO TELEMETRY DATA RECORDED</p>
-        <p className="text-xs text-muted-foreground">Complete a quiz to register your first entry.</p>
+        <p className="font-mono text-sm uppercase tracking-wider">
+          NO TELEMETRY DATA RECORDED
+        </p>
+        <p className="text-xs text-muted-foreground">
+          Complete a quiz to register your first entry.
+        </p>
       </div>
     );
   }
@@ -42,7 +46,7 @@ export default function LeaderboardTable({ entries }: LeaderboardTableProps) {
               "grid grid-cols-12 px-6 py-5 items-center transition-all mb-1 rounded",
               isTop3
                 ? "bg-primary-container/5 border border-primary-container/10 hover:bg-primary-container/10"
-                : "bg-surface-container-low/20 hover:bg-foreground/5"
+                : "bg-surface-container-low/20 hover:bg-foreground/5",
             )}
           >
             {/* Rank */}
@@ -50,10 +54,12 @@ export default function LeaderboardTable({ entries }: LeaderboardTableProps) {
               {i === 0 ? (
                 <Shield className="h-5 w-5 text-primary" />
               ) : (
-                <span className={cn(
-                  "font-mono text-sm",
-                  isTop3 ? "font-bold text-primary" : "text-muted-foreground"
-                )}>
+                <span
+                  className={cn(
+                    "font-mono text-sm",
+                    isTop3 ? "font-bold text-primary" : "text-muted-foreground",
+                  )}
+                >
                   {String(i + 1).padStart(2, "0")}
                 </span>
               )}
@@ -61,17 +67,23 @@ export default function LeaderboardTable({ entries }: LeaderboardTableProps) {
 
             {/* Name */}
             <div className="col-span-4 flex items-center gap-3">
-              <div className={cn(
-                "w-8 h-8 rounded flex items-center justify-center text-xs font-bold font-mono",
-                isTop3 ? "bg-primary-container text-white" : "bg-surface-container-highest text-muted-foreground"
-              )}>
+              <div
+                className={cn(
+                  "w-8 h-8 rounded flex items-center justify-center text-xs font-bold font-mono",
+                  isTop3
+                    ? "bg-primary-container text-white"
+                    : "bg-surface-container-highest text-muted-foreground",
+                )}
+              >
                 {entry.name.slice(0, 2).toUpperCase()}
               </div>
               <div>
-                <p className={cn(
-                  "font-[family-name:var(--font-display)] italic text-sm tracking-tight",
-                  isTop3 ? "text-foreground" : "text-foreground"
-                )}>
+                <p
+                  className={cn(
+                    "font-[family-name:var(--font-display)] italic text-sm tracking-tight",
+                    isTop3 ? "text-foreground" : "text-foreground",
+                  )}
+                >
                   {entry.name.toUpperCase()}
                 </p>
                 {isTop3 && (
@@ -84,7 +96,9 @@ export default function LeaderboardTable({ entries }: LeaderboardTableProps) {
 
             {/* Score */}
             <div className="col-span-3">
-              <span className="font-mono text-lg font-bold text-primary">{pct}%</span>
+              <span className="font-mono text-lg font-bold text-primary">
+                {pct}%
+              </span>
               <span className="font-mono text-xs text-muted-foreground ml-2">
                 ({entry.score}/{entry.total})
               </span>
@@ -99,7 +113,10 @@ export default function LeaderboardTable({ entries }: LeaderboardTableProps) {
 
             {/* Date */}
             <div className="col-span-2 text-right font-mono text-[10px] text-muted-foreground">
-              {new Date(entry.date).toISOString().split("T")[0].replace(/-/g, ".")}
+              {new Date(entry.date)
+                .toISOString()
+                .split("T")[0]
+                .replace(/-/g, ".")}
             </div>
           </div>
         );

@@ -11,7 +11,13 @@ interface ScoreBarProps {
   streak?: number;
 }
 
-export default function ScoreBar({ score, total, mode, roundSize, streak }: ScoreBarProps) {
+export default function ScoreBar({
+  score,
+  total,
+  mode,
+  roundSize,
+  streak,
+}: ScoreBarProps) {
   return (
     <section className="grid grid-cols-1 md:grid-cols-3 gap-px bg-surface-container-low rounded overflow-hidden">
       {/* Progress */}
@@ -51,7 +57,11 @@ export default function ScoreBar({ score, total, mode, roundSize, streak }: Scor
         </span>
         <div className="flex items-center gap-2">
           <span className="text-xl font-mono font-bold text-foreground">
-            {mode === "endless" ? (streak ?? 0).toString().padStart(2, "0") : total > 0 ? `${Math.round((score / total) * 100)}%` : "—"}
+            {mode === "endless"
+              ? (streak ?? 0).toString().padStart(2, "0")
+              : total > 0
+                ? `${Math.round((score / total) * 100)}%`
+                : "—"}
           </span>
           {mode === "endless" && streak !== undefined && streak > 0 && (
             <Flame className="h-4 w-4 text-destructive" />

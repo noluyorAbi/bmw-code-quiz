@@ -15,7 +15,7 @@ export function getLeaderboard(): LeaderboardEntry[] {
 }
 
 export function getLeaderboardByDifficulty(
-  difficulty: Difficulty
+  difficulty: Difficulty,
 ): LeaderboardEntry[] {
   return getLeaderboard()
     .filter((e) => e.difficulty === difficulty)
@@ -28,7 +28,7 @@ export function getLeaderboardByDifficulty(
 
 export function qualifiesForLeaderboard(
   score: number,
-  difficulty: Difficulty
+  difficulty: Difficulty,
 ): boolean {
   const entries = getLeaderboardByDifficulty(difficulty);
   if (entries.length < MAX_ENTRIES_PER_DIFFICULTY) return true;
@@ -40,7 +40,7 @@ export function addLeaderboardEntry(
   score: number,
   total: number,
   difficulty: Difficulty,
-  mode: GameMode
+  mode: GameMode,
 ): void {
   const entry: LeaderboardEntry = {
     name,

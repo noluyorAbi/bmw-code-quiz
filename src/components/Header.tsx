@@ -31,7 +31,7 @@ export default function Header() {
                 "font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.2em] py-1 transition-colors uppercase",
                 pathname === item.href
                   ? "text-foreground border-b-2 border-primary-container"
-                  : "text-muted-foreground hover:text-foreground"
+                  : "text-muted-foreground hover:text-foreground",
               )}
             >
               {item.label}

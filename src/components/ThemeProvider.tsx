@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 type Theme = "dark" | "light";
 
@@ -22,16 +22,26 @@ function applyTheme(theme: Theme) {
   root.classList.add(theme);
 }
 
+function getStoredTheme(): Theme {
+  if (typeof window === "undefined") return "dark";
+  return (localStorage.getItem("bmw-quiz-theme") as Theme) || "dark";
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("dark");
   const [mounted, setMounted] = useState(false);
+  const initialized = useRef(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem("bmw-quiz-theme") as Theme | null;
-    const initial = stored || "dark";
-    setTheme(initial);
+    if (initialized.current) return;
+    initialized.current = true;
+    const initial = getStoredTheme();
     applyTheme(initial);
-    setMounted(true);
+    // Use startTransition-style batching by deferring state
+    queueMicrotask(() => {
+      setTheme(initial);
+      setMounted(true);
+    });
   }, []);
 
   function toggleTheme() {
@@ -45,9 +55,5 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     return <div style={{ visibility: "hidden" }}>{children}</div>;
   }
 
-  return (
-    <ThemeContext value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext>
-  );
+  return <ThemeContext value={{ theme, toggleTheme }}>{children}</ThemeContext>;
 }

@@ -44,6 +44,7 @@ src/
 ### Task 1: Project Scaffolding
 
 **Files:**
+
 - Create: `package.json`, `tsconfig.json`, `next.config.ts`, `tailwind.config.ts`, `postcss.config.mjs`, `src/app/layout.tsx`, `src/app/page.tsx`, `src/app/globals.css`
 
 - [ ] **Step 1: Initialize Next.js project**
@@ -70,9 +71,9 @@ Replace `src/app/globals.css` with:
 @plugin "daisyui" {
   themes: light --default, dark,
     night --prefersdark {
-      primary: #0066B1;
-      primary-content: #ffffff;
-    }
+    primary: #0066b1;
+    primary-content: #ffffff;
+  }
 }
 ```
 
@@ -97,9 +98,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="night">
       <body className="min-h-screen bg-base-100">
-        <div className="container mx-auto px-4 py-8 max-w-4xl">
-          {children}
-        </div>
+        <div className="container mx-auto px-4 py-8 max-w-4xl">{children}</div>
       </body>
     </html>
   );
@@ -143,6 +142,7 @@ git commit -m "feat: scaffold Next.js project with Tailwind CSS and DaisyUI"
 ### Task 2: Types & Data — Part 1 (Types + Core Cars)
 
 **Files:**
+
 - Create: `src/lib/types.ts`
 - Create: `src/data/bmw-cars.ts` (start with core entries)
 
@@ -214,7 +214,8 @@ export const bmwCars: BmwCar[] = [
     years: "2004-2012",
     series: "1 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/BMW_E81_front_20081127.jpg/1280px-BMW_E81_front_20081127.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/BMW_E81_front_20081127.jpg/1280px-BMW_E81_front_20081127.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/BMW_1er_%28E81%29_Facelift_20090713_front.jpg/1280px-BMW_1er_%28E81%29_Facelift_20090713_front.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/BMW_E81_rear_20081127.jpg/1280px-BMW_E81_rear_20081127.jpg",
     },
@@ -227,7 +228,8 @@ export const bmwCars: BmwCar[] = [
     years: "2004-2011",
     series: "1 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/BMW_E87_front_20080719.jpg/1280px-BMW_E87_front_20080719.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/BMW_E87_front_20080719.jpg/1280px-BMW_E87_front_20080719.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/BMW_1er_%28E87%29_Facelift_20090713_front.jpg/1280px-BMW_1er_%28E87%29_Facelift_20090713_front.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/BMW_E87_rear_20080719.jpg/1280px-BMW_E87_rear_20080719.jpg",
     },
@@ -240,7 +242,8 @@ export const bmwCars: BmwCar[] = [
     years: "2011-2019",
     series: "1 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/BMW_F20_118i_Sportline_front_20130116.jpg/1280px-BMW_F20_118i_Sportline_front_20130116.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/BMW_F20_118i_Sportline_front_20130116.jpg/1280px-BMW_F20_118i_Sportline_front_20130116.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/2015_BMW_118i_Sport_1.6_Front.jpg/1280px-2015_BMW_118i_Sport_1.6_Front.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/BMW_F20_118i_Sportline_rear_20130116.jpg/1280px-BMW_F20_118i_Sportline_rear_20130116.jpg",
     },
@@ -253,7 +256,8 @@ export const bmwCars: BmwCar[] = [
     years: "2019-2024",
     series: "1 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/BMW_118i_%28F40%29_IMG_2874.jpg/1280px-BMW_118i_%28F40%29_IMG_2874.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/BMW_118i_%28F40%29_IMG_2874.jpg/1280px-BMW_118i_%28F40%29_IMG_2874.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/BMW_118i_%28F40%29_IMG_2877.jpg/1280px-BMW_118i_%28F40%29_IMG_2877.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/BMW_118i_%28F40%29_IMG_2878.jpg/1280px-BMW_118i_%28F40%29_IMG_2878.jpg",
     },
@@ -267,7 +271,8 @@ export const bmwCars: BmwCar[] = [
     years: "2014-2021",
     series: "2 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/2018_BMW_218i_SE_Coupe_1.5_Front.jpg/1280px-2018_BMW_218i_SE_Coupe_1.5_Front.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/2018_BMW_218i_SE_Coupe_1.5_Front.jpg/1280px-2018_BMW_218i_SE_Coupe_1.5_Front.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/2018_BMW_218i_SE_Coupe_1.5_Rear.jpg/1280px-2018_BMW_218i_SE_Coupe_1.5_Rear.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/2018_BMW_218i_SE_Coupe_1.5_Rear.jpg/1280px-2018_BMW_218i_SE_Coupe_1.5_Rear.jpg",
     },
@@ -280,7 +285,8 @@ export const bmwCars: BmwCar[] = [
     years: "2021-present",
     series: "2 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/BMW_220i_Coup%C3%A9_M_Sport_%28G42%29_1X7A6089.jpg/1280px-BMW_220i_Coup%C3%A9_M_Sport_%28G42%29_1X7A6089.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/BMW_220i_Coup%C3%A9_M_Sport_%28G42%29_1X7A6089.jpg/1280px-BMW_220i_Coup%C3%A9_M_Sport_%28G42%29_1X7A6089.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/BMW_220i_Coup%C3%A9_M_Sport_%28G42%29_1X7A6095.jpg/1280px-BMW_220i_Coup%C3%A9_M_Sport_%28G42%29_1X7A6095.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/BMW_220i_Coup%C3%A9_M_Sport_%28G42%29_1X7A6092.jpg/1280px-BMW_220i_Coup%C3%A9_M_Sport_%28G42%29_1X7A6092.jpg",
     },
@@ -294,7 +300,8 @@ export const bmwCars: BmwCar[] = [
     years: "1975-1983",
     series: "3 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/BMW_E21_front_20080331.jpg/1280px-BMW_E21_front_20080331.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/BMW_E21_front_20080331.jpg/1280px-BMW_E21_front_20080331.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/BMW_E21_323i_1.jpg/1280px-BMW_E21_323i_1.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/BMW_E21_rear_20080331.jpg/1280px-BMW_E21_rear_20080331.jpg",
     },
@@ -307,7 +314,8 @@ export const bmwCars: BmwCar[] = [
     years: "1982-1994",
     series: "3 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/BMW_E30_front_20080110.jpg/1280px-BMW_E30_front_20080110.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/BMW_E30_front_20080110.jpg/1280px-BMW_E30_front_20080110.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/BMW_E30_325i_Sedan.jpg/1280px-BMW_E30_325i_Sedan.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/BMW_E30_rear_20081218.jpg/1280px-BMW_E30_rear_20081218.jpg",
     },
@@ -320,7 +328,8 @@ export const bmwCars: BmwCar[] = [
     years: "1990-2000",
     series: "3 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/BMW_E36_front_20080822.jpg/1280px-BMW_E36_front_20080822.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/BMW_E36_front_20080822.jpg/1280px-BMW_E36_front_20080822.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/BMW_328i_%28E36%2C_Lim.%29_%E2%80%93_Frontansicht%2C_17._Juni_2012%2C_D%C3%BCsseldorf.jpg/1280px-BMW_328i_%28E36%2C_Lim.%29_%E2%80%93_Frontansicht%2C_17._Juni_2012%2C_D%C3%BCsseldorf.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/BMW_E36_rear_20080822.jpg/1280px-BMW_E36_rear_20080822.jpg",
     },
@@ -333,7 +342,8 @@ export const bmwCars: BmwCar[] = [
     years: "1997-2006",
     series: "3 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/BMW_E46_front_20080328.jpg/1280px-BMW_E46_front_20080328.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/BMW_E46_front_20080328.jpg/1280px-BMW_E46_front_20080328.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/BMW_E46_sedan.jpg/1280px-BMW_E46_sedan.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/BMW_E46_rear_20080328.jpg/1280px-BMW_E46_rear_20080328.jpg",
     },
@@ -346,7 +356,8 @@ export const bmwCars: BmwCar[] = [
     years: "2004-2013",
     series: "3 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/BMW_E90_front_20080325.jpg/1280px-BMW_E90_front_20080325.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/BMW_E90_front_20080325.jpg/1280px-BMW_E90_front_20080325.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/BMW_E90_320d_rear_20080417.jpg/1280px-BMW_E90_320d_rear_20080417.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/BMW_E90_320d_rear_20080417.jpg/1280px-BMW_E90_320d_rear_20080417.jpg",
     },
@@ -359,7 +370,8 @@ export const bmwCars: BmwCar[] = [
     years: "2011-2019",
     series: "3 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/2018_BMW_320d_xDrive_M_Sport_Shadow_Edition_Automatic_2.0_Front.jpg/1280px-2018_BMW_320d_xDrive_M_Sport_Shadow_Edition_Automatic_2.0_Front.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/2018_BMW_320d_xDrive_M_Sport_Shadow_Edition_Automatic_2.0_Front.jpg/1280px-2018_BMW_320d_xDrive_M_Sport_Shadow_Edition_Automatic_2.0_Front.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/BMW_3er_F30_Limousine_Luxury_Line_%28VII%29_%E2%80%93_Frontansicht%2C_24._Juni_2012%2C_D%C3%BCsseldorf.jpg/1280px-BMW_3er_F30_Limousine_Luxury_Line_%28VII%29_%E2%80%93_Frontansicht%2C_24._Juni_2012%2C_D%C3%BCsseldorf.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/2018_BMW_320d_xDrive_M_Sport_Shadow_Edition_Automatic_2.0_Rear.jpg/1280px-2018_BMW_320d_xDrive_M_Sport_Shadow_Edition_Automatic_2.0_Rear.jpg",
     },
@@ -372,7 +384,8 @@ export const bmwCars: BmwCar[] = [
     years: "2019-2025",
     series: "3 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/2019_BMW_320d_M_Sport_2.0_Front.jpg/1280px-2019_BMW_320d_M_Sport_2.0_Front.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/2019_BMW_320d_M_Sport_2.0_Front.jpg/1280px-2019_BMW_320d_M_Sport_2.0_Front.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/2019_BMW_320d_M_Sport_2.0_Rear.jpg/1280px-2019_BMW_320d_M_Sport_2.0_Rear.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/2019_BMW_320d_M_Sport_2.0_Rear.jpg/1280px-2019_BMW_320d_M_Sport_2.0_Rear.jpg",
     },
@@ -386,7 +399,8 @@ export const bmwCars: BmwCar[] = [
     years: "2013-2020",
     series: "4 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/BMW_4-Series_Coup%C3%A9_%28F32%29_registered_September_2013_1997cc.jpg/1280px-BMW_4-Series_Coup%C3%A9_%28F32%29_registered_September_2013_1997cc.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/BMW_4-Series_Coup%C3%A9_%28F32%29_registered_September_2013_1997cc.jpg/1280px-BMW_4-Series_Coup%C3%A9_%28F32%29_registered_September_2013_1997cc.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/BMW_4-Series_Coup%C3%A9_%28F32%29_registered_September_2013_1997cc.jpg/1280px-BMW_4-Series_Coup%C3%A9_%28F32%29_registered_September_2013_1997cc.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/BMW_4-Series_Coup%C3%A9_%28F32%29_registered_September_2013_1997cc.jpg/1280px-BMW_4-Series_Coup%C3%A9_%28F32%29_registered_September_2013_1997cc.jpg",
     },
@@ -399,7 +413,8 @@ export const bmwCars: BmwCar[] = [
     years: "2020-present",
     series: "4 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/BMW_420i_Coup%C3%A9_M_Sport_%28G22%29_1X7A5998.jpg/1280px-BMW_420i_Coup%C3%A9_M_Sport_%28G22%29_1X7A5998.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/BMW_420i_Coup%C3%A9_M_Sport_%28G22%29_1X7A5998.jpg/1280px-BMW_420i_Coup%C3%A9_M_Sport_%28G22%29_1X7A5998.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/BMW_420i_Coup%C3%A9_M_Sport_%28G22%29_1X7A5998.jpg/1280px-BMW_420i_Coup%C3%A9_M_Sport_%28G22%29_1X7A5998.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/BMW_420i_Coup%C3%A9_M_Sport_%28G22%29_1X7A5998.jpg/1280px-BMW_420i_Coup%C3%A9_M_Sport_%28G22%29_1X7A5998.jpg",
     },
@@ -413,7 +428,8 @@ export const bmwCars: BmwCar[] = [
     years: "1972-1981",
     series: "5 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/BMW_E12_front_20080417.jpg/1280px-BMW_E12_front_20080417.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/BMW_E12_front_20080417.jpg/1280px-BMW_E12_front_20080417.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/BMW_E12_front_20080417.jpg/1280px-BMW_E12_front_20080417.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/BMW_E12_front_20080417.jpg/1280px-BMW_E12_front_20080417.jpg",
     },
@@ -426,7 +442,8 @@ export const bmwCars: BmwCar[] = [
     years: "1981-1988",
     series: "5 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/BMW_E28_front_20080417.jpg/1280px-BMW_E28_front_20080417.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/BMW_E28_front_20080417.jpg/1280px-BMW_E28_front_20080417.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/BMW_E28_front_20080417.jpg/1280px-BMW_E28_front_20080417.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/BMW_E28_front_20080417.jpg/1280px-BMW_E28_front_20080417.jpg",
     },
@@ -439,7 +456,8 @@ export const bmwCars: BmwCar[] = [
     years: "1988-1996",
     series: "5 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/BMW_E34_front_20080524.jpg/1280px-BMW_E34_front_20080524.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/BMW_E34_front_20080524.jpg/1280px-BMW_E34_front_20080524.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/BMW_E34_front_20080524.jpg/1280px-BMW_E34_front_20080524.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/BMW_E34_front_20080524.jpg/1280px-BMW_E34_front_20080524.jpg",
     },
@@ -452,7 +470,8 @@ export const bmwCars: BmwCar[] = [
     years: "1995-2004",
     series: "5 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/BMW_E39_front_20080417.jpg/1280px-BMW_E39_front_20080417.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/BMW_E39_front_20080417.jpg/1280px-BMW_E39_front_20080417.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/BMW_E39_front_20080417.jpg/1280px-BMW_E39_front_20080417.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/BMW_E39_front_20080417.jpg/1280px-BMW_E39_front_20080417.jpg",
     },
@@ -465,7 +484,8 @@ export const bmwCars: BmwCar[] = [
     years: "2003-2010",
     series: "5 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/BMW_E60_front_20080417.jpg/1280px-BMW_E60_front_20080417.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/BMW_E60_front_20080417.jpg/1280px-BMW_E60_front_20080417.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/BMW_E60_front_20080417.jpg/1280px-BMW_E60_front_20080417.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/BMW_E60_front_20080417.jpg/1280px-BMW_E60_front_20080417.jpg",
     },
@@ -478,7 +498,8 @@ export const bmwCars: BmwCar[] = [
     years: "2010-2017",
     series: "5 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/BMW_F10_520d_Limousine_front_20100821.jpg/1280px-BMW_F10_520d_Limousine_front_20100821.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/BMW_F10_520d_Limousine_front_20100821.jpg/1280px-BMW_F10_520d_Limousine_front_20100821.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/BMW_F10_520d_Limousine_front_20100821.jpg/1280px-BMW_F10_520d_Limousine_front_20100821.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/BMW_F10_520d_Limousine_front_20100821.jpg/1280px-BMW_F10_520d_Limousine_front_20100821.jpg",
     },
@@ -491,7 +512,8 @@ export const bmwCars: BmwCar[] = [
     years: "2017-2023",
     series: "5 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/2018_BMW_520d_SE_Automatic_2.0_Front.jpg/1280px-2018_BMW_520d_SE_Automatic_2.0_Front.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/2018_BMW_520d_SE_Automatic_2.0_Front.jpg/1280px-2018_BMW_520d_SE_Automatic_2.0_Front.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/2018_BMW_520d_SE_Automatic_2.0_Front.jpg/1280px-2018_BMW_520d_SE_Automatic_2.0_Front.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/2018_BMW_520d_SE_Automatic_2.0_Front.jpg/1280px-2018_BMW_520d_SE_Automatic_2.0_Front.jpg",
     },
@@ -504,7 +526,8 @@ export const bmwCars: BmwCar[] = [
     years: "2023-present",
     series: "5 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/BMW_i5_eDrive40_%28G60%29_1X7A5886.jpg/1280px-BMW_i5_eDrive40_%28G60%29_1X7A5886.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/BMW_i5_eDrive40_%28G60%29_1X7A5886.jpg/1280px-BMW_i5_eDrive40_%28G60%29_1X7A5886.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/BMW_i5_eDrive40_%28G60%29_1X7A5886.jpg/1280px-BMW_i5_eDrive40_%28G60%29_1X7A5886.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/BMW_i5_eDrive40_%28G60%29_1X7A5886.jpg/1280px-BMW_i5_eDrive40_%28G60%29_1X7A5886.jpg",
     },
@@ -518,7 +541,8 @@ export const bmwCars: BmwCar[] = [
     years: "1976-1989",
     series: "6 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/BMW_E24_front_20080417.jpg/1280px-BMW_E24_front_20080417.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/BMW_E24_front_20080417.jpg/1280px-BMW_E24_front_20080417.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/BMW_E24_front_20080417.jpg/1280px-BMW_E24_front_20080417.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/BMW_E24_front_20080417.jpg/1280px-BMW_E24_front_20080417.jpg",
     },
@@ -531,7 +555,8 @@ export const bmwCars: BmwCar[] = [
     years: "2003-2010",
     series: "6 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/BMW_E63_front_20080417.jpg/1280px-BMW_E63_front_20080417.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/BMW_E63_front_20080417.jpg/1280px-BMW_E63_front_20080417.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/BMW_E63_front_20080417.jpg/1280px-BMW_E63_front_20080417.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/BMW_E63_front_20080417.jpg/1280px-BMW_E63_front_20080417.jpg",
     },
@@ -544,7 +569,8 @@ export const bmwCars: BmwCar[] = [
     years: "2011-2018",
     series: "6 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/BMW_650i_%28F13%29_%E2%80%93_Frontansicht%2C_17._Juni_2012%2C_D%C3%BCsseldorf.jpg/1280px-BMW_650i_%28F13%29_%E2%80%93_Frontansicht%2C_17._Juni_2012%2C_D%C3%BCsseldorf.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/BMW_650i_%28F13%29_%E2%80%93_Frontansicht%2C_17._Juni_2012%2C_D%C3%BCsseldorf.jpg/1280px-BMW_650i_%28F13%29_%E2%80%93_Frontansicht%2C_17._Juni_2012%2C_D%C3%BCsseldorf.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/BMW_650i_%28F13%29_%E2%80%93_Frontansicht%2C_17._Juni_2012%2C_D%C3%BCsseldorf.jpg/1280px-BMW_650i_%28F13%29_%E2%80%93_Frontansicht%2C_17._Juni_2012%2C_D%C3%BCsseldorf.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/BMW_650i_%28F13%29_%E2%80%93_Frontansicht%2C_17._Juni_2012%2C_D%C3%BCsseldorf.jpg/1280px-BMW_650i_%28F13%29_%E2%80%93_Frontansicht%2C_17._Juni_2012%2C_D%C3%BCsseldorf.jpg",
     },
@@ -558,7 +584,8 @@ export const bmwCars: BmwCar[] = [
     years: "1977-1987",
     series: "7 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/BMW_E23_front_20080127.jpg/1280px-BMW_E23_front_20080127.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/BMW_E23_front_20080127.jpg/1280px-BMW_E23_front_20080127.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/BMW_E23_front_20080127.jpg/1280px-BMW_E23_front_20080127.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/BMW_E23_front_20080127.jpg/1280px-BMW_E23_front_20080127.jpg",
     },
@@ -571,7 +598,8 @@ export const bmwCars: BmwCar[] = [
     years: "1986-1994",
     series: "7 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/BMW_E32_front_20080623.jpg/1280px-BMW_E32_front_20080623.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/BMW_E32_front_20080623.jpg/1280px-BMW_E32_front_20080623.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/BMW_E32_front_20080623.jpg/1280px-BMW_E32_front_20080623.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/BMW_E32_front_20080623.jpg/1280px-BMW_E32_front_20080623.jpg",
     },
@@ -584,7 +612,8 @@ export const bmwCars: BmwCar[] = [
     years: "1994-2001",
     series: "7 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/BMW_E38_front_20080108.jpg/1280px-BMW_E38_front_20080108.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/BMW_E38_front_20080108.jpg/1280px-BMW_E38_front_20080108.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/BMW_E38_front_20080108.jpg/1280px-BMW_E38_front_20080108.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/BMW_E38_front_20080108.jpg/1280px-BMW_E38_front_20080108.jpg",
     },
@@ -597,7 +626,8 @@ export const bmwCars: BmwCar[] = [
     years: "2001-2008",
     series: "7 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/BMW_E65_front_20080417.jpg/1280px-BMW_E65_front_20080417.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/BMW_E65_front_20080417.jpg/1280px-BMW_E65_front_20080417.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/BMW_E65_front_20080417.jpg/1280px-BMW_E65_front_20080417.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/BMW_E65_front_20080417.jpg/1280px-BMW_E65_front_20080417.jpg",
     },
@@ -610,7 +640,8 @@ export const bmwCars: BmwCar[] = [
     years: "2008-2015",
     series: "7 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/BMW_F01_front_20100403.jpg/1280px-BMW_F01_front_20100403.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/BMW_F01_front_20100403.jpg/1280px-BMW_F01_front_20100403.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/BMW_F01_front_20100403.jpg/1280px-BMW_F01_front_20100403.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/BMW_F01_front_20100403.jpg/1280px-BMW_F01_front_20100403.jpg",
     },
@@ -623,7 +654,8 @@ export const bmwCars: BmwCar[] = [
     years: "2015-2022",
     series: "7 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/2016_BMW_730d_Automatic_3.0.jpg/1280px-2016_BMW_730d_Automatic_3.0.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/2016_BMW_730d_Automatic_3.0.jpg/1280px-2016_BMW_730d_Automatic_3.0.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/2016_BMW_730d_Automatic_3.0.jpg/1280px-2016_BMW_730d_Automatic_3.0.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/2016_BMW_730d_Automatic_3.0.jpg/1280px-2016_BMW_730d_Automatic_3.0.jpg",
     },
@@ -636,7 +668,8 @@ export const bmwCars: BmwCar[] = [
     years: "2022-present",
     series: "7 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/BMW_i7_xDrive60_%28G70%29_1X7A6159.jpg/1280px-BMW_i7_xDrive60_%28G70%29_1X7A6159.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/BMW_i7_xDrive60_%28G70%29_1X7A6159.jpg/1280px-BMW_i7_xDrive60_%28G70%29_1X7A6159.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/BMW_i7_xDrive60_%28G70%29_1X7A6159.jpg/1280px-BMW_i7_xDrive60_%28G70%29_1X7A6159.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/BMW_i7_xDrive60_%28G70%29_1X7A6159.jpg/1280px-BMW_i7_xDrive60_%28G70%29_1X7A6159.jpg",
     },
@@ -650,7 +683,8 @@ export const bmwCars: BmwCar[] = [
     years: "1990-1999",
     series: "8 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/BMW_840Ci.jpg/1280px-BMW_840Ci.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/BMW_840Ci.jpg/1280px-BMW_840Ci.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/BMW_840Ci.jpg/1280px-BMW_840Ci.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/BMW_840Ci.jpg/1280px-BMW_840Ci.jpg",
     },
@@ -663,7 +697,8 @@ export const bmwCars: BmwCar[] = [
     years: "2018-present",
     series: "8 Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/BMW_M850i_xDrive_%28G15%29_IMG_2760.jpg/1280px-BMW_M850i_xDrive_%28G15%29_IMG_2760.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/BMW_M850i_xDrive_%28G15%29_IMG_2760.jpg/1280px-BMW_M850i_xDrive_%28G15%29_IMG_2760.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/BMW_M850i_xDrive_%28G15%29_IMG_2760.jpg/1280px-BMW_M850i_xDrive_%28G15%29_IMG_2760.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/BMW_M850i_xDrive_%28G15%29_IMG_2760.jpg/1280px-BMW_M850i_xDrive_%28G15%29_IMG_2760.jpg",
     },
@@ -677,7 +712,8 @@ export const bmwCars: BmwCar[] = [
     years: "2009-2015",
     series: "X1",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/BMW_X1_xDrive23d_front_20100410.jpg/1280px-BMW_X1_xDrive23d_front_20100410.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/BMW_X1_xDrive23d_front_20100410.jpg/1280px-BMW_X1_xDrive23d_front_20100410.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/BMW_X1_xDrive23d_front_20100410.jpg/1280px-BMW_X1_xDrive23d_front_20100410.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/BMW_X1_xDrive23d_front_20100410.jpg/1280px-BMW_X1_xDrive23d_front_20100410.jpg",
     },
@@ -690,7 +726,8 @@ export const bmwCars: BmwCar[] = [
     years: "2015-2022",
     series: "X1",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/2018_BMW_X1_sDrive18i_SE_1.5_Front.jpg/1280px-2018_BMW_X1_sDrive18i_SE_1.5_Front.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/2018_BMW_X1_sDrive18i_SE_1.5_Front.jpg/1280px-2018_BMW_X1_sDrive18i_SE_1.5_Front.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/2018_BMW_X1_sDrive18i_SE_1.5_Front.jpg/1280px-2018_BMW_X1_sDrive18i_SE_1.5_Front.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/2018_BMW_X1_sDrive18i_SE_1.5_Front.jpg/1280px-2018_BMW_X1_sDrive18i_SE_1.5_Front.jpg",
     },
@@ -703,7 +740,8 @@ export const bmwCars: BmwCar[] = [
     years: "2022-present",
     series: "X1",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/BMW_X1_xDrive23i_%28U11%29_1X7A5958.jpg/1280px-BMW_X1_xDrive23i_%28U11%29_1X7A5958.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/BMW_X1_xDrive23i_%28U11%29_1X7A5958.jpg/1280px-BMW_X1_xDrive23i_%28U11%29_1X7A5958.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/BMW_X1_xDrive23i_%28U11%29_1X7A5958.jpg/1280px-BMW_X1_xDrive23i_%28U11%29_1X7A5958.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/BMW_X1_xDrive23i_%28U11%29_1X7A5958.jpg/1280px-BMW_X1_xDrive23i_%28U11%29_1X7A5958.jpg",
     },
@@ -716,7 +754,8 @@ export const bmwCars: BmwCar[] = [
     years: "1999-2006",
     series: "X5",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/BMW_E53_front_20080524.jpg/1280px-BMW_E53_front_20080524.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/BMW_E53_front_20080524.jpg/1280px-BMW_E53_front_20080524.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/BMW_E53_front_20080524.jpg/1280px-BMW_E53_front_20080524.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/BMW_E53_front_20080524.jpg/1280px-BMW_E53_front_20080524.jpg",
     },
@@ -729,7 +768,8 @@ export const bmwCars: BmwCar[] = [
     years: "2006-2013",
     series: "X5",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/BMW_E70_X5_01.jpg/1280px-BMW_E70_X5_01.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/BMW_E70_X5_01.jpg/1280px-BMW_E70_X5_01.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/BMW_E70_X5_01.jpg/1280px-BMW_E70_X5_01.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/BMW_E70_X5_01.jpg/1280px-BMW_E70_X5_01.jpg",
     },
@@ -742,7 +782,8 @@ export const bmwCars: BmwCar[] = [
     years: "2013-2018",
     series: "X5",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/2018_BMW_X5_xDrive30d_M_Sport_Automatic_3.0_Front.jpg/1280px-2018_BMW_X5_xDrive30d_M_Sport_Automatic_3.0_Front.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/2018_BMW_X5_xDrive30d_M_Sport_Automatic_3.0_Front.jpg/1280px-2018_BMW_X5_xDrive30d_M_Sport_Automatic_3.0_Front.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/2018_BMW_X5_xDrive30d_M_Sport_Automatic_3.0_Front.jpg/1280px-2018_BMW_X5_xDrive30d_M_Sport_Automatic_3.0_Front.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/2018_BMW_X5_xDrive30d_M_Sport_Automatic_3.0_Front.jpg/1280px-2018_BMW_X5_xDrive30d_M_Sport_Automatic_3.0_Front.jpg",
     },
@@ -755,7 +796,8 @@ export const bmwCars: BmwCar[] = [
     years: "2018-present",
     series: "X5",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_BMW_X5_xDrive30d_M_Sport_Automatic_3.0.jpg/1280px-2019_BMW_X5_xDrive30d_M_Sport_Automatic_3.0.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_BMW_X5_xDrive30d_M_Sport_Automatic_3.0.jpg/1280px-2019_BMW_X5_xDrive30d_M_Sport_Automatic_3.0.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_BMW_X5_xDrive30d_M_Sport_Automatic_3.0.jpg/1280px-2019_BMW_X5_xDrive30d_M_Sport_Automatic_3.0.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_BMW_X5_xDrive30d_M_Sport_Automatic_3.0.jpg/1280px-2019_BMW_X5_xDrive30d_M_Sport_Automatic_3.0.jpg",
     },
@@ -768,7 +810,8 @@ export const bmwCars: BmwCar[] = [
     years: "2008-2014",
     series: "X6",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/BMW_X6_xDrive35d_%28E71%29_front_20100928.jpg/1280px-BMW_X6_xDrive35d_%28E71%29_front_20100928.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/BMW_X6_xDrive35d_%28E71%29_front_20100928.jpg/1280px-BMW_X6_xDrive35d_%28E71%29_front_20100928.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/BMW_X6_xDrive35d_%28E71%29_front_20100928.jpg/1280px-BMW_X6_xDrive35d_%28E71%29_front_20100928.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/BMW_X6_xDrive35d_%28E71%29_front_20100928.jpg/1280px-BMW_X6_xDrive35d_%28E71%29_front_20100928.jpg",
     },
@@ -781,7 +824,8 @@ export const bmwCars: BmwCar[] = [
     years: "2003-2010",
     series: "X3",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/BMW_E83_X3_20090514_front.jpg/1280px-BMW_E83_X3_20090514_front.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/BMW_E83_X3_20090514_front.jpg/1280px-BMW_E83_X3_20090514_front.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/BMW_E83_X3_20090514_front.jpg/1280px-BMW_E83_X3_20090514_front.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/BMW_E83_X3_20090514_front.jpg/1280px-BMW_E83_X3_20090514_front.jpg",
     },
@@ -794,7 +838,8 @@ export const bmwCars: BmwCar[] = [
     years: "2010-2017",
     series: "X3",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/BMW_X3_F25_xDrive20d_front_20110928.jpg/1280px-BMW_X3_F25_xDrive20d_front_20110928.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/BMW_X3_F25_xDrive20d_front_20110928.jpg/1280px-BMW_X3_F25_xDrive20d_front_20110928.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/BMW_X3_F25_xDrive20d_front_20110928.jpg/1280px-BMW_X3_F25_xDrive20d_front_20110928.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/BMW_X3_F25_xDrive20d_front_20110928.jpg/1280px-BMW_X3_F25_xDrive20d_front_20110928.jpg",
     },
@@ -807,7 +852,8 @@ export const bmwCars: BmwCar[] = [
     years: "2017-2024",
     series: "X3",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/2018_BMW_X3_xDrive20d_SE_Automatic_2.0_Front.jpg/1280px-2018_BMW_X3_xDrive20d_SE_Automatic_2.0_Front.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/2018_BMW_X3_xDrive20d_SE_Automatic_2.0_Front.jpg/1280px-2018_BMW_X3_xDrive20d_SE_Automatic_2.0_Front.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/2018_BMW_X3_xDrive20d_SE_Automatic_2.0_Front.jpg/1280px-2018_BMW_X3_xDrive20d_SE_Automatic_2.0_Front.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/2018_BMW_X3_xDrive20d_SE_Automatic_2.0_Front.jpg/1280px-2018_BMW_X3_xDrive20d_SE_Automatic_2.0_Front.jpg",
     },
@@ -821,7 +867,8 @@ export const bmwCars: BmwCar[] = [
     years: "1996-2002",
     series: "Z Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/BMW_Z3_1.9_Roadster_%28E36-7%29_front.jpg/1280px-BMW_Z3_1.9_Roadster_%28E36-7%29_front.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/BMW_Z3_1.9_Roadster_%28E36-7%29_front.jpg/1280px-BMW_Z3_1.9_Roadster_%28E36-7%29_front.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/BMW_Z3_1.9_Roadster_%28E36-7%29_front.jpg/1280px-BMW_Z3_1.9_Roadster_%28E36-7%29_front.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/BMW_Z3_1.9_Roadster_%28E36-7%29_front.jpg/1280px-BMW_Z3_1.9_Roadster_%28E36-7%29_front.jpg",
     },
@@ -834,7 +881,8 @@ export const bmwCars: BmwCar[] = [
     years: "2002-2008",
     series: "Z Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/BMW_Z4_%28E85%29_front_20080723.jpg/1280px-BMW_Z4_%28E85%29_front_20080723.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/BMW_Z4_%28E85%29_front_20080723.jpg/1280px-BMW_Z4_%28E85%29_front_20080723.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/BMW_Z4_%28E85%29_front_20080723.jpg/1280px-BMW_Z4_%28E85%29_front_20080723.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/BMW_Z4_%28E85%29_front_20080723.jpg/1280px-BMW_Z4_%28E85%29_front_20080723.jpg",
     },
@@ -847,7 +895,8 @@ export const bmwCars: BmwCar[] = [
     years: "2009-2016",
     series: "Z Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/BMW_Z4_sDrive23i_%28E89%29_front_20100411.jpg/1280px-BMW_Z4_sDrive23i_%28E89%29_front_20100411.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/BMW_Z4_sDrive23i_%28E89%29_front_20100411.jpg/1280px-BMW_Z4_sDrive23i_%28E89%29_front_20100411.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/BMW_Z4_sDrive23i_%28E89%29_front_20100411.jpg/1280px-BMW_Z4_sDrive23i_%28E89%29_front_20100411.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/BMW_Z4_sDrive23i_%28E89%29_front_20100411.jpg/1280px-BMW_Z4_sDrive23i_%28E89%29_front_20100411.jpg",
     },
@@ -860,7 +909,8 @@ export const bmwCars: BmwCar[] = [
     years: "2018-present",
     series: "Z Series",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/BMW_Z4_M40i_%28G29%29_IMG_2881.jpg/1280px-BMW_Z4_M40i_%28G29%29_IMG_2881.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/BMW_Z4_M40i_%28G29%29_IMG_2881.jpg/1280px-BMW_Z4_M40i_%28G29%29_IMG_2881.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/BMW_Z4_M40i_%28G29%29_IMG_2881.jpg/1280px-BMW_Z4_M40i_%28G29%29_IMG_2881.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/BMW_Z4_M40i_%28G29%29_IMG_2881.jpg/1280px-BMW_Z4_M40i_%28G29%29_IMG_2881.jpg",
     },
@@ -874,7 +924,8 @@ export const bmwCars: BmwCar[] = [
     years: "2019-present",
     series: "X7",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/2019_BMW_X7_xDrive30d_M_Sport_3.0.jpg/1280px-2019_BMW_X7_xDrive30d_M_Sport_3.0.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/2019_BMW_X7_xDrive30d_M_Sport_3.0.jpg/1280px-2019_BMW_X7_xDrive30d_M_Sport_3.0.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/2019_BMW_X7_xDrive30d_M_Sport_3.0.jpg/1280px-2019_BMW_X7_xDrive30d_M_Sport_3.0.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/2019_BMW_X7_xDrive30d_M_Sport_3.0.jpg/1280px-2019_BMW_X7_xDrive30d_M_Sport_3.0.jpg",
     },
@@ -888,7 +939,8 @@ export const bmwCars: BmwCar[] = [
     years: "2014-2018",
     series: "X4",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/BMW_X4_xDrive35i_%28F26%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg/1280px-BMW_X4_xDrive35i_%28F26%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/BMW_X4_xDrive35i_%28F26%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg/1280px-BMW_X4_xDrive35i_%28F26%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/BMW_X4_xDrive35i_%28F26%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg/1280px-BMW_X4_xDrive35i_%28F26%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/BMW_X4_xDrive35i_%28F26%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg/1280px-BMW_X4_xDrive35i_%28F26%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg",
     },
@@ -901,7 +953,8 @@ export const bmwCars: BmwCar[] = [
     years: "2018-2025",
     series: "X4",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/2019_BMW_X4_xDrive20d_M_Sport_Automatic_2.0.jpg/1280px-2019_BMW_X4_xDrive20d_M_Sport_Automatic_2.0.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/2019_BMW_X4_xDrive20d_M_Sport_Automatic_2.0.jpg/1280px-2019_BMW_X4_xDrive20d_M_Sport_Automatic_2.0.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/2019_BMW_X4_xDrive20d_M_Sport_Automatic_2.0.jpg/1280px-2019_BMW_X4_xDrive20d_M_Sport_Automatic_2.0.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/2019_BMW_X4_xDrive20d_M_Sport_Automatic_2.0.jpg/1280px-2019_BMW_X4_xDrive20d_M_Sport_Automatic_2.0.jpg",
     },
@@ -915,7 +968,8 @@ export const bmwCars: BmwCar[] = [
     years: "2018-2023",
     series: "X2",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/2018_BMW_X2_xDrive20d_M_Sport_X_Automatic_2.0_Front.jpg/1280px-2018_BMW_X2_xDrive20d_M_Sport_X_Automatic_2.0_Front.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/2018_BMW_X2_xDrive20d_M_Sport_X_Automatic_2.0_Front.jpg/1280px-2018_BMW_X2_xDrive20d_M_Sport_X_Automatic_2.0_Front.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/2018_BMW_X2_xDrive20d_M_Sport_X_Automatic_2.0_Front.jpg/1280px-2018_BMW_X2_xDrive20d_M_Sport_X_Automatic_2.0_Front.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/2018_BMW_X2_xDrive20d_M_Sport_X_Automatic_2.0_Front.jpg/1280px-2018_BMW_X2_xDrive20d_M_Sport_X_Automatic_2.0_Front.jpg",
     },
@@ -928,7 +982,8 @@ export const bmwCars: BmwCar[] = [
     years: "2014-2019",
     series: "X6",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/BMW_X6_xDrive50i_%28F16%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg/1280px-BMW_X6_xDrive50i_%28F16%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/BMW_X6_xDrive50i_%28F16%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg/1280px-BMW_X6_xDrive50i_%28F16%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/BMW_X6_xDrive50i_%28F16%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg/1280px-BMW_X6_xDrive50i_%28F16%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/BMW_X6_xDrive50i_%28F16%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg/1280px-BMW_X6_xDrive50i_%28F16%29_%E2%80%93_Frontansicht%2C_11._August_2014%2C_D%C3%BCsseldorf.jpg",
     },
@@ -941,7 +996,8 @@ export const bmwCars: BmwCar[] = [
     years: "2019-present",
     series: "X6",
     images: {
-      front: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/BMW_X6_xDrive30d_M_Sport_%28G06%29_%E2%80%93_f_30092019.jpg/1280px-BMW_X6_xDrive30d_M_Sport_%28G06%29_%E2%80%93_f_30092019.jpg",
+      front:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/BMW_X6_xDrive30d_M_Sport_%28G06%29_%E2%80%93_f_30092019.jpg/1280px-BMW_X6_xDrive30d_M_Sport_%28G06%29_%E2%80%93_f_30092019.jpg",
       side: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/BMW_X6_xDrive30d_M_Sport_%28G06%29_%E2%80%93_f_30092019.jpg/1280px-BMW_X6_xDrive30d_M_Sport_%28G06%29_%E2%80%93_f_30092019.jpg",
       rear: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/BMW_X6_xDrive30d_M_Sport_%28G06%29_%E2%80%93_f_30092019.jpg/1280px-BMW_X6_xDrive30d_M_Sport_%28G06%29_%E2%80%93_f_30092019.jpg",
     },
@@ -949,14 +1005,21 @@ export const bmwCars: BmwCar[] = [
 ];
 
 // Helper to get cars by difficulty (inclusive)
-export function getCarsByDifficulty(difficulty: "core" | "comprehensive" | "exhaustive"): BmwCar[] {
-  if (difficulty === "core") return bmwCars.filter((c) => c.difficulty === "core");
-  if (difficulty === "comprehensive") return bmwCars.filter((c) => c.difficulty === "core" || c.difficulty === "comprehensive");
+export function getCarsByDifficulty(
+  difficulty: "core" | "comprehensive" | "exhaustive",
+): BmwCar[] {
+  if (difficulty === "core")
+    return bmwCars.filter((c) => c.difficulty === "core");
+  if (difficulty === "comprehensive")
+    return bmwCars.filter(
+      (c) => c.difficulty === "core" || c.difficulty === "comprehensive",
+    );
   return bmwCars;
 }
 ```
 
 **NOTE TO IMPLEMENTER:** The data file shown above contains ~50 core entries as a starting point. The full file must contain ~200 entries total. During implementation, use web search to find Wikipedia Commons image URLs for each BMW model and expand the file to include:
+
 - All remaining core models (remaining X-series generations, M-car variants)
 - Comprehensive tier: i3 (I01), i4 (G26), i5 (G60), i7 (G70), iX (I20), iX1 (U11), Z1 (E30), Z8 (E52), BMW 2002, E9, 2 Series Active Tourer (F45, U06), 2 Series Gran Tourer (F46), 2 Series Gran Coupe (F44)
 - Exhaustive tier: All LCI variants, body style sub-variants (E91 Touring, E92 Coupe, E93 Convertible, F31 Touring, F34 GT, F36 Gran Coupe, etc.)
@@ -975,6 +1038,7 @@ git commit -m "feat: add BMW car types and core data entries with image URLs"
 ### Task 3: Quiz Engine
 
 **Files:**
+
 - Create: `src/lib/quiz-engine.ts`
 
 - [ ] **Step 1: Create the quiz engine utility**
@@ -1013,7 +1077,7 @@ export function initQuiz(difficulty: Difficulty): QuizState {
 
 export function generateOptions(correctCar: BmwCar, pool: BmwCar[]): string[] {
   const wrongCars = pool.filter(
-    (c) => c.internalCode !== correctCar.internalCode
+    (c) => c.internalCode !== correctCar.internalCode,
   );
   const shuffledWrong = shuffle(wrongCars);
   // Pick 3 unique wrong codes
@@ -1032,7 +1096,7 @@ export function generateOptions(correctCar: BmwCar, pool: BmwCar[]): string[] {
 export function submitAnswer(
   state: QuizState,
   answer: string,
-  pool: BmwCar[]
+  pool: BmwCar[],
 ): QuizState {
   const currentCar = state.cars[state.currentIndex];
   const isCorrect = answer === currentCar.internalCode;
@@ -1042,10 +1106,7 @@ export function submitAnswer(
     score: isCorrect ? state.score + 1 : state.score,
     streak: newStreak,
     bestStreak: Math.max(state.bestStreak, newStreak),
-    answers: [
-      ...state.answers,
-      { carId: currentCar.id, correct: isCorrect },
-    ],
+    answers: [...state.answers, { carId: currentCar.id, correct: isCorrect }],
     answered: true,
     selectedAnswer: answer,
   };
@@ -1088,6 +1149,7 @@ git commit -m "feat: add quiz engine with question generation and answer logic"
 ### Task 4: Leaderboard Logic
 
 **Files:**
+
 - Create: `src/lib/leaderboard.ts`
 
 - [ ] **Step 1: Create leaderboard utility**
@@ -1112,7 +1174,7 @@ export function getLeaderboard(): LeaderboardEntry[] {
 }
 
 export function getLeaderboardByDifficulty(
-  difficulty: Difficulty
+  difficulty: Difficulty,
 ): LeaderboardEntry[] {
   return getLeaderboard()
     .filter((e) => e.difficulty === difficulty)
@@ -1128,7 +1190,7 @@ export function getLeaderboardByDifficulty(
 
 export function qualifiesForLeaderboard(
   score: number,
-  difficulty: Difficulty
+  difficulty: Difficulty,
 ): boolean {
   const entries = getLeaderboardByDifficulty(difficulty);
   if (entries.length < MAX_ENTRIES_PER_DIFFICULTY) return true;
@@ -1140,7 +1202,7 @@ export function addLeaderboardEntry(
   score: number,
   total: number,
   difficulty: Difficulty,
-  mode: GameMode
+  mode: GameMode,
 ): void {
   const entry: LeaderboardEntry = {
     name,
@@ -1185,6 +1247,7 @@ git commit -m "feat: add leaderboard localStorage logic with top-10 per difficul
 ### Task 5: Shared Components
 
 **Files:**
+
 - Create: `src/components/ImageCarousel.tsx`
 - Create: `src/components/AnswerGrid.tsx`
 - Create: `src/components/ScoreBar.tsx`
@@ -1334,9 +1397,7 @@ export default function ScoreBar({
           Score: {score}/{total}
         </div>
         {mode === "endless" && streak !== undefined && streak > 0 && (
-          <div className="badge badge-secondary badge-lg">
-            Streak: {streak}
-          </div>
+          <div className="badge badge-secondary badge-lg">Streak: {streak}</div>
         )}
       </div>
       {mode === "rounds" && roundSize && (
@@ -1374,27 +1435,30 @@ interface DifficultySelectorProps {
   onChange: (difficulty: Difficulty) => void;
 }
 
-const difficulties: { value: Difficulty; label: string; description: string }[] =
-  [
-    { value: "core", label: "Core", description: "Well-known models" },
-    {
-      value: "comprehensive",
-      label: "Comprehensive",
-      description: "Core + classics & rarities",
-    },
-    {
-      value: "exhaustive",
-      label: "Exhaustive",
-      description: "Every variant & facelift",
-    },
-  ];
+const difficulties: {
+  value: Difficulty;
+  label: string;
+  description: string;
+}[] = [
+  { value: "core", label: "Core", description: "Well-known models" },
+  {
+    value: "comprehensive",
+    label: "Comprehensive",
+    description: "Core + classics & rarities",
+  },
+  {
+    value: "exhaustive",
+    label: "Exhaustive",
+    description: "Every variant & facelift",
+  },
+];
 
 function countCars(difficulty: Difficulty): number {
   if (difficulty === "core")
     return bmwCars.filter((c) => c.difficulty === "core").length;
   if (difficulty === "comprehensive")
     return bmwCars.filter(
-      (c) => c.difficulty === "core" || c.difficulty === "comprehensive"
+      (c) => c.difficulty === "core" || c.difficulty === "comprehensive",
     ).length;
   return bmwCars.length;
 }
@@ -1509,6 +1573,7 @@ git commit -m "feat: add shared UI components (carousel, answers, score, selecto
 ### Task 6: Home Page
 
 **Files:**
+
 - Modify: `src/app/page.tsx`
 
 - [ ] **Step 1: Implement the home page**
@@ -1542,9 +1607,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center gap-8">
       <div className="text-center">
-        <h1 className="text-5xl font-bold text-primary mb-2">
-          BMW Code Quiz
-        </h1>
+        <h1 className="text-5xl font-bold text-primary mb-2">BMW Code Quiz</h1>
         <p className="text-base-content/70 text-lg">
           How well do you know BMW internal chassis codes?
         </p>
@@ -1596,6 +1659,7 @@ git commit -m "feat: implement home page with difficulty and game mode selection
 ### Task 7: Quiz Page
 
 **Files:**
+
 - Create: `src/app/quiz/page.tsx`
 
 - [ ] **Step 1: Implement the quiz page**
@@ -1625,7 +1689,9 @@ function QuizContent() {
 
   const difficulty = (searchParams.get("difficulty") || "core") as Difficulty;
   const mode = (searchParams.get("mode") || "rounds") as GameMode;
-  const roundSize = parseInt(searchParams.get("roundSize") || "10") as RoundSize;
+  const roundSize = parseInt(
+    searchParams.get("roundSize") || "10",
+  ) as RoundSize;
 
   const [quizState, setQuizState] = useState<QuizState | null>(null);
   const pool = getCarsByDifficulty(difficulty);
@@ -1660,7 +1726,7 @@ function QuizContent() {
         setQuizState(nextQuestion(newState, pool));
       }, 1500);
     },
-    [quizState, pool, mode, roundSize, difficulty, router]
+    [quizState, pool, mode, roundSize, difficulty, router],
   );
 
   function handleQuit() {
@@ -1676,7 +1742,11 @@ function QuizContent() {
   }
 
   if (!quizState) {
-    return <div className="flex justify-center"><span className="loading loading-spinner loading-lg" /></div>;
+    return (
+      <div className="flex justify-center">
+        <span className="loading loading-spinner loading-lg" />
+      </div>
+    );
   }
 
   const currentCar = getCurrentCar(quizState);
@@ -1691,12 +1761,13 @@ function QuizContent() {
         streak={quizState.streak}
       />
 
-      <ImageCarousel images={currentCar.images} altText={currentCar.officialName} />
+      <ImageCarousel
+        images={currentCar.images}
+        altText={currentCar.officialName}
+      />
 
       <div className="text-center">
-        <h2 className="text-2xl font-bold">
-          {currentCar.officialName}
-        </h2>
+        <h2 className="text-2xl font-bold">{currentCar.officialName}</h2>
         <p className="text-base-content/60">{currentCar.years}</p>
       </div>
 
@@ -1719,7 +1790,13 @@ function QuizContent() {
 
 export default function QuizPage() {
   return (
-    <Suspense fallback={<div className="flex justify-center"><span className="loading loading-spinner loading-lg" /></div>}>
+    <Suspense
+      fallback={
+        <div className="flex justify-center">
+          <span className="loading loading-spinner loading-lg" />
+        </div>
+      }
+    >
       <QuizContent />
     </Suspense>
   );
@@ -1746,6 +1823,7 @@ git commit -m "feat: implement quiz page with image carousel, answers, and scori
 ### Task 8: Results Page
 
 **Files:**
+
 - Create: `src/app/results/page.tsx`
 
 - [ ] **Step 1: Implement the results page**
@@ -1854,10 +1932,7 @@ function ResultsContent() {
       )}
 
       <div className="flex gap-3">
-        <button
-          className="btn btn-primary"
-          onClick={() => router.push("/")}
-        >
+        <button className="btn btn-primary" onClick={() => router.push("/")}>
           Play Again
         </button>
         <button
@@ -1873,7 +1948,13 @@ function ResultsContent() {
 
 export default function ResultsPage() {
   return (
-    <Suspense fallback={<div className="flex justify-center"><span className="loading loading-spinner loading-lg" /></div>}>
+    <Suspense
+      fallback={
+        <div className="flex justify-center">
+          <span className="loading loading-spinner loading-lg" />
+        </div>
+      }
+    >
       <ResultsContent />
     </Suspense>
   );
@@ -1892,6 +1973,7 @@ git commit -m "feat: implement results page with score summary and leaderboard e
 ### Task 9: Leaderboard Page
 
 **Files:**
+
 - Create: `src/app/leaderboard/page.tsx`
 - Create: `src/components/LeaderboardTable.tsx`
 
@@ -1971,7 +2053,9 @@ const tabs: { value: Difficulty; label: string }[] = [
 export default function LeaderboardPage() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<Difficulty>("core");
-  const [entries, setEntries] = useState<ReturnType<typeof getLeaderboardByDifficulty>>([]);
+  const [entries, setEntries] = useState<
+    ReturnType<typeof getLeaderboardByDifficulty>
+  >([]);
 
   useEffect(() => {
     setEntries(getLeaderboardByDifficulty(activeTab));
@@ -2018,6 +2102,7 @@ git commit -m "feat: implement leaderboard page with difficulty tabs and score t
 ### Task 10: Expand BMW Data — Comprehensive Tier
 
 **Files:**
+
 - Modify: `src/data/bmw-cars.ts`
 
 - [ ] **Step 1: Add comprehensive difficulty entries**
@@ -2092,6 +2177,7 @@ git commit -m "feat: add comprehensive tier BMW models (i-series, Z-cars, M-cars
 ### Task 11: Expand BMW Data — Exhaustive Tier
 
 **Files:**
+
 - Modify: `src/data/bmw-cars.ts`
 
 - [ ] **Step 1: Add exhaustive difficulty entries**
@@ -2099,35 +2185,44 @@ git commit -m "feat: add comprehensive tier BMW models (i-series, Z-cars, M-cars
 Add body style sub-variants and LCI facelifts with `difficulty: "exhaustive"`. These include:
 
 **3 Series variants:**
+
 - E91 (Touring), E92 (Coupe), E93 (Convertible)
 - F31 (Touring), F34 (GT), F35 (Long Wheelbase)
 - G21 (Touring), G28 (Gran Sedan)
 
 **4 Series variants:**
+
 - F33 (Convertible), F36 (Gran Coupe)
 - G23 (Convertible), G26 (Gran Coupe)
 
 **5 Series variants:**
+
 - E61 (Touring), F11 (Touring), F07 (GT)
 - G31 (Touring)
 
 **6 Series variants:**
+
 - E64 (Convertible), F06 (Gran Coupe), F12 (Convertible)
 
 **7 Series variants:**
+
 - E66 (Long Wheelbase), F02 (Long Wheelbase), G12 (Long Wheelbase)
 
 **X Series variants:**
+
 - X3 M (F97), X4 M (F98)
 - X2 (U10) — 2024-present
 
 **1 Series variants:**
+
 - F21 (3-door), E88 (Convertible), E82 (Coupe)
 
 **2 Series variants:**
+
 - F23 (Convertible)
 
 **LCI facelifts** (add as separate entries with "LCI" in the name):
+
 - E90 LCI, E60 LCI, F10 LCI, F30 LCI, G30 LCI, G20 LCI, etc.
 
 **NOTE TO IMPLEMENTER:** Each entry needs real Wikipedia Commons URLs. Search for each model. Expect ~80+ entries for this tier. Use the same entry format as existing data.
@@ -2148,6 +2243,7 @@ git commit -m "feat: add exhaustive tier with body variants and LCI facelifts"
 ### Task 12: Next.js Image Configuration
 
 **Files:**
+
 - Modify: `next.config.ts`
 
 - [ ] **Step 1: Allow Wikipedia Commons images**

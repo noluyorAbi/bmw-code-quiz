@@ -3,7 +3,10 @@
 import { useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Difficulty, GameMode } from "@/lib/types";
-import { qualifiesForLeaderboard, addLeaderboardEntry } from "@/lib/leaderboard";
+import {
+  qualifiesForLeaderboard,
+  addLeaderboardEntry,
+} from "@/lib/leaderboard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -60,10 +63,16 @@ function ResultsContent() {
               <span className="text-[10px] font-mono text-muted-foreground tracking-[0.2em] uppercase">
                 Efficiency
               </span>
-              <div className={cn(
-                "text-4xl font-[family-name:var(--font-display)] font-black italic mt-4",
-                percentage >= 70 ? "text-primary" : percentage >= 50 ? "text-secondary" : "text-destructive"
-              )}>
+              <div
+                className={cn(
+                  "text-4xl font-[family-name:var(--font-display)] font-black italic mt-4",
+                  percentage >= 70
+                    ? "text-primary"
+                    : percentage >= 50
+                      ? "text-secondary"
+                      : "text-destructive",
+                )}
+              >
                 {percentage}%
               </div>
             </div>
@@ -91,10 +100,15 @@ function ResultsContent() {
                   <span className="text-2xl font-bold font-[family-name:var(--font-display)] font-black italic text-foreground">
                     {(percentage / 20).toFixed(1)}
                   </span>
-                  <span className="text-xs text-muted-foreground font-mono">/ 5.0</span>
+                  <span className="text-xs text-muted-foreground font-mono">
+                    / 5.0
+                  </span>
                 </div>
                 <div className="w-32 h-1 bg-surface-container-highest rounded-full overflow-hidden">
-                  <div className="h-full bg-primary-container" style={{ width: `${percentage}%` }} />
+                  <div
+                    className="h-full bg-primary-container"
+                    style={{ width: `${percentage}%` }}
+                  />
                 </div>
               </div>
               <div className="flex flex-col gap-2">
@@ -131,7 +145,10 @@ function ResultsContent() {
                   maxLength={20}
                   className="flex-1 h-12 font-mono bg-background/50 border-outline-variant rounded"
                 />
-                <Button onClick={handleSave} className="h-12 px-6 bg-primary-container text-white rounded gap-2">
+                <Button
+                  onClick={handleSave}
+                  className="h-12 px-6 bg-primary-container text-white rounded gap-2"
+                >
                   <Save className="h-4 w-4" />
                   SAVE
                 </Button>
@@ -170,11 +187,13 @@ function ResultsContent() {
 
 export default function ResultsPage() {
   return (
-    <Suspense fallback={
-      <div className="flex items-center justify-center min-h-[60vh]">
-        <div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent" />
-      </div>
-    }>
+    <Suspense
+      fallback={
+        <div className="flex items-center justify-center min-h-[60vh]">
+          <div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent" />
+        </div>
+      }
+    >
       <ResultsContent />
     </Suspense>
   );

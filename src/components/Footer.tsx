@@ -14,11 +14,12 @@ export default function Footer() {
               BMW Code Quiz
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              An interactive quiz to test your knowledge of BMW&apos;s internal chassis codes.
-              157 vehicles across every generation.
+              An interactive quiz to test your knowledge of BMW&apos;s internal
+              chassis codes. 157 vehicles across every generation.
             </p>
             <p className="text-xs text-muted-foreground/70">
-              Fan Project &middot; Not affiliated with BMW AG &middot; Built with Next.js &amp; Tailwind CSS
+              Fan Project &middot; Not affiliated with BMW AG &middot; Built
+              with Next.js &amp; Tailwind CSS
             </p>
             <p className="text-sm text-muted-foreground pt-2">
               Questions or feedback?{" "}
@@ -40,7 +41,8 @@ export default function Footer() {
         {/* Bottom copyright */}
         <div className="border-t border-border pt-6 text-center">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} BMW Code Quiz. All rights reserved. Not affiliated with BMW AG.
+            &copy; {new Date().getFullYear()} BMW Code Quiz. All rights
+            reserved. Not affiliated with BMW AG.
           </p>
         </div>
       </div>

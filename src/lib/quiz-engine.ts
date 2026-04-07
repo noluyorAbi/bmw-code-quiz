@@ -29,7 +29,7 @@ export function initQuiz(difficulty: Difficulty): QuizState {
 
 export function generateOptions(correctCar: BmwCar, pool: BmwCar[]): string[] {
   const wrongCars = pool.filter(
-    (c) => c.internalCode !== correctCar.internalCode
+    (c) => c.internalCode !== correctCar.internalCode,
   );
   const shuffledWrong = shuffle(wrongCars);
   const wrongCodes: string[] = [];
@@ -44,11 +44,8 @@ export function generateOptions(correctCar: BmwCar, pool: BmwCar[]): string[] {
   return shuffle([correctCar.internalCode, ...wrongCodes]);
 }
 
-export function submitAnswer(
-  state: QuizState,
-  answer: string,
-  pool: BmwCar[]
-): QuizState {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function submitAnswer(state: QuizState, answer: string, pool: BmwCar[]): QuizState {
   const currentCar = state.cars[state.currentIndex];
   const isCorrect = answer === currentCar.internalCode;
   const newStreak = isCorrect ? state.streak + 1 : 0;
@@ -57,10 +54,7 @@ export function submitAnswer(
     score: isCorrect ? state.score + 1 : state.score,
     streak: newStreak,
     bestStreak: Math.max(state.bestStreak, newStreak),
-    answers: [
-      ...state.answers,
-      { carId: currentCar.id, correct: isCorrect },
-    ],
+    answers: [...state.answers, { carId: currentCar.id, correct: isCorrect }],
     answered: true,
     selectedAnswer: answer,
   };

@@ -16,12 +16,19 @@ const difficulties: { value: Difficulty; label: string }[] = [
 ];
 
 function countCars(difficulty: Difficulty): number {
-  if (difficulty === "core") return bmwCars.filter((c) => c.difficulty === "core").length;
-  if (difficulty === "comprehensive") return bmwCars.filter((c) => c.difficulty === "core" || c.difficulty === "comprehensive").length;
+  if (difficulty === "core")
+    return bmwCars.filter((c) => c.difficulty === "core").length;
+  if (difficulty === "comprehensive")
+    return bmwCars.filter(
+      (c) => c.difficulty === "core" || c.difficulty === "comprehensive",
+    ).length;
   return bmwCars.length;
 }
 
-export default function DifficultySelector({ value, onChange }: DifficultySelectorProps) {
+export default function DifficultySelector({
+  value,
+  onChange,
+}: DifficultySelectorProps) {
   return (
     <div className="space-y-3">
       <label className="font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.2em] text-muted-foreground uppercase">
@@ -35,7 +42,7 @@ export default function DifficultySelector({ value, onChange }: DifficultySelect
               "py-3 px-2 text-[10px] font-[family-name:var(--font-label-font)] font-bold tracking-[0.15em] rounded transition-all uppercase",
               value === d.value
                 ? "bg-primary text-primary-foreground"
-                : "border border-outline-variant text-foreground hover:bg-foreground/5"
+                : "border border-outline-variant text-foreground hover:bg-foreground/5",
             )}
             onClick={() => onChange(d.value)}
           >

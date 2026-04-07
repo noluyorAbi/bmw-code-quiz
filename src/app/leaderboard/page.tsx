@@ -17,7 +17,9 @@ const tabs: { value: Difficulty; label: string }[] = [
 export default function LeaderboardPage() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<Difficulty>("core");
-  const [entries, setEntries] = useState<ReturnType<typeof getLeaderboardByDifficulty>>([]);
+  const [entries, setEntries] = useState<
+    ReturnType<typeof getLeaderboardByDifficulty>
+  >([]);
 
   useEffect(() => {
     setEntries(getLeaderboardByDifficulty(activeTab));
@@ -44,7 +46,7 @@ export default function LeaderboardPage() {
               "font-[family-name:var(--font-label-font)] text-sm tracking-[0.15em] px-6 py-2 transition-all uppercase",
               activeTab === tab.value
                 ? "bg-primary-container text-white rounded"
-                : "text-on-surface-variant hover:bg-foreground/5"
+                : "text-on-surface-variant hover:bg-foreground/5",
             )}
             onClick={() => setActiveTab(tab.value)}
           >

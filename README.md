@@ -50,6 +50,7 @@ The quiz shows you a BMW model with photos and its official name, and you pick t
 <td width="50%">
 
 ### Quiz Engine
+
 - **157 vehicles** across all BMW series, M cars, X models, Z roadsters, i electric vehicles, and classics
 - **Multi-angle images** — front, side, and rear views sourced from Wikimedia Commons
 - **Smart shuffling** — randomized question order with no repeats until the full pool is exhausted
@@ -60,6 +61,7 @@ The quiz shows you a BMW model with photos and its official name, and you pick t
 <td width="50%">
 
 ### Experience
+
 - **Three difficulty tiers** — Core (57 cars), Comprehensive (99 cars), Exhaustive (157 cars)
 - **Two game modes** — fixed rounds (10 or 20 questions) or endless mode with streak tracking
 - **Dark & light themes** — toggle between themes with automatic persistence
@@ -98,11 +100,11 @@ The quiz shows you a BMW model with photos and its official name, and you pick t
 
 ## Difficulty Levels
 
-| Level | Cars | Description |
-|:------|:----:|:------------|
-| **Core** | 57 | The essentials — well-known production models across all major series (1–8, X1–X7, Z3/Z4) |
-| **Comprehensive** | 99 | Core + classics (2002, Isetta, Z1, Z8, E9), all M cars (M2–M8, X5 M, X6 M), i Series, body variants (Active Tourer, Gran Coupé), and the new X3 G45 |
-| **Exhaustive** | 157 | Everything — adds Touring/Coupé/Convertible/Compact sub-variants, Gran Turismo models, LCI facelifts for major series, long-wheelbase 7 Series, and X Series M variants |
+| Level             | Cars | Description                                                                                                                                                             |
+| :---------------- | :--: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Core**          |  57  | The essentials — well-known production models across all major series (1–8, X1–X7, Z3/Z4)                                                                               |
+| **Comprehensive** |  99  | Core + classics (2002, Isetta, Z1, Z8, E9), all M cars (M2–M8, X5 M, X6 M), i Series, body variants (Active Tourer, Gran Coupé), and the new X3 G45                     |
+| **Exhaustive**    | 157  | Everything — adds Touring/Coupé/Convertible/Compact sub-variants, Gran Turismo models, LCI facelifts for major series, long-wheelbase 7 Series, and X Series M variants |
 
 <br />
 
@@ -113,12 +115,14 @@ The quiz shows you a BMW model with photos and its official name, and you pick t
 <td width="50%">
 
 ### Rounds Mode
+
 Play a fixed set of **10 or 20 questions**. Your final score and percentage are shown at the end. Best for quick sessions and comparing scores on the leaderboard.
 
 </td>
 <td width="50%">
 
 ### Endless Mode
+
 Keep playing until you decide to stop. Tracks your **current streak** and **best streak** — how many correct answers in a row. Best for learning and pushing your limits.
 
 </td>
@@ -131,18 +135,19 @@ Keep playing until you decide to stop. Tracks your **current streak** and **best
 
 After each answer, the quiz explains the chassis code:
 
-| Prefix | Meaning | Era |
-|:------:|:--------|:----|
-| **E** | *Entwicklung* (Development) | 1960s – ~2012 |
-| **F** | Next generation series | ~2010 – ~2018 |
-| **G** | Current generation | ~2017 – present |
-| **U** | UKL/FAAR platform compacts | ~2022 – present |
-| **I** | Electric i sub-brand | 2013 – present |
+| Prefix | Meaning                     | Era             |
+| :----: | :-------------------------- | :-------------- |
+| **E**  | _Entwicklung_ (Development) | 1960s – ~2012   |
+| **F**  | Next generation series      | ~2010 – ~2018   |
+| **G**  | Current generation          | ~2017 – present |
+| **U**  | UKL/FAAR platform compacts  | ~2022 – present |
+| **I**  | Electric i sub-brand        | 2013 – present  |
 
 Additional context is provided for:
-- **LCI** (*Life Cycle Impulse*) — BMW's term for mid-cycle facelifts
+
+- **LCI** (_Life Cycle Impulse_) — BMW's term for mid-cycle facelifts
 - **M models** — high-performance variants by BMW M GmbH
-- **Z** (*Zukunft* = Future) — roadster designations
+- **Z** (_Zukunft_ = Future) — roadster designations
 - **X** — Sports Activity Vehicle (SAV) lineup
 - **Touring** — estate/wagon body style
 - **Slash notation** (e.g., E36/7) — body style variants within a generation
@@ -183,18 +188,18 @@ npm start
 
 ## Tech Stack
 
-| Layer | Technology |
-|:------|:-----------|
-| **Framework** | [Next.js 16](https://nextjs.org) with App Router |
-| **Language** | TypeScript 5 |
-| **UI** | React 19 |
-| **Styling** | Tailwind CSS v4 with `oklch()` color space |
+| Layer          | Technology                                                                              |
+| :------------- | :-------------------------------------------------------------------------------------- |
+| **Framework**  | [Next.js 16](https://nextjs.org) with App Router                                        |
+| **Language**   | TypeScript 5                                                                            |
+| **UI**         | React 19                                                                                |
+| **Styling**    | Tailwind CSS v4 with `oklch()` color space                                              |
 | **Components** | [Base UI](https://base-ui.com) primitives + [shadcn/ui](https://ui.shadcn.com) patterns |
-| **Icons** | [Lucide React](https://lucide.dev) |
-| **Fonts** | Outfit (body), IBM Plex Mono (chassis codes), Helvetica Neue (headings) |
-| **State** | React hooks — no external state library |
-| **Storage** | `localStorage` for leaderboard and theme preference |
-| **Images** | Wikimedia Commons (remote, no bundled assets) |
+| **Icons**      | [Lucide React](https://lucide.dev)                                                      |
+| **Fonts**      | Outfit (body), IBM Plex Mono (chassis codes), Helvetica Neue (headings)                 |
+| **State**      | React hooks — no external state library                                                 |
+| **Storage**    | `localStorage` for leaderboard and theme preference                                     |
+| **Images**     | Wikimedia Commons (remote, no bundled assets)                                           |
 
 <br />
 
@@ -236,16 +241,16 @@ All 157 vehicles are defined in `src/data/bmw-cars.ts`. Each entry contains:
 
 ```typescript
 {
-  id: string           // Unique identifier (e.g., "3-e46")
-  officialName: string // Display name (e.g., "BMW 3 Series")
-  internalCode: string // The chassis code (e.g., "E46")
-  difficulty: string   // "core" | "comprehensive" | "exhaustive"
-  years: string        // Production years (e.g., "1997–2006")
-  series: string       // Series grouping (e.g., "3 Series")
+  id: string; // Unique identifier (e.g., "3-e46")
+  officialName: string; // Display name (e.g., "BMW 3 Series")
+  internalCode: string; // The chassis code (e.g., "E46")
+  difficulty: string; // "core" | "comprehensive" | "exhaustive"
+  years: string; // Production years (e.g., "1997–2006")
+  series: string; // Series grouping (e.g., "3 Series")
   images: {
-    front: string      // Wikimedia Commons thumbnail URL
-    side: string
-    rear: string
+    front: string; // Wikimedia Commons thumbnail URL
+    side: string;
+    rear: string;
   }
 }
 ```

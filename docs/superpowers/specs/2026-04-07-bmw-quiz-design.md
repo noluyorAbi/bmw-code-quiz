@@ -52,18 +52,21 @@ A client-side Next.js web app that teaches users BMW internal model codes (chass
 ## Components
 
 ### `ImageCarousel`
+
 - DaisyUI carousel component
 - Displays front, side, and rear images of the current car
 - Handles missing images gracefully (skip that slide)
 - Responsive sizing
 
 ### `AnswerGrid`
+
 - 2x2 grid of DaisyUI buttons
 - Each button shows an internal code
 - On click: disable all buttons, color correct answer green, color wrong selection red
 - Auto-advance after ~1.5s delay
 
 ### `ScoreBar`
+
 - Shows current score (correct/total)
 - Progress bar for rounds mode (question X of Y)
 - Question counter for endless mode
@@ -71,15 +74,18 @@ A client-side Next.js web app that teaches users BMW internal model codes (chass
 - Quit button for endless mode
 
 ### `DifficultySelector`
+
 - DaisyUI tabs or toggle group
 - Three options: Core, Comprehensive, Exhaustive
 - Shows approximate question count per tier
 
 ### `GameModeSelector`
+
 - Toggle between Rounds and Endless
 - Rounds mode shows additional round size picker (10 / 20)
 
 ### `LeaderboardTable`
+
 - DaisyUI table component
 - Filterable by difficulty tabs
 - Sorted by score descending
@@ -92,13 +98,13 @@ A client-side Next.js web app that teaches users BMW internal model codes (chass
 ```typescript
 interface BmwCar {
   id: string;
-  officialName: string;      // e.g. "BMW 3 Series Sedan"
-  internalCode: string;      // e.g. "G20"
+  officialName: string; // e.g. "BMW 3 Series Sedan"
+  internalCode: string; // e.g. "G20"
   difficulty: "core" | "comprehensive" | "exhaustive";
-  years: string;             // e.g. "2019-2025"
-  series: string;            // e.g. "3 Series" — used for category filtering
+  years: string; // e.g. "2019-2025"
+  series: string; // e.g. "3 Series" — used for category filtering
   images: {
-    front: string;           // Wikipedia Commons URL
+    front: string; // Wikipedia Commons URL
     side: string;
     rear: string;
   };
@@ -120,7 +126,7 @@ interface LeaderboardEntry {
   total: number;
   difficulty: "core" | "comprehensive" | "exhaustive";
   mode: "rounds" | "endless";
-  date: string;              // ISO date string
+  date: string; // ISO date string
 }
 ```
 

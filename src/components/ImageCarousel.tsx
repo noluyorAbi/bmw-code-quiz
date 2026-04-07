@@ -16,14 +16,20 @@ const views = [
   { key: "rear" as const, label: "REAR" },
 ];
 
-export default function ImageCarousel({ images, altText, overlayTitle }: ImageCarouselProps) {
+export default function ImageCarousel({
+  images,
+  altText,
+  overlayTitle,
+}: ImageCarouselProps) {
   const available = views.filter((v) => images[v.key]);
   const [activeView, setActiveView] = useState(available[0]?.key ?? "front");
 
   if (available.length === 0) {
     return (
       <div className="w-full aspect-[16/9] rounded-xl bg-surface-container-low flex items-center justify-center border border-border">
-        <span className="text-muted-foreground text-sm font-mono">NO_IMAGE_DATA</span>
+        <span className="text-muted-foreground text-sm font-mono">
+          NO_IMAGE_DATA
+        </span>
       </div>
     );
   }
@@ -61,13 +67,16 @@ export default function ImageCarousel({ images, altText, overlayTitle }: ImageCa
               "relative aspect-video rounded overflow-hidden transition-all bg-surface-container-low",
               activeView === v.key
                 ? "border-2 border-primary-container ring-offset-2 ring-offset-background"
-                : "border border-border opacity-40 hover:opacity-100 hover:border-foreground/20"
+                : "border border-border opacity-40 hover:opacity-100 hover:border-foreground/20",
             )}
           >
             <SafeImage
               src={images[v.key]}
               alt={`${altText} - ${v.label}`}
-              className={cn("w-full h-full object-cover", activeView === v.key ? "opacity-80" : "")}
+              className={cn(
+                "w-full h-full object-cover",
+                activeView === v.key ? "opacity-80" : "",
+              )}
               fallbackClassName="w-full h-full bg-surface-container-highest"
             />
             <div className="absolute bottom-2 left-2 text-[8px] font-mono text-white bg-black/50 px-1">
