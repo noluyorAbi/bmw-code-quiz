@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('bmw-quiz-theme')||'dark';document.documentElement.className=document.documentElement.className.replace(/dark|light/g,'')+' '+t}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem('bmw-quiz-theme')||'dark';var c=document.documentElement.classList;c.remove('dark','light');c.add(t)}catch(e){}})();`,
           }}
         />
       </head>

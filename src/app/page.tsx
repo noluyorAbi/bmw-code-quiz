@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Difficulty, GameMode, RoundSize } from "@/lib/types";
 import DifficultySelector from "@/components/DifficultySelector";
 import GameModeSelector from "@/components/GameModeSelector";
+import SafeImage from "@/components/SafeImage";
 import { ChevronRight } from "lucide-react";
 
 export default function Home() {
@@ -105,11 +106,11 @@ export default function Home() {
       {/* Hero Car Image */}
       <div className="w-full mt-24 relative overflow-hidden h-[500px] animate-fade-in delay-6">
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent z-10" />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="https://commons.wikimedia.org/w/thumb.php?f=BMW_G82_M4_Competition_Frozen_Deep_Grey.jpg&w=1600"
+        <SafeImage
+          src="https://commons.wikimedia.org/w/thumb.php?f=2021_BMW_M4_Competition_Automatic_3.0_Front.jpg&w=1600"
           alt="BMW M4 G82"
           className="w-full h-full object-cover grayscale brightness-75 contrast-125"
+          fallbackClassName="w-full h-full bg-surface-container-low"
         />
         {/* Floating Technical Specs */}
         <div className="absolute bottom-12 left-12 z-20 flex flex-col gap-1">

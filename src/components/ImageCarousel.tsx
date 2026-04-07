@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import SafeImage from "@/components/SafeImage";
 
 interface ImageCarouselProps {
   images: { front: string; side: string; rear: string };
@@ -31,12 +32,11 @@ export default function ImageCarousel({ images, altText, overlayTitle }: ImageCa
     <div className="space-y-4">
       {/* Main Image */}
       <div className="relative aspect-[16/9] w-full bg-[#0c0e11] rounded-xl overflow-hidden group">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <SafeImage
           src={images[activeView]}
           alt={`${altText} - ${activeView}`}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          loading="eager"
+          fallbackClassName="w-full h-full bg-surface-container-low"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0c0e11]/80 to-transparent" />
         {overlayTitle && (
@@ -58,18 +58,17 @@ export default function ImageCarousel({ images, altText, overlayTitle }: ImageCa
             key={v.key}
             onClick={() => setActiveView(v.key)}
             className={cn(
-              "relative aspect-video rounded overflow-hidden transition-all",
+              "relative aspect-video rounded overflow-hidden transition-all bg-surface-container-low",
               activeView === v.key
                 ? "border-2 border-primary-container ring-offset-2 ring-offset-background"
                 : "border border-border opacity-40 hover:opacity-100 hover:border-foreground/20"
             )}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <SafeImage
               src={images[v.key]}
               alt={`${altText} - ${v.label}`}
               className={cn("w-full h-full object-cover", activeView === v.key ? "opacity-80" : "")}
-              loading="eager"
+              fallbackClassName="w-full h-full bg-surface-container-highest"
             />
             <div className="absolute bottom-2 left-2 text-[8px] font-mono text-white bg-black/50 px-1">
               VIEW_{v.label}.JPG

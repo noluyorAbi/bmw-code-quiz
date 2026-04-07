@@ -16,6 +16,12 @@ export function useTheme() {
   return useContext(ThemeContext);
 }
 
+function applyTheme(theme: Theme) {
+  const root = document.documentElement;
+  root.classList.remove("dark", "light");
+  root.classList.add(theme);
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("dark");
   const [mounted, setMounted] = useState(false);
@@ -24,7 +30,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const stored = localStorage.getItem("bmw-quiz-theme") as Theme | null;
     const initial = stored || "dark";
     setTheme(initial);
-    document.documentElement.classList.toggle("dark", initial === "dark");
+    applyTheme(initial);
     setMounted(true);
   }, []);
 
@@ -32,7 +38,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const next = theme === "dark" ? "light" : "dark";
     setTheme(next);
     localStorage.setItem("bmw-quiz-theme", next);
-    document.documentElement.classList.toggle("dark", next === "dark");
+    applyTheme(next);
   }
 
   if (!mounted) {
