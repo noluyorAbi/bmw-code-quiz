@@ -1,15 +1,30 @@
 {
-  "name": "BMW Code Quiz",
+  "name": "BMW Code Quiz — Test Your Chassis Code Knowledge",
   "short_name": "BMW Quiz",
-  "description": "Test your knowledge of BMW's internal chassis codes — 155 vehicles from E30 to G87",
+  "description": "Interactive quiz to test your knowledge of BMW internal chassis codes. 157 vehicles from E30 to G87.",
   "start_url": "/",
+  "id": "/",
   "display": "standalone",
+  "orientation": "any",
   "background_color": "#111316",
   "theme_color": "#0066b3",
+  "categories": ["education", "entertainment", "games"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
   "icons": [
     { "src": "/favicon-32x32.png", "sizes": "32x32", "type": "image/png" },
-    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
     { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1280x640",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "BMW Code Quiz landing page"
+    }
   ]
 }

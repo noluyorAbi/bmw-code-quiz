@@ -25,8 +25,8 @@ export default function LeaderboardTable({ entries }: LeaderboardTableProps) {
 
   return (
     <div className="w-full">
-      {/* Table Header */}
-      <div className="grid grid-cols-12 px-6 py-4 mb-2 font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.2em] text-on-surface-variant uppercase border-b border-border">
+      {/* Desktop Header */}
+      <div className="hidden sm:grid grid-cols-12 px-3 sm:px-6 py-4 mb-2 font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.2em] text-on-surface-variant uppercase border-b border-border">
         <div className="col-span-1">RNK</div>
         <div className="col-span-4">PILOT IDENTIFIER</div>
         <div className="col-span-3">TELEMETRY SCORE</div>
@@ -34,7 +34,6 @@ export default function LeaderboardTable({ entries }: LeaderboardTableProps) {
         <div className="col-span-2 text-right">TIMESTAMP</div>
       </div>
 
-      {/* Rows */}
       {entries.map((entry, i) => {
         const pct = Math.round((entry.score / entry.total) * 100);
         const isTop3 = i < 3;
@@ -43,33 +42,33 @@ export default function LeaderboardTable({ entries }: LeaderboardTableProps) {
           <div
             key={`${entry.name}-${entry.date}`}
             className={cn(
-              "grid grid-cols-12 px-6 py-5 items-center transition-all mb-1 rounded",
+              "mb-1 rounded transition-all",
               isTop3
                 ? "bg-primary-container/5 border border-primary-container/10 hover:bg-primary-container/10"
                 : "bg-surface-container-low/20 hover:bg-foreground/5",
             )}
           >
-            {/* Rank */}
-            <div className="col-span-1">
-              {i === 0 ? (
-                <Shield className="h-5 w-5 text-primary" />
-              ) : (
-                <span
-                  className={cn(
-                    "font-mono text-sm",
-                    isTop3 ? "font-bold text-primary" : "text-muted-foreground",
-                  )}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-              )}
-            </div>
-
-            {/* Name */}
-            <div className="col-span-4 flex items-center gap-3">
+            {/* Mobile card layout */}
+            <div className="sm:hidden p-4 flex items-center gap-3">
+              <div className="shrink-0">
+                {i === 0 ? (
+                  <Shield className="h-5 w-5 text-primary" />
+                ) : (
+                  <span
+                    className={cn(
+                      "font-mono text-sm w-6 text-center block",
+                      isTop3
+                        ? "font-bold text-primary"
+                        : "text-muted-foreground",
+                    )}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                )}
+              </div>
               <div
                 className={cn(
-                  "w-8 h-8 rounded flex items-center justify-center text-xs font-bold font-mono",
+                  "w-8 h-8 rounded flex items-center justify-center text-xs font-bold font-mono shrink-0",
                   isTop3
                     ? "bg-primary-container text-white"
                     : "bg-surface-container-highest text-muted-foreground",
@@ -77,46 +76,87 @@ export default function LeaderboardTable({ entries }: LeaderboardTableProps) {
               >
                 {entry.name.slice(0, 2).toUpperCase()}
               </div>
-              <div>
-                <p
-                  className={cn(
-                    "font-[family-name:var(--font-display)] italic text-sm tracking-tight",
-                    isTop3 ? "text-foreground" : "text-foreground",
-                  )}
-                >
+              <div className="flex-1 min-w-0">
+                <p className="font-[family-name:var(--font-display)] italic text-sm tracking-tight text-foreground truncate">
                   {entry.name.toUpperCase()}
                 </p>
-                {isTop3 && (
-                  <p className="font-[family-name:var(--font-label-font)] text-[9px] text-primary tracking-wider">
-                    P{String(i + 1).padStart(2, "0")}_ELITE
-                  </p>
-                )}
+                <p className="text-[10px] text-muted-foreground font-mono">
+                  {entry.mode} &middot;{" "}
+                  {new Date(entry.date)
+                    .toISOString()
+                    .split("T")[0]
+                    .replace(/-/g, ".")}
+                </p>
+              </div>
+              <div className="shrink-0 text-right">
+                <span className="font-mono text-lg font-bold text-primary">
+                  {pct}%
+                </span>
+                <p className="font-mono text-[10px] text-muted-foreground">
+                  {entry.score}/{entry.total}
+                </p>
               </div>
             </div>
 
-            {/* Score */}
-            <div className="col-span-3">
-              <span className="font-mono text-lg font-bold text-primary">
-                {pct}%
-              </span>
-              <span className="font-mono text-xs text-muted-foreground ml-2">
-                ({entry.score}/{entry.total})
-              </span>
-            </div>
-
-            {/* Mode */}
-            <div className="col-span-2">
-              <span className="text-[10px] font-[family-name:var(--font-label-font)] text-on-surface-variant bg-surface-container-highest px-2 py-1 rounded uppercase tracking-wider">
-                {entry.mode}
-              </span>
-            </div>
-
-            {/* Date */}
-            <div className="col-span-2 text-right font-mono text-[10px] text-muted-foreground">
-              {new Date(entry.date)
-                .toISOString()
-                .split("T")[0]
-                .replace(/-/g, ".")}
+            {/* Desktop row layout */}
+            <div className="hidden sm:grid grid-cols-12 px-3 sm:px-6 py-5 items-center">
+              <div className="col-span-1">
+                {i === 0 ? (
+                  <Shield className="h-5 w-5 text-primary" />
+                ) : (
+                  <span
+                    className={cn(
+                      "font-mono text-sm",
+                      isTop3
+                        ? "font-bold text-primary"
+                        : "text-muted-foreground",
+                    )}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                )}
+              </div>
+              <div className="col-span-4 flex items-center gap-3">
+                <div
+                  className={cn(
+                    "w-8 h-8 rounded flex items-center justify-center text-xs font-bold font-mono",
+                    isTop3
+                      ? "bg-primary-container text-white"
+                      : "bg-surface-container-highest text-muted-foreground",
+                  )}
+                >
+                  {entry.name.slice(0, 2).toUpperCase()}
+                </div>
+                <div>
+                  <p className="font-[family-name:var(--font-display)] italic text-sm tracking-tight text-foreground">
+                    {entry.name.toUpperCase()}
+                  </p>
+                  {isTop3 && (
+                    <p className="font-[family-name:var(--font-label-font)] text-[9px] text-primary tracking-wider">
+                      P{String(i + 1).padStart(2, "0")}_ELITE
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="col-span-3">
+                <span className="font-mono text-lg font-bold text-primary">
+                  {pct}%
+                </span>
+                <span className="font-mono text-xs text-muted-foreground ml-2">
+                  ({entry.score}/{entry.total})
+                </span>
+              </div>
+              <div className="col-span-2">
+                <span className="text-[10px] font-[family-name:var(--font-label-font)] text-on-surface-variant bg-surface-container-highest px-2 py-1 rounded uppercase tracking-wider">
+                  {entry.mode}
+                </span>
+              </div>
+              <div className="col-span-2 text-right font-mono text-[10px] text-muted-foreground">
+                {new Date(entry.date)
+                  .toISOString()
+                  .split("T")[0]
+                  .replace(/-/g, ".")}
+              </div>
             </div>
           </div>
         );

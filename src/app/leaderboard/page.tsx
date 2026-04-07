@@ -32,7 +32,7 @@ export default function LeaderboardPage() {
         <span className="font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.3em] text-primary uppercase mb-2 block">
           GLOBAL RANKINGS
         </span>
-        <h1 className="text-6xl md:text-8xl font-[family-name:var(--font-display)] font-black italic text-foreground tracking-tighter leading-[0.9]">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl font-[family-name:var(--font-display)] font-black italic text-foreground tracking-tighter leading-[0.9]">
           TELEMETRY
         </h1>
       </div>
@@ -43,7 +43,7 @@ export default function LeaderboardPage() {
           <button
             key={tab.value}
             className={cn(
-              "font-[family-name:var(--font-label-font)] text-sm tracking-[0.15em] px-6 py-2 transition-all uppercase",
+              "font-[family-name:var(--font-label-font)] text-sm tracking-[0.15em] px-4 sm:px-6 py-3 transition-all min-h-[44px] uppercase",
               activeTab === tab.value
                 ? "bg-primary-container text-white rounded"
                 : "text-on-surface-variant hover:bg-foreground/5",

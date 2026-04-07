@@ -272,7 +272,7 @@ function QuizContent() {
             {mode === "endless" && !quizState.answered && (
               <button
                 onClick={handleQuit}
-                className="mt-4 flex items-center gap-2 text-muted-foreground hover:text-destructive transition-colors font-mono text-xs"
+                className="mt-4 flex items-center gap-2 py-3 min-h-[44px] text-muted-foreground hover:text-destructive transition-colors font-mono text-xs"
               >
                 <LogOut className="h-3.5 w-3.5" />
                 END SESSION

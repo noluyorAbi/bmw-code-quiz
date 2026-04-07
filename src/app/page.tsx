@@ -184,7 +184,7 @@ export default function Home() {
             <span className="font-[family-name:var(--font-label-font)] text-xs tracking-[0.3em] text-primary mb-2 uppercase">
               M-TECHNIC DATA MODULE
             </span>
-            <h1 className="font-[family-name:var(--font-display)] font-black italic text-6xl md:text-8xl tracking-tighter text-foreground leading-none">
+            <h1 className="font-[family-name:var(--font-display)] font-black italic text-4xl sm:text-6xl md:text-8xl tracking-tighter text-foreground leading-none">
               BMW CODE QUIZ
             </h1>
           </div>
@@ -212,7 +212,7 @@ export default function Home() {
               <span className="block font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.2em] text-muted-foreground uppercase mb-1">
                 DATABASE ENTRIES
               </span>
-              <span className="block font-[family-name:var(--font-display)] text-3xl font-bold text-foreground tabular-nums italic">
+              <span className="block font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-foreground tabular-nums italic">
                 157 VEHICLES
               </span>
             </div>
@@ -220,7 +220,7 @@ export default function Home() {
               <span className="block font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.2em] text-muted-foreground uppercase mb-1">
                 CHASSIS GENERATIONS
               </span>
-              <span className="block font-[family-name:var(--font-display)] text-3xl font-bold text-primary tabular-nums italic">
+              <span className="block font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-primary tabular-nums italic">
                 E / F / G / U / I
               </span>
             </div>
@@ -228,7 +228,7 @@ export default function Home() {
 
           <button
             onClick={() => router.push("/leaderboard")}
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mt-2 animate-fade-up delay-5"
+            className="flex items-center gap-2 py-2 min-h-[44px] text-sm text-muted-foreground hover:text-primary transition-colors mt-2 animate-fade-up delay-5"
           >
             <Trophy className="h-4 w-4" />
             <span className="font-[family-name:var(--font-label-font)] text-xs tracking-[0.15em] uppercase">
@@ -335,7 +335,7 @@ export default function Home() {
           className="w-full h-full object-cover grayscale brightness-75 contrast-125"
           fallbackClassName="w-full h-full bg-surface-container-low"
         />
-        <div className="absolute bottom-12 left-12 z-20 flex flex-col gap-1">
+        <div className="absolute bottom-6 left-6 sm:bottom-12 sm:left-12 z-20 flex flex-col gap-1">
           <span className="font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.4em] text-primary uppercase">
             CURRENT MODEL STUDY
           </span>

@@ -41,7 +41,7 @@ function ResultsContent() {
           {/* Hero */}
           <div className="animate-fade-up">
             <div className="m-stripe-gradient h-1 w-24 mb-6" />
-            <h1 className="text-6xl md:text-8xl font-[family-name:var(--font-display)] font-black italic text-foreground tracking-tighter leading-[0.9]">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-[family-name:var(--font-display)] font-black italic text-foreground tracking-tighter leading-[0.9]">
               QUIZ COMPLETE!
             </h1>
             <p className="font-mono text-xs tracking-[0.2em] text-primary-container mt-2 uppercase">
@@ -91,7 +91,7 @@ function ResultsContent() {
             <h3 className="font-mono text-xs tracking-[0.2em] text-muted-foreground mb-6 uppercase">
               Technical Telemetry
             </h3>
-            <div className="flex flex-col md:flex-row gap-12">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
               <div className="flex flex-col gap-2">
                 <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-wider">
                   Accuracy Rate

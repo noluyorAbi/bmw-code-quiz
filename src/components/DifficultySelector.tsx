@@ -39,7 +39,7 @@ export default function DifficultySelector({
           <button
             key={d.value}
             className={cn(
-              "py-3 px-2 text-[10px] font-[family-name:var(--font-label-font)] font-bold tracking-[0.15em] rounded transition-all uppercase",
+              "py-3 px-1 sm:px-2 text-[9px] sm:text-[10px] font-[family-name:var(--font-label-font)] font-bold tracking-[0.1em] sm:tracking-[0.15em] rounded transition-all uppercase min-h-[44px]",
               value === d.value
                 ? "bg-primary text-primary-foreground"
                 : "border border-outline-variant text-foreground hover:bg-foreground/5",
