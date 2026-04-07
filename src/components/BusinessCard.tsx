@@ -62,7 +62,7 @@ export default function BusinessCard() {
           role="button"
           tabIndex={0}
           aria-label={`Flip business card to ${isFlipped ? "front" : "back"}`}
-          className="w-[280px] h-[190px] sm:w-[320px] sm:h-[210px] relative cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary-container focus-visible:ring-offset-2"
+          className="w-[320px] h-[185px] sm:w-[380px] sm:h-[220px] relative cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary-container focus-visible:ring-offset-2"
           style={{
             rotateX,
             rotateY,
