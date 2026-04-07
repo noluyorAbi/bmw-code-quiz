@@ -16,6 +16,49 @@ import ImageCarousel from "@/components/ImageCarousel";
 import AnswerGrid from "@/components/AnswerGrid";
 import ScoreBar from "@/components/ScoreBar";
 
+function getCodeExplanation(code: string, series: string): string {
+  const prefix = code.charAt(0);
+  const prefixMeaning: Record<string, string> = {
+    E: "\"E\" (Entwicklung = Development) was used for BMW chassis codes from the 1960s to ~2012.",
+    F: "\"F\" generation codes replaced \"E\" starting around 2010, marking BMW's modern era.",
+    G: "\"G\" is the current generation prefix, used since ~2017 for the latest BMW models.",
+    U: "\"U\" is used for BMW's newer UKL/FAAR platform-based compact models.",
+    I: "\"I\" prefix is reserved for BMW's fully electric \"i\" sub-brand vehicles.",
+  };
+
+  const parts: string[] = [];
+
+  if (prefixMeaning[prefix]) {
+    parts.push(prefixMeaning[prefix]);
+  }
+
+  if (code.includes("LCI")) {
+    parts.push("\"LCI\" (Life Cycle Impulse) is BMW's term for a mid-cycle facelift update.");
+  }
+
+  if (code.includes("M3") || code.includes("M4") || code.includes("M5") || code.includes("M6") || code.includes("M8") || code.includes("1M")) {
+    parts.push("M models are high-performance variants developed by BMW M GmbH.");
+  }
+
+  if (series === "Z Series") {
+    parts.push("The Z designation stands for \"Zukunft\" (Future), BMW's roadster line.");
+  }
+
+  if (series.startsWith("X") && !series.includes("M")) {
+    parts.push("The X prefix denotes BMW's SAV (Sports Activity Vehicle) lineup.");
+  }
+
+  if (code.includes("Touring")) {
+    parts.push("\"Touring\" is BMW's name for their estate/wagon body style.");
+  }
+
+  if (code.includes("/")) {
+    parts.push("The slash notation indicates a body style variant within the same generation.");
+  }
+
+  return parts.join(" ") || `Part of the BMW ${series} lineage.`;
+}
+
 function QuizContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -114,14 +157,23 @@ function QuizContent() {
 
       {quizState.answered && (
         <div className={cn(
-          "w-full max-w-lg mx-auto rounded-lg border px-4 py-3 text-sm transition-all animate-in fade-in slide-in-from-bottom-2 duration-300",
+          "w-full max-w-lg mx-auto rounded-lg border px-4 py-4 text-sm transition-all animate-in fade-in slide-in-from-bottom-2 duration-300 space-y-2",
           quizState.selectedAnswer === currentCar.internalCode
-            ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-300"
-            : "border-red-500/30 bg-red-500/10 text-red-300"
+            ? "border-emerald-500/30 bg-emerald-500/10"
+            : "border-red-500/30 bg-red-500/10"
         )}>
-          <p className="font-semibold">
-            {quizState.selectedAnswer === currentCar.internalCode ? "Correct!" : "Wrong!"}{" "}
-            <span className="text-foreground">The {currentCar.officialName} ({currentCar.years}) has the internal code <span className="font-mono font-bold">{currentCar.internalCode}</span>.</span>
+          <p className={cn(
+            "font-bold text-base",
+            quizState.selectedAnswer === currentCar.internalCode ? "text-emerald-400" : "text-red-400"
+          )}>
+            {quizState.selectedAnswer === currentCar.internalCode ? "Correct!" : "Wrong!"}
+          </p>
+          <p className="text-foreground">
+            <span className="font-mono font-bold text-primary text-lg">{currentCar.internalCode}</span>{" "}
+            is the internal code for the {currentCar.officialName}, produced {currentCar.years}.
+          </p>
+          <p className="text-muted-foreground text-xs leading-relaxed">
+            {getCodeExplanation(currentCar.internalCode, currentCar.series)}
           </p>
         </div>
       )}
