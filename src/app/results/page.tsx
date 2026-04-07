@@ -8,9 +8,10 @@ import {
   addLeaderboardEntry,
 } from "@/lib/leaderboard";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import ThemeToggle from "@/components/ThemeToggle";
+import { RotateCcw, Trophy, Check, Flame } from "lucide-react";
 
 function ResultsContent() {
   const searchParams = useSearchParams();
@@ -35,53 +36,91 @@ function ResultsContent() {
   }
 
   function getMessage(): string {
-    if (percentage >= 90) return "BMW Master! Incredible!";
-    if (percentage >= 70) return "Great job! You know your BMWs!";
-    if (percentage >= 50) return "Not bad! Keep practicing!";
-    return "Keep learning — you'll get there!";
+    if (percentage >= 90) return "BMW Master!";
+    if (percentage >= 70) return "Impressive knowledge!";
+    if (percentage >= 50) return "Solid effort!";
+    return "Room to grow!";
+  }
+
+  function getGradeColor(): string {
+    if (percentage >= 90) return "text-emerald-400";
+    if (percentage >= 70) return "text-primary";
+    if (percentage >= 50) return "text-yellow-400";
+    return "text-red-400";
+  }
+
+  function getBarColor(): string {
+    if (percentage >= 90) return "bg-emerald-500";
+    if (percentage >= 70) return "bg-primary";
+    if (percentage >= 50) return "bg-yellow-500";
+    return "bg-red-500";
   }
 
   return (
-    <div className="flex flex-col items-center gap-8 pt-8">
-      <div className="text-center space-y-2">
-        <h1 className="text-4xl font-bold tracking-tight">Quiz Complete</h1>
-        <p className="text-muted-foreground">{getMessage()}</p>
+    <div className="flex flex-col items-center min-h-[calc(100vh-3px)] relative">
+      {/* Theme toggle */}
+      <div className="absolute top-4 right-0">
+        <ThemeToggle />
       </div>
 
-      <div className="flex gap-6">
-        <div className="text-center">
-          <div className="text-5xl font-bold font-mono tracking-tight">
-            {score}
-            <span className="text-muted-foreground">/{total}</span>
-          </div>
-          <p className="text-sm text-muted-foreground mt-1">{percentage}% correct</p>
+      <div className="flex flex-col items-center gap-8 pt-16 sm:pt-24 w-full max-w-md">
+        {/* Message */}
+        <div className="text-center opacity-0 animate-fade-up">
+          <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-2">
+            Quiz Complete
+          </p>
+          <h1
+            className={cn(
+              "text-3xl sm:text-4xl font-extrabold tracking-tight",
+              getGradeColor()
+            )}
+            style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
+          >
+            {getMessage()}
+          </h1>
         </div>
-        {mode === "endless" && bestStreak > 0 && (
-          <div className="text-center border-l border-border pl-6">
-            <div className="text-5xl font-bold font-mono tracking-tight text-primary">
-              {bestStreak}
+
+        {/* Score display */}
+        <div className="flex items-end gap-8 opacity-0 animate-fade-up delay-1">
+          <div className="text-center">
+            <div className="text-6xl sm:text-7xl font-bold font-mono tracking-tighter animate-count-up">
+              {score}
+              <span className="text-muted-foreground/40">/{total}</span>
             </div>
-            <p className="text-sm text-muted-foreground mt-1">best streak</p>
+            <p className="text-sm text-muted-foreground mt-1">{percentage}% correct</p>
           </div>
-        )}
-      </div>
+          {mode === "endless" && bestStreak > 0 && (
+            <div className="text-center border-l border-border pl-8">
+              <div className="flex items-center justify-center gap-2">
+                <Flame className="h-6 w-6 text-primary" />
+                <span className="text-5xl sm:text-6xl font-bold font-mono tracking-tighter text-primary animate-count-up">
+                  {bestStreak}
+                </span>
+              </div>
+              <p className="text-sm text-muted-foreground mt-1">best streak</p>
+            </div>
+          )}
+        </div>
 
-      <div
-        className={cn(
-          "w-full max-w-sm h-1 rounded-full",
-          percentage >= 90 && "bg-emerald-500",
-          percentage >= 70 && percentage < 90 && "bg-blue-500",
-          percentage >= 50 && percentage < 70 && "bg-yellow-500",
-          percentage < 50 && "bg-red-500",
-        )}
-      />
+        {/* Progress bar */}
+        <div className="w-full opacity-0 animate-fade-up delay-2">
+          <div className="w-full h-1.5 rounded-full bg-muted overflow-hidden">
+            <div
+              className={cn("h-full rounded-full transition-all duration-1000 ease-out", getBarColor())}
+              style={{ width: `${percentage}%` }}
+            />
+          </div>
+        </div>
 
-      {qualifies && !saved && (
-        <Card className="w-full max-w-sm border-border/50 bg-card/50">
-          <CardContent className="pt-6 space-y-3">
-            <p className="text-sm font-medium">
-              Top 10! Enter your name:
-            </p>
+        {/* Leaderboard entry */}
+        {qualifies && !saved && (
+          <div className="w-full glass rounded-2xl p-5 opacity-0 animate-scale-in delay-3">
+            <div className="flex items-center gap-2 mb-3">
+              <Trophy className="h-4 w-4 text-primary" />
+              <p className="text-sm font-semibold">
+                Top 10! Enter your name:
+              </p>
+            </div>
             <div className="flex gap-2">
               <Input
                 placeholder="Your name"
@@ -89,26 +128,40 @@ function ResultsContent() {
                 onChange={(e) => setName(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleSave()}
                 maxLength={20}
-                className="flex-1"
+                className="flex-1 h-10 rounded-xl bg-background/50"
               />
-              <Button onClick={handleSave}>Save</Button>
+              <Button onClick={handleSave} className="rounded-xl h-10 px-5">
+                Save
+              </Button>
             </div>
-          </CardContent>
-        </Card>
-      )}
+          </div>
+        )}
 
-      {saved && (
-        <p className="text-sm text-emerald-400">Score saved to leaderboard!</p>
-      )}
+        {saved && (
+          <div className="inline-flex items-center gap-2 text-sm text-emerald-400 opacity-0 animate-scale-in">
+            <Check className="h-4 w-4" />
+            Saved to leaderboard!
+          </div>
+        )}
 
-      <div className="flex gap-3">
-        <Button onClick={() => router.push("/")}>Play Again</Button>
-        <Button
-          variant="outline"
-          onClick={() => router.push("/leaderboard")}
-        >
-          Leaderboard
-        </Button>
+        {/* Actions */}
+        <div className="flex gap-3 opacity-0 animate-fade-up delay-4">
+          <Button
+            onClick={() => router.push("/")}
+            className="rounded-xl gap-2"
+          >
+            <RotateCcw className="h-3.5 w-3.5" />
+            Play Again
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => router.push("/leaderboard")}
+            className="rounded-xl gap-2"
+          >
+            <Trophy className="h-3.5 w-3.5" />
+            Leaderboard
+          </Button>
+        </div>
       </div>
     </div>
   );
@@ -118,7 +171,7 @@ export default function ResultsPage() {
   return (
     <Suspense
       fallback={
-        <div className="flex justify-center py-20">
+        <div className="flex items-center justify-center min-h-[60vh]">
           <div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent" />
         </div>
       }

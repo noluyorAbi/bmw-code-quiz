@@ -22,7 +22,7 @@ export default function ImageCarousel({ images, altText }: ImageCarouselProps) {
 
   if (available.length === 0) {
     return (
-      <div className="w-full h-full rounded-lg bg-muted flex items-center justify-center">
+      <div className="w-full h-full rounded-2xl bg-muted/50 flex items-center justify-center border border-border">
         <span className="text-muted-foreground text-sm">No image available</span>
       </div>
     );
@@ -33,7 +33,7 @@ export default function ImageCarousel({ images, altText }: ImageCarouselProps) {
 
   if (!hasMultipleViews) {
     return (
-      <div className="w-full rounded-lg overflow-hidden border border-border bg-black/40">
+      <div className="w-full h-full rounded-2xl overflow-hidden border border-border bg-black/20">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={images[available[0].key]}
@@ -46,22 +46,22 @@ export default function ImageCarousel({ images, altText }: ImageCarouselProps) {
   }
 
   return (
-    <div className="w-full grid grid-rows-3 gap-1.5 h-full">
+    <div className="w-full grid grid-rows-3 gap-2 h-full">
       {available.map((v) => (
         <div
           key={v.key}
           className={cn(
-            "relative rounded-lg overflow-hidden border border-border bg-black/40"
+            "relative rounded-xl overflow-hidden border border-border bg-black/20 group"
           )}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={images[v.key]}
             alt={`${altText} - ${v.label}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             loading="eager"
           />
-          <span className="absolute top-1 left-1.5 bg-black/60 text-[9px] font-medium text-white/70 px-1.5 py-0.5 rounded uppercase tracking-wider">
+          <span className="absolute top-1.5 left-2 bg-black/50 backdrop-blur-sm text-[9px] font-semibold text-white/70 px-2 py-0.5 rounded-md uppercase tracking-wider">
             {v.label}
           </span>
         </div>

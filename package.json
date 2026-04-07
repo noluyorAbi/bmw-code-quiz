@@ -1,7 +1,11 @@
 {
-  "name": "bmw-interne-namen",
-  "version": "0.1.0",
+  "name": "bmw-code-quiz",
+  "version": "1.0.0",
+  "description": "Interactive quiz to test your knowledge of BMW's internal chassis codes — from the E30 to the G87. Not affiliated with BMW AG.",
+  "author": "noluyorAbi",
+  "license": "MIT",
   "private": true,
+  "keywords": ["bmw", "quiz", "chassis-codes", "automotive", "nextjs", "react", "typescript"],
   "scripts": {
     "dev": "next dev",
     "build": "next build",

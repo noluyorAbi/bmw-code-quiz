@@ -1,20 +1,64 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Outfit, IBM_Plex_Mono } from "next/font/google";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-sans",
+const outfit = Outfit({
+  variable: "--font-body",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-mono",
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-code",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
+
+const siteUrl = "https://bmw-code-quiz.vercel.app";
+const title = "BMW Code Quiz — Test Your Chassis Code Knowledge";
+const description =
+  "How well do you know BMW's internal chassis codes? An interactive quiz covering 156 vehicles from the E30 to the G87. Not affiliated with BMW AG.";
 
 export const metadata: Metadata = {
-  title: "BMW Code Quiz",
-  description: "Learn BMW chassis codes through an interactive quiz",
+  title: {
+    default: title,
+    template: "%s | BMW Code Quiz",
+  },
+  description,
+  keywords: [
+    "BMW",
+    "chassis codes",
+    "internal codes",
+    "quiz",
+    "E30",
+    "E46",
+    "F80",
+    "G20",
+    "BMW trivia",
+    "car quiz",
+    "automotive",
+  ],
+  authors: [{ name: "noluyorAbi" }],
+  creator: "noluyorAbi",
+  metadataBase: new URL(siteUrl),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    title,
+    description,
+    siteName: "BMW Code Quiz",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -23,11 +67,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="min-h-screen bg-background font-sans">
-        <div className="mx-auto max-w-3xl px-4 py-4">
-          {children}
-        </div>
+    <html
+      lang="en"
+      className={`dark ${outfit.variable} ${ibmPlexMono.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('bmw-quiz-theme') || 'dark';
+                  document.documentElement.className = document.documentElement.className.replace(/dark|light/g, '') + ' ' + theme;
+                } catch(e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className="min-h-screen bg-background font-sans antialiased">
+        <ThemeProvider>
+          <div className="m-stripe" />
+          <div className="mx-auto max-w-5xl px-4 sm:px-6">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

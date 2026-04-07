@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState, useCallback, Suspense } from "react";
+import { useEffect, useState, useCallback, useRef, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import { Difficulty, GameMode, RoundSize, QuizState } from "@/lib/types";
+import { Difficulty, GameMode, RoundSize, QuizState, BmwCar } from "@/lib/types";
 import { getCarsByDifficulty } from "@/data/bmw-cars";
 import {
   initQuiz,
@@ -10,11 +10,28 @@ import {
   nextQuestion,
   getCurrentCar,
 } from "@/lib/quiz-engine";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import ImageCarousel from "@/components/ImageCarousel";
 import AnswerGrid from "@/components/AnswerGrid";
 import ScoreBar from "@/components/ScoreBar";
+import ThemeToggle from "@/components/ThemeToggle";
+import { LogOut } from "lucide-react";
+
+function preloadImages(car: BmwCar): Promise<void> {
+  const urls = [car.images.front, car.images.side, car.images.rear].filter(Boolean);
+  const unique = [...new Set(urls)];
+  return Promise.all(
+    unique.map(
+      (url) =>
+        new Promise<void>((resolve) => {
+          const img = new Image();
+          img.onload = () => resolve();
+          img.onerror = () => resolve();
+          img.src = url;
+        })
+    )
+  ).then(() => {});
+}
 
 function getCodeExplanation(code: string, series: string): string {
   const prefix = code.charAt(0);
@@ -70,7 +87,9 @@ function QuizContent() {
   ) as RoundSize;
 
   const [quizState, setQuizState] = useState<QuizState | null>(null);
+  const [transitioning, setTransitioning] = useState(false);
   const pool = getCarsByDifficulty(difficulty);
+  const pendingNextState = useRef<QuizState | null>(null);
 
   useEffect(() => {
     setQuizState(initQuiz(difficulty));
@@ -81,6 +100,12 @@ function QuizContent() {
       if (!quizState || quizState.answered) return;
       const newState = submitAnswer(quizState, answer, pool);
       setQuizState(newState);
+
+      // Precompute next state and start preloading images immediately
+      const upcoming = nextQuestion(newState, pool);
+      pendingNextState.current = upcoming;
+      const nextCar = getCurrentCar(upcoming);
+      const preloadPromise = preloadImages(nextCar);
 
       setTimeout(() => {
         const totalAnswered = newState.answers.length;
@@ -97,7 +122,21 @@ function QuizContent() {
           return;
         }
 
-        setQuizState(nextQuestion(newState, pool));
+        // Fade out
+        setTransitioning(true);
+
+        // Wait for both fade-out (300ms) and images to be ready
+        Promise.all([
+          preloadPromise,
+          new Promise((r) => setTimeout(r, 300)),
+        ]).then(() => {
+          setQuizState(pendingNextState.current);
+          pendingNextState.current = null;
+          // Small tick to let React render, then fade in
+          requestAnimationFrame(() => {
+            setTransitioning(false);
+          });
+        });
       }, 4000);
     },
     [quizState, pool, mode, roundSize, difficulty, router]
@@ -117,27 +156,47 @@ function QuizContent() {
 
   if (!quizState) {
     return (
-      <div className="flex justify-center py-20">
+      <div className="flex items-center justify-center min-h-[60vh]">
         <div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent" />
       </div>
     );
   }
 
   const currentCar = getCurrentCar(quizState);
+  const isCorrect = quizState.selectedAnswer === currentCar.internalCode;
 
   return (
-    <div className="flex flex-col h-[calc(100vh-2rem)] gap-2">
-      {/* Score bar */}
-      <ScoreBar
-        score={quizState.score}
-        total={quizState.answers.length}
-        mode={mode}
-        roundSize={roundSize}
-        streak={quizState.streak}
-      />
+    <div className="flex flex-col h-[calc(100vh-3px)] py-3 gap-3">
+      {/* Top bar */}
+      <div className="flex items-center justify-between">
+        <ScoreBar
+          score={quizState.score}
+          total={quizState.answers.length}
+          mode={mode}
+          roundSize={roundSize}
+          streak={quizState.streak}
+        />
+        <div className="flex items-center gap-1 ml-3 shrink-0">
+          <ThemeToggle />
+          {mode === "endless" && !quizState.answered && (
+            <button
+              onClick={handleQuit}
+              className="flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground transition-all hover:text-destructive hover:bg-destructive/10"
+              title="End Quiz"
+            >
+              <LogOut className="h-4 w-4" />
+            </button>
+          )}
+        </div>
+      </div>
 
-      {/* Main content: images left, info+answers right */}
-      <div className="flex gap-4 flex-1 min-h-0">
+      {/* Main content — fades out/in between questions */}
+      <div
+        className={cn(
+          "flex gap-5 flex-1 min-h-0 transition-opacity duration-300 ease-in-out",
+          transitioning ? "opacity-0" : "opacity-100"
+        )}
+      >
         {/* Left: images */}
         <div className="w-1/2 min-h-0">
           <ImageCarousel
@@ -146,13 +205,18 @@ function QuizContent() {
           />
         </div>
 
-        {/* Right: name, answers, explanation */}
-        <div className="w-1/2 flex flex-col gap-3 justify-center">
+        {/* Right: info + answers */}
+        <div className="w-1/2 flex flex-col gap-4 justify-center">
           <div>
-            <h2 className="text-xl font-bold tracking-tight leading-tight">
+            <p className="text-xs font-medium text-primary uppercase tracking-widest mb-1">
+              {currentCar.series}
+            </p>
+            <h2 className="text-2xl font-bold tracking-tight leading-tight" style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}>
               {currentCar.officialName}
             </h2>
-            <p className="text-xs text-muted-foreground">{currentCar.years}</p>
+            <p className="text-sm text-muted-foreground mt-0.5">
+              {currentCar.years}
+            </p>
           </div>
 
           <AnswerGrid
@@ -164,37 +228,36 @@ function QuizContent() {
           />
 
           {quizState.answered && (
-            <div className={cn(
-              "rounded-md border px-3 py-2 text-xs transition-all animate-in fade-in slide-in-from-bottom-2 duration-300",
-              quizState.selectedAnswer === currentCar.internalCode
-                ? "border-emerald-500/30 bg-emerald-500/10"
-                : "border-red-500/30 bg-red-500/10"
-            )}>
-              <p className="text-foreground">
-                <span className={cn(
-                  "font-bold",
-                  quizState.selectedAnswer === currentCar.internalCode ? "text-emerald-400" : "text-red-400"
-                )}>
-                  {quizState.selectedAnswer === currentCar.internalCode ? "Correct! " : "Wrong! "}
+            <div
+              className={cn(
+                "rounded-xl border px-4 py-3 text-sm transition-all animate-scale-in",
+                isCorrect
+                  ? "border-emerald-500/20 bg-emerald-500/5"
+                  : "border-red-500/20 bg-red-500/5"
+              )}
+            >
+              <p className="leading-relaxed">
+                <span
+                  className={cn(
+                    "font-bold",
+                    isCorrect ? "text-emerald-400" : "text-red-400"
+                  )}
+                >
+                  {isCorrect ? "Correct! " : "Wrong! "}
                 </span>
-                <span className="font-mono font-bold text-primary">{currentCar.internalCode}</span>
-                {" "}— {currentCar.officialName} ({currentCar.years}).{" "}
+                <span className="font-mono font-bold text-primary">
+                  {currentCar.internalCode}
+                </span>
+                {" — "}
+                {currentCar.officialName} ({currentCar.years}).{" "}
                 <span className="text-muted-foreground">
-                  {getCodeExplanation(currentCar.internalCode, currentCar.series)}
+                  {getCodeExplanation(
+                    currentCar.internalCode,
+                    currentCar.series
+                  )}
                 </span>
               </p>
             </div>
-          )}
-
-          {mode === "endless" && !quizState.answered && (
-            <Button
-              variant="ghost"
-              size="sm"
-              className="text-muted-foreground text-xs w-fit"
-              onClick={handleQuit}
-            >
-              End Quiz
-            </Button>
           )}
         </div>
       </div>
@@ -206,7 +269,7 @@ export default function QuizPage() {
   return (
     <Suspense
       fallback={
-        <div className="flex justify-center py-20">
+        <div className="flex items-center justify-center min-h-[60vh]">
           <div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent" />
         </div>
       }

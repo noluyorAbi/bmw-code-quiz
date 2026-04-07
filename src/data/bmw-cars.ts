@@ -476,7 +476,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "core",
     years: "2014–2019",
     series: "X6",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_X6_F16_xDrive30d%2C_front_left%2C_06-08-2024.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2009_BMW_X6_side.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_X6_F16_xDrive30d%2C_rear_right%2C_06-08-2024.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_X6_F16_xDrive30d%2C_front_left%2C_06-08-2024.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_X6_%28F16%29_China_%284%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2018_BMW_X6_F16_xDrive30d%2C_rear_right%2C_06-08-2024.jpg&w=800" },
   },
   {
     id: "x6-g06",
@@ -581,7 +581,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "comprehensive",
     years: "2020–2023",
     series: "i Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_iX3_NA5_IMG_5333.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_iX3_NA5_IMG_5333.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_iX3_NA5_IMG_5333.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_iX3_%28G08%29_China_%283%29.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_iX3_%28G08%29_China_%287%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_iX3_%28G08%29_China_%288%29.jpg&w=800" },
   },
 
   // ── Classics (comprehensive) ───────────────────────────────────────────────
@@ -1197,7 +1197,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2001–2008",
     series: "7 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_7er_%28E65%29_front_20100918.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_7er_%28E65%29_front_20100918.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_7er_%28E65%29_front_20100918.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2005_BMW_740Li_%28E66%29_sedan_%282015-07-16%29_01.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_760Li_E66_%2815572042002%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2005_BMW_740Li_%28E66%29_sedan_%282015-07-16%29_02.jpg&w=800" },
   },
   {
     id: "7-f02",
@@ -1396,7 +1396,7 @@ export const bmwCars: BmwCar[] = [
     difficulty: "exhaustive",
     years: "2019–2022",
     series: "7 Series",
-    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_750i_%28G12%29_front_3.23.18.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_750i_%28G12%29_front_3.23.18.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2017_BMW_750i_%28G12%29_front_3.23.18.jpg&w=800" },
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_730d_%28G11%2C_Facelift%29_%E2%80%93_f_16012021.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_740d_G11_LCI_black_%281%29.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_730d_%28G11%2C_Facelift%29_%E2%80%93_h_16012021.jpg&w=800" },
   },
   {
     id: "1-f20-lci",
