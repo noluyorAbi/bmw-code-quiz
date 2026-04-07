@@ -98,7 +98,7 @@ function QuizContent() {
         }
 
         setQuizState(nextQuestion(newState, pool));
-      }, 1500);
+      }, 4000);
     },
     [quizState, pool, mode, roundSize, difficulty, router]
   );
