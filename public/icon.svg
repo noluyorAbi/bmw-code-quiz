@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#111316"/>
+  <!-- M-stripe at top -->
+  <rect x="0" y="0" width="170.67" height="16" rx="0" fill="#0066B3"/>
+  <rect x="170.67" y="0" width="170.67" height="16" fill="#282d58"/>
+  <rect x="341.33" y="0" width="170.67" height="16" rx="0" fill="#cb000e"/>
+  <!-- "B" letterform -->
+  <text x="256" y="340" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="900" font-style="italic" font-size="340" fill="#ffffff" letter-spacing="-15">B</text>
+  <!-- Small "CODE" label -->
+  <text x="256" y="440" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="56" fill="#a2c9ff" letter-spacing="18">CODE</text>
+  <!-- Subtle blue glow -->
+  <circle cx="420" cy="120" r="120" fill="#0066B3" opacity="0.08"/>
+</svg>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Be_Vietnam_Pro, Space_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
@@ -31,13 +31,24 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 const siteUrl = "https://github.com/noluyorAbi/bmw-code-quiz";
+const siteName = "BMW Code Quiz";
 const title = "BMW Code Quiz — Guess the BMW Chassis Code | E30 to G87";
 const description =
   "Can you tell an E46 from an F30? Test your BMW knowledge with 155 vehicles across every generation. Learn internal chassis codes (Entwicklung, F, G, U, I series), M car variants, and BMW model history. Free interactive quiz — no signup required. Not affiliated with BMW AG.";
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#111316" },
+    { media: "(prefers-color-scheme: light)", color: "#f4f5f7" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
-  title: { default: title, template: "%s | BMW Code Quiz" },
+  title: { default: title, template: `%s | ${siteName}` },
   description,
+  applicationName: siteName,
   keywords: [
     "BMW quiz", "BMW chassis code quiz", "BMW code quiz", "BMW trivia",
     "BMW internal codes", "BMW Entwicklung codes", "BMW model quiz",
@@ -55,26 +66,75 @@ export const metadata: Metadata = {
     "BMW fan quiz", "BMW nerd test", "BMW expert test",
     "BMW history quiz", "BMW model year quiz",
   ],
-  authors: [{ name: "noluyorAbi" }],
-  creator: "noluyorAbi",
+  authors: [{ name: "Alperen Adatepe", url: "https://adatepe.dev" }],
+  creator: "Alperen Adatepe",
+  publisher: "Alperen Adatepe",
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: siteUrl,
     title: "BMW Code Quiz — Can You Identify Every BMW Generation?",
     description: "155 BMW vehicles. 5 chassis code generations. 3 difficulty levels. Test your knowledge of BMW internal codes from the E30 to the G87.",
-    siteName: "BMW Code Quiz",
-    images: [{ url: "/og-image.png", width: 1280, height: 640, alt: "BMW Code Quiz — Test your knowledge of BMW's internal chassis codes" }],
+    siteName,
+    images: [{
+      url: "/og-image.png",
+      width: 1280,
+      height: 640,
+      alt: "BMW Code Quiz — Test your knowledge of BMW's internal chassis codes. 155 vehicles, E/F/G/U/I generations.",
+    }],
   },
   twitter: {
     card: "summary_large_image",
     title: "BMW Code Quiz — Can You Identify Every BMW Generation?",
     description: "155 BMW vehicles. 5 chassis code generations. From the E30 to the G87 — how well do you really know your BMWs?",
-    images: ["/og-image.png"],
+    images: [{ url: "/og-image.png", alt: "BMW Code Quiz" }],
+    creator: "@noluyorAbi",
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   alternates: { canonical: siteUrl },
+  category: "education",
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: siteName,
+  url: siteUrl,
+  description,
+  applicationCategory: "EducationalApplication",
+  operatingSystem: "Any",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  author: {
+    "@type": "Person",
+    name: "Alperen Adatepe",
+    url: "https://adatepe.dev",
+  },
+  screenshot: "/og-image.png",
+  about: {
+    "@type": "Thing",
+    name: "BMW chassis codes",
+    description: "BMW internal development codes (E, F, G, U, I series) used to identify vehicle platforms and generations since the 1960s.",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -85,6 +145,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
     >
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('bmw-quiz-theme')||'dark';var c=document.documentElement.classList;c.remove('dark','light');c.add(t)}catch(e){}})();`,

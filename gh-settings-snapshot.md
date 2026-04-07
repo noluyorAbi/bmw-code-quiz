@@ -1,0 +1,72 @@
+- generic [ref=e2]:
+  - region
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - generic [ref=e7]:
+      - banner "Global Navigation Menu" [ref=e8]:
+        - generic [ref=e9]:
+          - generic [ref=e10]
+          - generic [ref=e18]
+          - generic [ref=e30]
+        - heading "Repository navigation" [level=2] [ref=e37]
+        - navigation "Repository" [ref=e38]:
+          - list [ref=e39]
+      - region "Important update" [ref=e69]:
+        - img [ref=e71]
+        - generic [ref=e74]:
+          - heading "Important update" [level=2] [ref=e76]
+          - generic [ref=e78]
+        - button "Dismiss banner" [ref=e81] [cursor=pointer]:
+          - img [ref=e82]
+  - main [ref=e87]:
+    - generic [ref=e89]:
+      - 'heading "Settings: noluyorAbi/bmw-code-quiz" [level=1] [ref=e90]'
+      - generic [ref=e92]:
+        - navigation "General settings" [ref=e95]:
+          - list [ref=e97]
+        - generic [ref=e190]:
+          - heading "General" [level=2] [ref=e192]
+          - generic [ref=e193]
+          - generic [ref=e201]
+          - generic [ref=e207]
+          - heading "Releases" [level=2] [ref=e220]
+          - generic [ref=e222]
+          - generic [ref=e229]
+          - group [ref=e237]
+          - heading "Features" [level=2] [ref=e243]
+          - generic [ref=e244]
+          - heading "Pull Requests" [level=2] [ref=e333]
+          - paragraph [ref=e334]: When merging pull requests, you can allow any combination of merge commits, squashing, or rebasing. At least one option must be enabled. If you have linear history requirement enabled on any protected branch, you must enable squashing or rebasing.
+          - generic [ref=e335]
+          - heading "Commits" [level=2] [ref=e401]
+          - generic [ref=e402]
+          - heading "Archives" [level=2] [ref=e421]
+          - paragraph [ref=e422]: When creating source code archives, you can choose to include files stored using Git LFS in the archive.
+          - list [ref=e425]
+          - heading "Pushes" [level=2] [ref=e433]
+          - list [ref=e436]
+          - heading "Issues" [level=2] [ref=e448]
+          - generic [ref=e449]
+          - heading "Danger Zone" [level=2] [ref=e461]
+          - list [ref=e463]
+  - contentinfo [ref=e507]:
+    - heading "Footer" [level=2] [ref=e508]
+    - generic [ref=e509]:
+      - generic [ref=e510]:
+        - link "GitHub Homepage" [ref=e511] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e512]
+        - generic [ref=e514]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e515]:
+        - heading "Footer navigation" [level=3] [ref=e516]
+        - list "Footer navigation" [ref=e517]:
+          - listitem [ref=e518]
+          - listitem [ref=e520]
+          - listitem [ref=e522]
+          - listitem [ref=e524]
+          - listitem [ref=e526]
+          - listitem [ref=e528]
+          - listitem [ref=e530]
+          - listitem [ref=e532]
+          - listitem [ref=e535]
