@@ -45,7 +45,11 @@ export function generateOptions(correctCar: BmwCar, pool: BmwCar[]): string[] {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function submitAnswer(state: QuizState, answer: string, pool: BmwCar[]): QuizState {
+export function submitAnswer(
+  state: QuizState,
+  answer: string,
+  pool: BmwCar[],
+): QuizState {
   const currentCar = state.cars[state.currentIndex];
   const isCorrect = answer === currentCar.internalCode;
   const newStreak = isCorrect ? state.streak + 1 : 0;
