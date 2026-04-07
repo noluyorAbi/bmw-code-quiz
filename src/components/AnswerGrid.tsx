@@ -19,14 +19,14 @@ export default function AnswerGrid({
   onAnswer,
 }: AnswerGridProps) {
   return (
-    <div className="grid grid-cols-2 gap-3 w-full max-w-lg mx-auto">
+    <div className="grid grid-cols-2 gap-2 w-full">
       {options.map((option) => (
         <Button
           key={option}
           variant="outline"
           size="lg"
           className={cn(
-            "h-14 text-base font-mono font-semibold transition-all duration-200",
+            "h-11 text-sm font-mono font-semibold transition-all duration-200",
             !answered && "hover:border-primary hover:text-primary hover:bg-primary/5",
             answered && option === correctAnswer && "bg-emerald-500/15 border-emerald-500 text-emerald-400",
             answered && option === selectedAnswer && option !== correctAnswer && "bg-red-500/15 border-red-500 text-red-400",

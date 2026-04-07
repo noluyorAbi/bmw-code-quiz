@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface ImageCarouselProps {
@@ -20,61 +19,53 @@ const views = [
 
 export default function ImageCarousel({ images, altText }: ImageCarouselProps) {
   const available = views.filter((v) => images[v.key]);
-  const [active, setActive] = useState(0);
 
   if (available.length === 0) {
     return (
-      <div className="w-full aspect-[16/10] rounded-xl bg-muted flex items-center justify-center">
+      <div className="w-full h-full rounded-lg bg-muted flex items-center justify-center">
         <span className="text-muted-foreground text-sm">No image available</span>
       </div>
     );
   }
 
-  // Check if all images are actually different
   const uniqueUrls = new Set(available.map((v) => images[v.key]));
   const hasMultipleViews = uniqueUrls.size > 1;
 
-  return (
-    <div className="w-full space-y-3">
-      {/* Main large image */}
-      <div className="w-full rounded-xl overflow-hidden border border-border bg-black/40">
+  if (!hasMultipleViews) {
+    return (
+      <div className="w-full rounded-lg overflow-hidden border border-border bg-black/40">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={images[available[active].key]}
-          alt={`${altText} - ${available[active].label}`}
-          className="w-full h-auto min-h-[280px] max-h-[420px] object-contain"
+          src={images[available[0].key]}
+          alt={altText}
+          className="w-full h-full object-contain"
           loading="eager"
         />
       </div>
+    );
+  }
 
-      {/* Thumbnail strip — only show if we have different images */}
-      {hasMultipleViews && (
-        <div className="grid grid-cols-3 gap-2">
-          {available.map((v, i) => (
-            <button
-              key={v.key}
-              onClick={() => setActive(i)}
-              className={cn(
-                "relative rounded-lg overflow-hidden border-2 transition-all",
-                i === active
-                  ? "border-primary ring-1 ring-primary/30"
-                  : "border-border/50 opacity-60 hover:opacity-100"
-              )}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={images[v.key]}
-                alt={`${altText} - ${v.label}`}
-                className="w-full aspect-[16/10] object-cover"
-                loading="eager"
-              />
-              <span className="absolute bottom-0 inset-x-0 bg-black/60 text-[10px] font-medium text-white/80 text-center py-0.5 uppercase tracking-wider">
-                {v.label}
-              </span>
-            </button>
-          ))}
+  return (
+    <div className="w-full grid grid-rows-3 gap-1.5 h-full">
+      {available.map((v) => (
+        <div
+          key={v.key}
+          className={cn(
+            "relative rounded-lg overflow-hidden border border-border bg-black/40"
+          )}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={images[v.key]}
+            alt={`${altText} - ${v.label}`}
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <span className="absolute top-1 left-1.5 bg-black/60 text-[9px] font-medium text-white/70 px-1.5 py-0.5 rounded uppercase tracking-wider">
+            {v.label}
+          </span>
         </div>
-      )}
+      ))}
     </div>
   );
 }

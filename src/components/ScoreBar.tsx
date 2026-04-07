@@ -20,27 +20,24 @@ export default function ScoreBar({
   streak,
 }: ScoreBarProps) {
   return (
-    <div className="flex items-center justify-between w-full mb-4">
+    <div className="flex items-center justify-between w-full">
       <div className="flex items-center gap-2">
-        <Badge variant="secondary" className="text-sm px-3 py-1 font-mono">
+        <Badge variant="secondary" className="text-xs px-2 py-0.5 font-mono">
           {score}/{total}
         </Badge>
         {mode === "endless" && streak !== undefined && streak > 0 && (
-          <Badge className="text-sm px-3 py-1 bg-primary/15 text-primary border-primary/30">
+          <Badge className="text-xs px-2 py-0.5 bg-primary/15 text-primary border-primary/30">
             {streak} streak
           </Badge>
         )}
       </div>
       {mode === "rounds" && roundSize && (
-        <div className="flex-1 mx-4 space-y-1">
-          <Progress value={(total / roundSize) * 100} className="h-1.5" />
-          <p className="text-xs text-center text-muted-foreground">
-            {total} / {roundSize}
-          </p>
+        <div className="flex-1 mx-4">
+          <Progress value={(total / roundSize) * 100} className="h-1" />
         </div>
       )}
       {mode === "endless" && (
-        <span className="text-sm text-muted-foreground">{total} answered</span>
+        <span className="text-xs text-muted-foreground">{total} answered</span>
       )}
     </div>
   );

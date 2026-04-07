@@ -126,7 +126,8 @@ function QuizContent() {
   const currentCar = getCurrentCar(quizState);
 
   return (
-    <div className="flex flex-col items-center gap-6">
+    <div className="flex flex-col h-[calc(100vh-2rem)] gap-2">
+      {/* Score bar */}
       <ScoreBar
         score={quizState.score}
         total={quizState.answers.length}
@@ -135,59 +136,68 @@ function QuizContent() {
         streak={quizState.streak}
       />
 
-      <ImageCarousel
-        images={currentCar.images}
-        altText={currentCar.officialName}
-      />
-
-      <div className="text-center space-y-1">
-        <h2 className="text-2xl font-bold tracking-tight">
-          {currentCar.officialName}
-        </h2>
-        <p className="text-sm text-muted-foreground">{currentCar.years}</p>
-      </div>
-
-      <AnswerGrid
-        options={quizState.options}
-        correctAnswer={currentCar.internalCode}
-        answered={quizState.answered}
-        selectedAnswer={quizState.selectedAnswer}
-        onAnswer={handleAnswer}
-      />
-
-      {quizState.answered && (
-        <div className={cn(
-          "w-full max-w-lg mx-auto rounded-lg border px-4 py-4 text-sm transition-all animate-in fade-in slide-in-from-bottom-2 duration-300 space-y-2",
-          quizState.selectedAnswer === currentCar.internalCode
-            ? "border-emerald-500/30 bg-emerald-500/10"
-            : "border-red-500/30 bg-red-500/10"
-        )}>
-          <p className={cn(
-            "font-bold text-base",
-            quizState.selectedAnswer === currentCar.internalCode ? "text-emerald-400" : "text-red-400"
-          )}>
-            {quizState.selectedAnswer === currentCar.internalCode ? "Correct!" : "Wrong!"}
-          </p>
-          <p className="text-foreground">
-            <span className="font-mono font-bold text-primary text-lg">{currentCar.internalCode}</span>{" "}
-            is the internal code for the {currentCar.officialName}, produced {currentCar.years}.
-          </p>
-          <p className="text-muted-foreground text-xs leading-relaxed">
-            {getCodeExplanation(currentCar.internalCode, currentCar.series)}
-          </p>
+      {/* Main content: images left, info+answers right */}
+      <div className="flex gap-4 flex-1 min-h-0">
+        {/* Left: images */}
+        <div className="w-1/2 min-h-0">
+          <ImageCarousel
+            images={currentCar.images}
+            altText={currentCar.officialName}
+          />
         </div>
-      )}
 
-      {mode === "endless" && (
-        <Button
-          variant="ghost"
-          size="sm"
-          className="mt-2 text-muted-foreground"
-          onClick={handleQuit}
-        >
-          End Quiz
-        </Button>
-      )}
+        {/* Right: name, answers, explanation */}
+        <div className="w-1/2 flex flex-col gap-3 justify-center">
+          <div>
+            <h2 className="text-xl font-bold tracking-tight leading-tight">
+              {currentCar.officialName}
+            </h2>
+            <p className="text-xs text-muted-foreground">{currentCar.years}</p>
+          </div>
+
+          <AnswerGrid
+            options={quizState.options}
+            correctAnswer={currentCar.internalCode}
+            answered={quizState.answered}
+            selectedAnswer={quizState.selectedAnswer}
+            onAnswer={handleAnswer}
+          />
+
+          {quizState.answered && (
+            <div className={cn(
+              "rounded-md border px-3 py-2 text-xs transition-all animate-in fade-in slide-in-from-bottom-2 duration-300",
+              quizState.selectedAnswer === currentCar.internalCode
+                ? "border-emerald-500/30 bg-emerald-500/10"
+                : "border-red-500/30 bg-red-500/10"
+            )}>
+              <p className="text-foreground">
+                <span className={cn(
+                  "font-bold",
+                  quizState.selectedAnswer === currentCar.internalCode ? "text-emerald-400" : "text-red-400"
+                )}>
+                  {quizState.selectedAnswer === currentCar.internalCode ? "Correct! " : "Wrong! "}
+                </span>
+                <span className="font-mono font-bold text-primary">{currentCar.internalCode}</span>
+                {" "}— {currentCar.officialName} ({currentCar.years}).{" "}
+                <span className="text-muted-foreground">
+                  {getCodeExplanation(currentCar.internalCode, currentCar.series)}
+                </span>
+              </p>
+            </div>
+          )}
+
+          {mode === "endless" && !quizState.answered && (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-muted-foreground text-xs w-fit"
+              onClick={handleQuit}
+            >
+              End Quiz
+            </Button>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
