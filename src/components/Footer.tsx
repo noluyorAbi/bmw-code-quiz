@@ -15,7 +15,7 @@ export default function Footer() {
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               An interactive quiz to test your knowledge of BMW&apos;s internal chassis codes.
-              155 vehicles across every generation.
+              157 vehicles across every generation.
             </p>
             <p className="text-xs text-muted-foreground/70">
               Fan Project &middot; Not affiliated with BMW AG &middot; Built with Next.js &amp; Tailwind CSS

@@ -34,7 +34,7 @@ const siteUrl = "https://github.com/noluyorAbi/bmw-code-quiz";
 const siteName = "BMW Code Quiz";
 const title = "BMW Code Quiz — Guess the BMW Chassis Code | E30 to G87";
 const description =
-  "Can you tell an E46 from an F30? Test your BMW knowledge with 155 vehicles across every generation. Learn internal chassis codes (Entwicklung, F, G, U, I series), M car variants, and BMW model history. Free interactive quiz — no signup required. Not affiliated with BMW AG.";
+  "Can you tell an E46 from an F30? Test your BMW knowledge with 157 vehicles across every generation. Learn internal chassis codes (Entwicklung, F, G, U, I series), M car variants, and BMW model history. Free interactive quiz — no signup required. Not affiliated with BMW AG.";
 
 export const viewport: Viewport = {
   themeColor: [
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
       url: "/og-image.png",
       width: 1280,
       height: 640,
-      alt: "BMW Code Quiz — Test your knowledge of BMW's internal chassis codes. 155 vehicles, E/F/G/U/I generations.",
+      alt: "BMW Code Quiz — Test your knowledge of BMW's internal chassis codes. 157 vehicles, E/F/G/U/I generations.",
     }],
   },
   twitter: {

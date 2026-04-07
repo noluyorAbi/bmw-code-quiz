@@ -1461,6 +1461,26 @@ export const bmwCars: BmwCar[] = [
     series: "X6",
     images: { front: "https://commons.wikimedia.org/w/thumb.php?f=2008_red_BMW_X6_xDrive50i_front.JPG&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=2008_red_BMW_X6_xDrive50i_left_side.JPG&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=2009_BMW_X6_rear.jpg&w=800" },
   },
+
+  // ── Neue Klasse (NA/ZA platform) ─────────────────────────────────────────
+  {
+    id: "nk-na5",
+    officialName: "BMW iX3 (Neue Klasse)",
+    internalCode: "NA5",
+    difficulty: "comprehensive",
+    years: "2025–present",
+    series: "Neue Klasse",
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_iX3_NA5_IAA_2025_DSC_1273.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_iX3_NA5_Auto_Zuerich_2025_DSC_3087.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_iX3_NA5_Auto_Zuerich_2025_DSC_3641.jpg&w=800" },
+  },
+  {
+    id: "nk-na0",
+    officialName: "BMW i3 Sedan (Neue Klasse)",
+    internalCode: "NA0",
+    difficulty: "comprehensive",
+    years: "2026–present",
+    series: "Neue Klasse",
+    images: { front: "https://commons.wikimedia.org/w/thumb.php?f=BMW_Vision_Neue_Klasse_IAA_2023_1X7A0221.jpg&w=800", side: "https://commons.wikimedia.org/w/thumb.php?f=BMW_Vision_Neue_Klasse_IAA_2023_1X7A0101.jpg&w=800", rear: "https://commons.wikimedia.org/w/thumb.php?f=BMW_Vision_Neue_Klasse_IAA_2023_1X7A0224.jpg&w=800" },
+  },
 ];
 
 export function getCarsByDifficulty(

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Interactive quiz to test your knowledge of BMW's internal chassis codes — from the E30 to the G87. Not affiliated with BMW AG.",
   "author": "noluyorAbi",
-  "license": "MIT",
+  "license": "CC-BY-SA-4.0",
   "private": true,
   "keywords": [
     "bmw",

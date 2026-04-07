@@ -16,7 +16,7 @@ From the classic E30 to the latest G87 — how well do you really know your BMWs
 
 <table>
 <tr>
-<td><strong>155</strong><br/>Vehicles</td>
+<td><strong>157</strong><br/>Vehicles</td>
 <td><strong>3</strong><br/>Difficulty Levels</td>
 <td><strong>2</strong><br/>Game Modes</td>
 <td><strong>&infin;</strong><br/>Replayability</td>
@@ -50,7 +50,7 @@ The quiz shows you a BMW model with photos and its official name, and you pick t
 <td width="50%">
 
 ### Quiz Engine
-- **155 vehicles** across all BMW series, M cars, X models, Z roadsters, i electric vehicles, and classics
+- **157 vehicles** across all BMW series, M cars, X models, Z roadsters, i electric vehicles, and classics
 - **Multi-angle images** — front, side, and rear views sourced from Wikimedia Commons
 - **Smart shuffling** — randomized question order with no repeats until the full pool is exhausted
 - **Real-time feedback** — correct/wrong indication with a 4-second explanation window
@@ -60,7 +60,7 @@ The quiz shows you a BMW model with photos and its official name, and you pick t
 <td width="50%">
 
 ### Experience
-- **Three difficulty tiers** — Core (57 cars), Comprehensive (99 cars), Exhaustive (155 cars)
+- **Three difficulty tiers** — Core (57 cars), Comprehensive (99 cars), Exhaustive (157 cars)
 - **Two game modes** — fixed rounds (10 or 20 questions) or endless mode with streak tracking
 - **Dark & light themes** — toggle between themes with automatic persistence
 - **Local leaderboard** — top 10 scores per difficulty saved to localStorage
@@ -102,7 +102,7 @@ The quiz shows you a BMW model with photos and its official name, and you pick t
 |:------|:----:|:------------|
 | **Core** | 57 | The essentials — well-known production models across all major series (1–8, X1–X7, Z3/Z4) |
 | **Comprehensive** | 99 | Core + classics (2002, Isetta, Z1, Z8, E9), all M cars (M2–M8, X5 M, X6 M), i Series, body variants (Active Tourer, Gran Coupé), and the new X3 G45 |
-| **Exhaustive** | 155 | Everything — adds Touring/Coupé/Convertible/Compact sub-variants, Gran Turismo models, LCI facelifts for major series, long-wheelbase 7 Series, and X Series M variants |
+| **Exhaustive** | 157 | Everything — adds Touring/Coupé/Convertible/Compact sub-variants, Gran Turismo models, LCI facelifts for major series, long-wheelbase 7 Series, and X Series M variants |
 
 <br />
 
@@ -220,7 +220,7 @@ src/
 │   ├── LeaderboardTable.tsx
 │   └── ui/                 # Base UI primitives (button, card, badge, etc.)
 ├── data/
-│   └── bmw-cars.ts         # 155 BMW entries with codes, years, series, images
+│   └── bmw-cars.ts         # 157 BMW entries with codes, years, series, images
 └── lib/
     ├── types.ts            # TypeScript types (BmwCar, QuizState, etc.)
     ├── quiz-engine.ts      # Quiz logic — init, shuffle, submit, next
@@ -232,7 +232,7 @@ src/
 
 ## Data
 
-All 155 vehicles are defined in `src/data/bmw-cars.ts`. Each entry contains:
+All 157 vehicles are defined in `src/data/bmw-cars.ts`. Each entry contains:
 
 ```typescript
 {
@@ -274,5 +274,10 @@ This is an **independent fan project** created for educational and entertainment
 
 - **Not affiliated with BMW AG** — This project is not endorsed by, directly affiliated with, maintained, authorized, or sponsored by BMW AG or any of its subsidiaries or affiliates.
 - **Trademarks** — BMW, the BMW logo, M, and all model names and designations are registered trademarks of BMW AG.
-- **Images** — Vehicle photographs are sourced from [Wikimedia Commons](https://commons.wikimedia.org) and used under their respective licenses (primarily CC BY-SA).
-- **Code** — The source code of this project is available under the [MIT License](LICENSE).
+- **Images** — All vehicle photographs are sourced from [Wikimedia Commons](https://commons.wikimedia.org) and used under their respective free licenses:
+  - **CC BY-SA 4.0** (~60% of images) — [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+  - **CC BY-SA 3.0** (~15%) — [Creative Commons Attribution-ShareAlike 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
+  - **CC BY 4.0** (~5%) — [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+  - **Public Domain** (~15%) — No restrictions
+  - To view the license and author for any specific image, visit `https://commons.wikimedia.org/wiki/File:FILENAME`
+- **License** — This project is licensed under [CC BY-SA 4.0](LICENSE) (Creative Commons Attribution-ShareAlike 4.0 International).

@@ -14,6 +14,7 @@ const CODE_GENERATIONS = [
   { prefix: "G", label: "Current Gen", era: "2017 – present", example: "G20, G80, G82", color: "text-primary" },
   { prefix: "U", label: "FAAR Platform", era: "2022 – present", example: "U06, U10, U11", color: "text-foreground" },
   { prefix: "I", label: "Electric", era: "2013 – present", example: "I01, I12, I20", color: "text-foreground" },
+  { prefix: "NA", label: "Neue Klasse", era: "2025 – future", example: "NA0, NA5", color: "text-primary" },
 ];
 
 const FEATURED_CARS = [
@@ -25,12 +26,14 @@ const FEATURED_CARS = [
   { name: "BMW Z4 G29", code: "G29", years: "2018–present", series: "Z Series", img: "https://commons.wikimedia.org/w/thumb.php?f=BMW_Z4_sDrive30i_%28G29%2C_2019%29_%2852226832452%29.jpg&w=600", desc: "BMW's roadster lives on. Shares a platform with the Toyota Supra — but true fans know it as the G29." },
   { name: "BMW X5 G05", code: "G05", years: "2018–present", series: "X5", img: "https://commons.wikimedia.org/w/thumb.php?f=2020_BMW_X5_G05_xDrive30d_M_Sport%2C_front_right%2C_06-30-2024.jpg&w=600", desc: "The Sports Activity Vehicle that started it all — now in its fourth generation with PHEV and M Competition variants." },
   { name: "BMW iX I20", code: "I20", years: "2021–present", series: "i Series", img: "https://commons.wikimedia.org/w/thumb.php?f=2022_BMW_iX_front.jpg&w=600", desc: "BMW's electric flagship SUV. The I20 platform brings up to 610 HP and 300+ miles of range." },
+  { name: "BMW iX3 NA5", code: "NA5", years: "2025–present", series: "Neue Klasse", img: "https://commons.wikimedia.org/w/thumb.php?f=BMW_iX3_NA5_IAA_2025_DSC_1273.jpg&w=600", desc: "The first Neue Klasse vehicle. 800V architecture, 900+ km range, and a radical new design language for BMW's electric future." },
 ];
 
 const POPULAR_CODES = [
   "E21", "E30", "E36", "E46", "E90", "E39", "E60", "E38", "E34", "E92", "E31",
   "F30", "F80", "F82", "F10", "F87", "F90",
   "G20", "G80", "G82", "G42", "G70", "G87", "G60",
+  "NA0", "NA5",
 ];
 
 export default function Home() {
@@ -84,7 +87,7 @@ export default function Home() {
                 DATABASE ENTRIES
               </span>
               <span className="block font-[family-name:var(--font-display)] text-3xl font-bold text-foreground tabular-nums italic">
-                155 VEHICLES
+                157 VEHICLES
               </span>
             </div>
             <div className="bg-surface-container-low p-6 rounded-lg border-l-4 border-primary-container">
@@ -142,7 +145,7 @@ export default function Home() {
             ICONIC CHASSIS CODES
           </h2>
           <p className="text-on-surface-variant max-w-2xl mt-3 leading-relaxed">
-            From legendary sports sedans to cutting-edge electric SUVs — these are some of the 155 BMW models
+            From legendary sports sedans to cutting-edge electric SUVs — these are some of the 157 BMW models
             you&apos;ll encounter in the quiz. Each one has a story, a chassis code, and a legacy.
           </p>
         </div>
@@ -190,7 +193,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent z-10" />
         <SafeImage
           src="https://commons.wikimedia.org/w/thumb.php?f=2021_BMW_M4_Competition_Automatic_3.0_Front.jpg&w=1600"
-          alt="BMW M4 Competition G82 — one of 155 vehicles in the BMW Code Quiz"
+          alt="BMW M4 Competition G82 — one of 157 vehicles in the BMW Code Quiz"
           className="w-full h-full object-cover grayscale brightness-75 contrast-125"
           fallbackClassName="w-full h-full bg-surface-container-low"
         />
@@ -227,7 +230,7 @@ export default function Home() {
         </div>
 
         {/* Generation Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
           {CODE_GENERATIONS.map((gen, i) => (
             <div
               key={gen.prefix}

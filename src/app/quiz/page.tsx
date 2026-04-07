@@ -26,13 +26,15 @@ function preloadImages(car: BmwCar): Promise<void> {
 }
 
 function getCodeExplanation(code: string, series: string): string {
-  const prefix = code.charAt(0);
+  const prefix = code.startsWith("NA") || code.startsWith("ZA") ? code.substring(0, 2) : code.charAt(0);
   const prefixMeaning: Record<string, string> = {
     E: '"E" (Entwicklung = Development) was used for BMW chassis codes from the 1960s to ~2012.',
     F: '"F" generation codes replaced "E" starting around 2010, marking BMW\'s modern era.',
     G: '"G" is the current generation prefix, used since ~2017 for the latest BMW models.',
     U: '"U" is used for BMW\'s newer UKL/FAAR platform-based compact models.',
     I: '"I" prefix is reserved for BMW\'s fully electric "i" sub-brand vehicles.',
+    NA: '"NA" is BMW\'s Neue Klasse (New Class) platform code for the next generation of electric vehicles, featuring 800V architecture and a completely new design language.',
+    ZA: '"ZA" is the M performance variant code for BMW\'s Neue Klasse platform — the "Z" replaces "N" for M Division models.',
   };
   const parts: string[] = [];
   if (prefixMeaning[prefix]) parts.push(prefixMeaning[prefix]);
@@ -42,6 +44,7 @@ function getCodeExplanation(code: string, series: string): string {
   if (series.startsWith("X") && !series.includes("M")) parts.push("The X prefix denotes BMW's SAV (Sports Activity Vehicle) lineup.");
   if (code.includes("Touring")) parts.push('"Touring" is BMW\'s name for their estate/wagon body style.');
   if (code.includes("/")) parts.push("The slash notation indicates a body style variant within the same generation.");
+  if (series === "Neue Klasse") parts.push("Neue Klasse vehicles use BMW's next-generation electric platform with 800V architecture, up to 900+ km range, and a radically new design language.");
   return parts.join(" ") || `Part of the BMW ${series} lineage.`;
 }
 
