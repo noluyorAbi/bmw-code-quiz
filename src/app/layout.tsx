@@ -161,28 +161,37 @@ export const metadata: Metadata = {
   category: "education",
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  name: siteName,
-  url: siteUrl,
-  description,
-  applicationCategory: "EducationalApplication",
-  operatingSystem: "Any",
-  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-  author: {
-    "@type": "Person",
-    name: "Alperen Adatepe",
-    url: "https://adatepe.dev",
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: siteName,
+    url: siteUrl,
+    description,
+    applicationCategory: "EducationalApplication",
+    operatingSystem: "Any",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    author: { "@type": "Person", name: "Alperen Adatepe", url: "https://adatepe.dev" },
+    screenshot: "/og-image.png",
+    about: {
+      "@type": "Thing",
+      name: "BMW chassis codes",
+      description: "BMW internal development codes (E, F, G, U, I, NA series) used to identify vehicle platforms and generations since the 1960s.",
+    },
   },
-  screenshot: "/og-image.png",
-  about: {
-    "@type": "Thing",
-    name: "BMW chassis codes",
-    description:
-      "BMW internal development codes (E, F, G, U, I series) used to identify vehicle platforms and generations since the 1960s.",
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "What does the E stand for in BMW chassis codes?", acceptedAnswer: { "@type": "Answer", text: "E stands for Entwicklung, the German word for development. It was used as a prefix for BMW internal chassis codes from the 1960s until around 2012. For example, E30 is the second-generation 3 Series (1982-1994) and E46 is the fourth generation (1997-2006)." } },
+      { "@type": "Question", name: "Why did BMW switch from E to F to G codes?", acceptedAnswer: { "@type": "Answer", text: "BMW ran through E-numbers over 50 years. The switch to F around 2010 and G around 2017 was simply the next available letters. The latest shift to NA for the Neue Klasse (2025+) carries meaning: N for Neue Klasse, A for first generation." } },
+      { "@type": "Question", name: "What does LCI mean on a BMW?", acceptedAnswer: { "@type": "Answer", text: "LCI stands for Life Cycle Impulse — BMW's term for a mid-cycle facelift. It typically happens 3-4 years into a 7-year model lifecycle, bringing revised headlights, taillights, bumpers, and sometimes new engines." } },
+      { "@type": "Question", name: "What is BMW Neue Klasse?", acceptedAnswer: { "@type": "Answer", text: "Neue Klasse (New Class) is BMW's next-generation electric vehicle platform launching in 2025. It uses NA chassis codes and features 800V architecture, new cylindrical battery cells, and a radical design language. The first model is the NA5 iX3." } },
+      { "@type": "Question", name: "What is the difference between an E46 and an F30?", acceptedAnswer: { "@type": "Answer", text: "Both are BMW 3 Series sedans from different generations. The E46 (1997-2006) is known for naturally aspirated engines and pure driving feel. The F30 (2011-2019) is turbocharged, more technology-focused, and larger. They look completely different." } },
+      { "@type": "Question", name: "Why do BMW enthusiasts use chassis codes instead of model names?", acceptedAnswer: { "@type": "Answer", text: "Because model names repeat across generations. BMW 3 Series could mean any car from 1975 to today. But E30 means exactly one generation (1982-1994). Chassis codes are precise, unambiguous, and efficient." } },
+    ],
   },
-};
+];
 
 export default function RootLayout({
   children,
