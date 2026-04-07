@@ -2,26 +2,18 @@
 
 import { Difficulty } from "@/lib/types";
 import { bmwCars } from "@/data/bmw-cars";
+import { cn } from "@/lib/utils";
 
 interface DifficultySelectorProps {
   value: Difficulty;
   onChange: (difficulty: Difficulty) => void;
 }
 
-const difficulties: { value: Difficulty; label: string; description: string }[] =
-  [
-    { value: "core", label: "Core", description: "Well-known models" },
-    {
-      value: "comprehensive",
-      label: "Comprehensive",
-      description: "Core + classics & rarities",
-    },
-    {
-      value: "exhaustive",
-      label: "Exhaustive",
-      description: "Every variant & facelift",
-    },
-  ];
+const difficulties: { value: Difficulty; label: string; description: string }[] = [
+  { value: "core", label: "Core", description: "Well-known models" },
+  { value: "comprehensive", label: "Comprehensive", description: "Classics & rarities" },
+  { value: "exhaustive", label: "Exhaustive", description: "Every variant" },
+];
 
 function countCars(difficulty: Difficulty): number {
   if (difficulty === "core")
@@ -38,23 +30,26 @@ export default function DifficultySelector({
   onChange,
 }: DifficultySelectorProps) {
   return (
-    <div className="flex flex-col gap-2">
-      <h2 className="text-lg font-semibold">Difficulty</h2>
-      <div className="flex gap-2">
+    <div className="space-y-3">
+      <label className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+        Difficulty
+      </label>
+      <div className="grid grid-cols-3 gap-2">
         {difficulties.map((d) => (
           <button
             key={d.value}
-            className={`btn flex-1 ${
-              value === d.value ? "btn-primary" : "btn-ghost border-base-300"
-            }`}
+            className={cn(
+              "flex flex-col items-center gap-0.5 rounded-lg border px-3 py-3 text-sm transition-all",
+              value === d.value
+                ? "border-primary bg-primary/10 text-foreground"
+                : "border-border bg-transparent text-muted-foreground hover:border-muted-foreground/40 hover:text-foreground"
+            )}
             onClick={() => onChange(d.value)}
           >
-            <div className="flex flex-col items-center">
-              <span className="font-bold">{d.label}</span>
-              <span className="text-xs opacity-70">
-                {countCars(d.value)} cars
-              </span>
-            </div>
+            <span className="font-semibold">{d.label}</span>
+            <span className="text-xs text-muted-foreground">
+              {countCars(d.value)} cars
+            </span>
           </button>
         ))}
       </div>

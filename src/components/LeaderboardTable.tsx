@@ -1,6 +1,14 @@
 "use client";
 
 import { LeaderboardEntry } from "@/lib/types";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 interface LeaderboardTableProps {
   entries: LeaderboardEntry[];
@@ -9,39 +17,45 @@ interface LeaderboardTableProps {
 export default function LeaderboardTable({ entries }: LeaderboardTableProps) {
   if (entries.length === 0) {
     return (
-      <div className="text-center py-8 text-base-content/50">
+      <div className="text-center py-12 text-muted-foreground">
         No scores yet. Be the first!
       </div>
     );
   }
 
   return (
-    <div className="overflow-x-auto">
-      <table className="table table-zebra">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Score</th>
-            <th>Mode</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          {entries.map((entry, i) => (
-            <tr key={`${entry.name}-${entry.date}`}>
-              <td className="font-bold">{i + 1}</td>
-              <td>{entry.name}</td>
-              <td>
-                {entry.score}/{entry.total} (
-                {Math.round((entry.score / entry.total) * 100)}%)
-              </td>
-              <td className="capitalize">{entry.mode}</td>
-              <td>{new Date(entry.date).toLocaleDateString()}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead className="w-12">#</TableHead>
+          <TableHead>Name</TableHead>
+          <TableHead>Score</TableHead>
+          <TableHead>Mode</TableHead>
+          <TableHead className="text-right">Date</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {entries.map((entry, i) => (
+          <TableRow key={`${entry.name}-${entry.date}`}>
+            <TableCell className="font-mono font-bold text-muted-foreground">
+              {i + 1}
+            </TableCell>
+            <TableCell className="font-medium">{entry.name}</TableCell>
+            <TableCell className="font-mono">
+              {entry.score}/{entry.total}{" "}
+              <span className="text-muted-foreground">
+                ({Math.round((entry.score / entry.total) * 100)}%)
+              </span>
+            </TableCell>
+            <TableCell className="capitalize text-muted-foreground">
+              {entry.mode}
+            </TableCell>
+            <TableCell className="text-right text-muted-foreground">
+              {new Date(entry.date).toLocaleDateString()}
+            </TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
   );
 }

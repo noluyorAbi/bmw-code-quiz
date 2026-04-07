@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Geist } from "next/font/google";
-import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geistSans = Geist({
+  variable: "--font-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: "BMW Internal Names Quiz",
+  title: "BMW Code Quiz",
   description: "Learn BMW chassis codes through an interactive quiz",
 };
 
@@ -16,9 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="night" className={cn("font-sans", geist.variable)}>
-      <body className="min-h-screen bg-base-100">
-        <div className="container mx-auto px-4 py-8 max-w-4xl">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className="min-h-screen bg-background font-sans">
+        <div className="mx-auto max-w-3xl px-4 py-10">
           {children}
         </div>
       </body>

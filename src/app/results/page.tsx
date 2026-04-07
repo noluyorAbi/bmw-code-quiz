@@ -7,6 +7,10 @@ import {
   qualifiesForLeaderboard,
   addLeaderboardEntry,
 } from "@/lib/leaderboard";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 
 function ResultsContent() {
   const searchParams = useSearchParams();
@@ -34,83 +38,77 @@ function ResultsContent() {
     if (percentage >= 90) return "BMW Master! Incredible!";
     if (percentage >= 70) return "Great job! You know your BMWs!";
     if (percentage >= 50) return "Not bad! Keep practicing!";
-    return "Keep learning! You'll get there!";
-  }
-
-  function getAlertClass(): string {
-    if (percentage >= 90) return "alert-success";
-    if (percentage >= 70) return "alert-info";
-    if (percentage >= 50) return "alert-warning";
-    return "alert-error";
+    return "Keep learning — you'll get there!";
   }
 
   return (
-    <div className="flex flex-col items-center gap-6">
-      <h1 className="text-4xl font-bold text-primary">Quiz Complete!</h1>
+    <div className="flex flex-col items-center gap-8 pt-8">
+      <div className="text-center space-y-2">
+        <h1 className="text-4xl font-bold tracking-tight">Quiz Complete</h1>
+        <p className="text-muted-foreground">{getMessage()}</p>
+      </div>
 
-      <div className="stats shadow bg-base-200">
-        <div className="stat">
-          <div className="stat-title">Score</div>
-          <div className="stat-value text-primary">
-            {score}/{total}
+      <div className="flex gap-6">
+        <div className="text-center">
+          <div className="text-5xl font-bold font-mono tracking-tight">
+            {score}
+            <span className="text-muted-foreground">/{total}</span>
           </div>
-          <div className="stat-desc">{percentage}% correct</div>
+          <p className="text-sm text-muted-foreground mt-1">{percentage}% correct</p>
         </div>
         {mode === "endless" && bestStreak > 0 && (
-          <div className="stat">
-            <div className="stat-title">Best Streak</div>
-            <div className="stat-value text-secondary">{bestStreak}</div>
+          <div className="text-center border-l border-border pl-6">
+            <div className="text-5xl font-bold font-mono tracking-tight text-primary">
+              {bestStreak}
+            </div>
+            <p className="text-sm text-muted-foreground mt-1">best streak</p>
           </div>
         )}
       </div>
 
-      <div className={`alert ${getAlertClass()} max-w-md`}>
-        <span>{getMessage()}</span>
-      </div>
+      <div
+        className={cn(
+          "w-full max-w-sm h-1 rounded-full",
+          percentage >= 90 && "bg-emerald-500",
+          percentage >= 70 && percentage < 90 && "bg-blue-500",
+          percentage >= 50 && percentage < 70 && "bg-yellow-500",
+          percentage < 50 && "bg-red-500",
+        )}
+      />
 
       {qualifies && !saved && (
-        <div className="card bg-base-200 w-full max-w-md">
-          <div className="card-body">
-            <h3 className="card-title text-sm">
-              You made the top 10! Enter your name:
-            </h3>
+        <Card className="w-full max-w-sm border-border/50 bg-card/50">
+          <CardContent className="pt-6 space-y-3">
+            <p className="text-sm font-medium">
+              Top 10! Enter your name:
+            </p>
             <div className="flex gap-2">
-              <input
-                type="text"
+              <Input
                 placeholder="Your name"
-                className="input input-bordered flex-1"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleSave()}
                 maxLength={20}
+                className="flex-1"
               />
-              <button className="btn btn-primary" onClick={handleSave}>
-                Save
-              </button>
+              <Button onClick={handleSave}>Save</Button>
             </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
       )}
 
       {saved && (
-        <div className="alert alert-success max-w-md">
-          <span>Score saved to leaderboard!</span>
-        </div>
+        <p className="text-sm text-emerald-400">Score saved to leaderboard!</p>
       )}
 
       <div className="flex gap-3">
-        <button
-          className="btn btn-primary"
-          onClick={() => router.push("/")}
-        >
-          Play Again
-        </button>
-        <button
-          className="btn btn-ghost"
+        <Button onClick={() => router.push("/")}>Play Again</Button>
+        <Button
+          variant="outline"
           onClick={() => router.push("/leaderboard")}
         >
           Leaderboard
-        </button>
+        </Button>
       </div>
     </div>
   );
@@ -118,7 +116,13 @@ function ResultsContent() {
 
 export default function ResultsPage() {
   return (
-    <Suspense fallback={<div className="flex justify-center"><span className="loading loading-spinner loading-lg" /></div>}>
+    <Suspense
+      fallback={
+        <div className="flex justify-center py-20">
+          <div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent" />
+        </div>
+      }
+    >
       <ResultsContent />
     </Suspense>
   );

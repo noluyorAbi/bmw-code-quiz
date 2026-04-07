@@ -1,6 +1,8 @@
 "use client";
 
 import { GameMode } from "@/lib/types";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
 
 interface ScoreBarProps {
   score: number;
@@ -18,31 +20,27 @@ export default function ScoreBar({
   streak,
 }: ScoreBarProps) {
   return (
-    <div className="flex items-center justify-between w-full max-w-2xl mx-auto mb-6">
-      <div className="flex items-center gap-4">
-        <div className="badge badge-primary badge-lg">
-          Score: {score}/{total}
-        </div>
+    <div className="flex items-center justify-between w-full mb-4">
+      <div className="flex items-center gap-2">
+        <Badge variant="secondary" className="text-sm px-3 py-1 font-mono">
+          {score}/{total}
+        </Badge>
         {mode === "endless" && streak !== undefined && streak > 0 && (
-          <div className="badge badge-secondary badge-lg">
-            Streak: {streak}
-          </div>
+          <Badge className="text-sm px-3 py-1 bg-primary/15 text-primary border-primary/30">
+            {streak} streak
+          </Badge>
         )}
       </div>
       {mode === "rounds" && roundSize && (
-        <div className="flex-1 mx-4">
-          <progress
-            className="progress progress-primary w-full"
-            value={total}
-            max={roundSize}
-          />
-          <p className="text-xs text-center text-base-content/60 mt-1">
-            Question {total} of {roundSize}
+        <div className="flex-1 mx-4 space-y-1">
+          <Progress value={(total / roundSize) * 100} className="h-1.5" />
+          <p className="text-xs text-center text-muted-foreground">
+            {total} / {roundSize}
           </p>
         </div>
       )}
       {mode === "endless" && (
-        <p className="text-sm text-base-content/60">Questions: {total}</p>
+        <span className="text-sm text-muted-foreground">{total} answered</span>
       )}
     </div>
   );

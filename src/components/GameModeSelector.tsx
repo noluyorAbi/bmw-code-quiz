@@ -1,6 +1,7 @@
 "use client";
 
 import { GameMode, RoundSize } from "@/lib/types";
+import { cn } from "@/lib/utils";
 
 interface GameModeSelectorProps {
   mode: GameMode;
@@ -16,44 +17,42 @@ export default function GameModeSelector({
   onRoundSizeChange,
 }: GameModeSelectorProps) {
   return (
-    <div className="flex flex-col gap-2">
-      <h2 className="text-lg font-semibold">Game Mode</h2>
-      <div className="flex gap-2">
-        <button
-          className={`btn flex-1 ${
-            mode === "rounds" ? "btn-primary" : "btn-ghost border-base-300"
-          }`}
-          onClick={() => onModeChange("rounds")}
-        >
-          Rounds
-        </button>
-        <button
-          className={`btn flex-1 ${
-            mode === "endless" ? "btn-primary" : "btn-ghost border-base-300"
-          }`}
-          onClick={() => onModeChange("endless")}
-        >
-          Endless
-        </button>
+    <div className="space-y-3">
+      <label className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+        Mode
+      </label>
+      <div className="grid grid-cols-2 gap-2">
+        {(["rounds", "endless"] as const).map((m) => (
+          <button
+            key={m}
+            className={cn(
+              "rounded-lg border px-4 py-2.5 text-sm font-semibold capitalize transition-all",
+              mode === m
+                ? "border-primary bg-primary/10 text-foreground"
+                : "border-border bg-transparent text-muted-foreground hover:border-muted-foreground/40 hover:text-foreground"
+            )}
+            onClick={() => onModeChange(m)}
+          >
+            {m}
+          </button>
+        ))}
       </div>
       {mode === "rounds" && (
-        <div className="flex gap-2 mt-1">
-          <button
-            className={`btn btn-sm flex-1 ${
-              roundSize === 10 ? "btn-secondary" : "btn-ghost border-base-300"
-            }`}
-            onClick={() => onRoundSizeChange(10)}
-          >
-            10 Questions
-          </button>
-          <button
-            className={`btn btn-sm flex-1 ${
-              roundSize === 20 ? "btn-secondary" : "btn-ghost border-base-300"
-            }`}
-            onClick={() => onRoundSizeChange(20)}
-          >
-            20 Questions
-          </button>
+        <div className="grid grid-cols-2 gap-2">
+          {([10, 20] as const).map((size) => (
+            <button
+              key={size}
+              className={cn(
+                "rounded-md border px-3 py-1.5 text-xs font-medium transition-all",
+                roundSize === size
+                  ? "border-primary/50 bg-primary/5 text-foreground"
+                  : "border-border text-muted-foreground hover:text-foreground"
+              )}
+              onClick={() => onRoundSizeChange(size)}
+            >
+              {size} questions
+            </button>
+          ))}
         </div>
       )}
     </div>

@@ -10,6 +10,7 @@ import {
   nextQuestion,
   getCurrentCar,
 } from "@/lib/quiz-engine";
+import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import AnswerGrid from "@/components/AnswerGrid";
 import ScoreBar from "@/components/ScoreBar";
@@ -20,7 +21,9 @@ function QuizContent() {
 
   const difficulty = (searchParams.get("difficulty") || "core") as Difficulty;
   const mode = (searchParams.get("mode") || "rounds") as GameMode;
-  const roundSize = parseInt(searchParams.get("roundSize") || "10") as RoundSize;
+  const roundSize = parseInt(
+    searchParams.get("roundSize") || "10"
+  ) as RoundSize;
 
   const [quizState, setQuizState] = useState<QuizState | null>(null);
   const pool = getCarsByDifficulty(difficulty);
@@ -69,7 +72,11 @@ function QuizContent() {
   }
 
   if (!quizState) {
-    return <div className="flex justify-center"><span className="loading loading-spinner loading-lg" /></div>;
+    return (
+      <div className="flex justify-center py-20">
+        <div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent" />
+      </div>
+    );
   }
 
   const currentCar = getCurrentCar(quizState);
@@ -78,19 +85,22 @@ function QuizContent() {
     <div className="flex flex-col items-center gap-6">
       <ScoreBar
         score={quizState.score}
-        total={quizState.answers.length + (quizState.answered ? 0 : 0)}
+        total={quizState.answers.length}
         mode={mode}
         roundSize={roundSize}
         streak={quizState.streak}
       />
 
-      <ImageCarousel images={currentCar.images} altText={currentCar.officialName} />
+      <ImageCarousel
+        images={currentCar.images}
+        altText={currentCar.officialName}
+      />
 
-      <div className="text-center">
-        <h2 className="text-2xl font-bold">
+      <div className="text-center space-y-1">
+        <h2 className="text-2xl font-bold tracking-tight">
           {currentCar.officialName}
         </h2>
-        <p className="text-base-content/60">{currentCar.years}</p>
+        <p className="text-sm text-muted-foreground">{currentCar.years}</p>
       </div>
 
       <AnswerGrid
@@ -102,9 +112,14 @@ function QuizContent() {
       />
 
       {mode === "endless" && (
-        <button className="btn btn-ghost btn-sm mt-4" onClick={handleQuit}>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="mt-2 text-muted-foreground"
+          onClick={handleQuit}
+        >
           End Quiz
-        </button>
+        </Button>
       )}
     </div>
   );
@@ -112,7 +127,13 @@ function QuizContent() {
 
 export default function QuizPage() {
   return (
-    <Suspense fallback={<div className="flex justify-center"><span className="loading loading-spinner loading-lg" /></div>}>
+    <Suspense
+      fallback={
+        <div className="flex justify-center py-20">
+          <div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent" />
+        </div>
+      }
+    >
       <QuizContent />
     </Suspense>
   );

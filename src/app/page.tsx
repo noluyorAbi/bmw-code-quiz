@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Difficulty, GameMode, RoundSize } from "@/lib/types";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import DifficultySelector from "@/components/DifficultySelector";
 import GameModeSelector from "@/components/GameModeSelector";
 
@@ -22,18 +24,18 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col items-center gap-8">
-      <div className="text-center">
-        <h1 className="text-5xl font-bold text-primary mb-2">
+    <div className="flex flex-col items-center gap-10 pt-8">
+      <div className="text-center space-y-2">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
           BMW Code Quiz
         </h1>
-        <p className="text-base-content/70 text-lg">
+        <p className="text-muted-foreground text-lg">
           How well do you know BMW internal chassis codes?
         </p>
       </div>
 
-      <div className="card bg-base-200 shadow-xl w-full max-w-md">
-        <div className="card-body gap-6">
+      <Card className="w-full max-w-md border-border/50 bg-card/50 backdrop-blur">
+        <CardContent className="space-y-6 pt-6">
           <DifficultySelector value={difficulty} onChange={setDifficulty} />
           <GameModeSelector
             mode={mode}
@@ -41,18 +43,24 @@ export default function Home() {
             onModeChange={setMode}
             onRoundSizeChange={setRoundSize}
           />
-          <button className="btn btn-primary btn-lg w-full" onClick={startGame}>
+          <Button
+            size="lg"
+            className="w-full text-base font-semibold"
+            onClick={startGame}
+          >
             Start Quiz
-          </button>
-        </div>
-      </div>
+          </Button>
+        </CardContent>
+      </Card>
 
-      <button
-        className="btn btn-ghost btn-sm"
+      <Button
+        variant="ghost"
+        size="sm"
+        className="text-muted-foreground"
         onClick={() => router.push("/leaderboard")}
       >
         View Leaderboard
-      </button>
+      </Button>
     </div>
   );
 }
