@@ -18,7 +18,7 @@ export default function Header() {
       <div className="flex items-center gap-8">
         <button
           onClick={() => router.push("/")}
-          className="text-base font-black tracking-tighter text-foreground uppercase italic font-[family-name:var(--font-display)] hover:text-primary transition-colors"
+          className="text-lg font-black tracking-tighter text-foreground uppercase italic font-[family-name:var(--font-display)] hover:text-primary transition-colors"
         >
           THE PERFORMANCE ARCHIVE
         </button>

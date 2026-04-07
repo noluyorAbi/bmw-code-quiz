@@ -127,7 +127,11 @@ function QuizContent() {
       >
         {/* Left: Image Display */}
         <div className="lg:col-span-8 space-y-4">
-          <ImageCarousel images={currentCar.images} altText={currentCar.officialName} />
+          <ImageCarousel
+            images={currentCar.images}
+            altText={currentCar.officialName}
+            overlayTitle={`INTEL TARGET: ${currentCar.officialName.replace("BMW ", "")}`}
+          />
         </div>
 
         {/* Right: Answers */}
@@ -138,7 +142,7 @@ function QuizContent() {
               <span className="font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.2em] text-primary uppercase">
                 {currentCar.series}
               </span>
-              <h2 className="font-[family-name:var(--font-display)] italic text-2xl text-foreground tracking-tight leading-tight mt-1">
+              <h2 className="font-[family-name:var(--font-display)] font-black italic text-2xl text-foreground tracking-tight leading-tight mt-1">
                 {currentCar.officialName}
               </h2>
               <span className="font-mono text-xs text-muted-foreground">{currentCar.years}</span>

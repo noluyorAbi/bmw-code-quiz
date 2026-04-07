@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 interface ImageCarouselProps {
   images: { front: string; side: string; rear: string };
   altText: string;
+  overlayTitle?: string;
 }
 
 const views = [
@@ -14,7 +15,7 @@ const views = [
   { key: "rear" as const, label: "REAR" },
 ];
 
-export default function ImageCarousel({ images, altText }: ImageCarouselProps) {
+export default function ImageCarousel({ images, altText, overlayTitle }: ImageCarouselProps) {
   const available = views.filter((v) => images[v.key]);
   const [activeView, setActiveView] = useState(available[0]?.key ?? "front");
 
@@ -29,7 +30,7 @@ export default function ImageCarousel({ images, altText }: ImageCarouselProps) {
   return (
     <div className="space-y-4">
       {/* Main Image */}
-      <div className="relative aspect-[16/9] w-full bg-surface-container-low rounded-xl overflow-hidden group border border-border">
+      <div className="relative aspect-[16/9] w-full bg-[#0c0e11] rounded-xl overflow-hidden group">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={images[activeView]}
@@ -37,44 +38,44 @@ export default function ImageCarousel({ images, altText }: ImageCarouselProps) {
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-        <div className="absolute bottom-4 left-5">
-          <p className="font-mono text-[10px] text-primary-container tracking-[0.2em] uppercase">
-            VIEW_{activeView.toUpperCase()}.JPG
-          </p>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c0e11]/80 to-transparent" />
+        {overlayTitle && (
+          <div className="absolute bottom-6 left-6">
+            <h2 className="text-3xl md:text-4xl font-black font-[family-name:var(--font-display)] tracking-tighter uppercase italic text-white leading-none">
+              {overlayTitle}
+            </h2>
+            <p className="font-mono text-xs text-primary-container tracking-widest mt-2">
+              ENCRYPTED DATA STREAM... ACTIVE
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Thumbnails */}
-      <div className="grid grid-cols-3 gap-3">
-        {available.map((v) => {
-          const uniqueUrls = new Set(available.map((av) => images[av.key]));
-          const hasMultiple = uniqueUrls.size > 1;
-
-          return (
-            <button
-              key={v.key}
-              onClick={() => setActiveView(v.key)}
-              className={cn(
-                "relative aspect-video rounded-lg overflow-hidden transition-all",
-                activeView === v.key
-                  ? "border-2 border-primary-container ring-2 ring-primary-container/20"
-                  : "border border-border hover:border-outline-variant opacity-60 hover:opacity-100"
-              )}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={hasMultiple ? images[v.key] : images[available[0].key]}
-                alt={`${altText} - ${v.label}`}
-                className="w-full h-full object-cover"
-                loading="eager"
-              />
-              <div className="absolute bottom-1.5 left-2 text-[8px] font-mono text-white bg-black/50 px-1.5 py-0.5 rounded">
-                VIEW_{v.label}.JPG
-              </div>
-            </button>
-          );
-        })}
+      <div className="grid grid-cols-3 gap-4">
+        {available.map((v) => (
+          <button
+            key={v.key}
+            onClick={() => setActiveView(v.key)}
+            className={cn(
+              "relative aspect-video rounded overflow-hidden transition-all",
+              activeView === v.key
+                ? "border-2 border-primary-container ring-offset-2 ring-offset-background"
+                : "border border-border opacity-40 hover:opacity-100 hover:border-foreground/20"
+            )}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={images[v.key]}
+              alt={`${altText} - ${v.label}`}
+              className={cn("w-full h-full object-cover", activeView === v.key ? "opacity-80" : "")}
+              loading="eager"
+            />
+            <div className="absolute bottom-2 left-2 text-[8px] font-mono text-white bg-black/50 px-1">
+              VIEW_{v.label}.JPG
+            </div>
+          </button>
+        ))}
       </div>
     </div>
   );

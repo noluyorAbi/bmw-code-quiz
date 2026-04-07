@@ -30,7 +30,7 @@ export default function LeaderboardPage() {
         <span className="font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.3em] text-primary uppercase mb-2 block">
           GLOBAL RANKINGS
         </span>
-        <h1 className="text-6xl md:text-8xl font-[family-name:var(--font-display)] italic text-foreground tracking-tighter leading-[0.9]">
+        <h1 className="text-6xl md:text-8xl font-[family-name:var(--font-display)] font-black italic text-foreground tracking-tighter leading-[0.9]">
           TELEMETRY
         </h1>
       </div>

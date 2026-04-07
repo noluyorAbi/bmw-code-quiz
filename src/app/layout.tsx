@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Be_Vietnam_Pro, Space_Grotesk, IBM_Plex_Mono, Instrument_Serif } from "next/font/google";
-import localFont from "next/font/local";
+import { Inter, Be_Vietnam_Pro, Space_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["400", "700", "800", "900"],
+  style: ["normal", "italic"],
+});
 
 const beVietnamPro = Be_Vietnam_Pro({
   variable: "--font-body",
@@ -22,13 +28,6 @@ const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-code",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-});
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"],
 });
 
 const siteUrl = "https://github.com/noluyorAbi/bmw-code-quiz";
@@ -52,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`dark ${beVietnamPro.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable} ${instrumentSerif.variable}`}
+      className={`dark ${inter.variable} ${beVietnamPro.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable}`}
       suppressHydrationWarning
     >
       <head>

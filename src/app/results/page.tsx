@@ -38,7 +38,7 @@ function ResultsContent() {
           {/* Hero */}
           <div className="animate-fade-up">
             <div className="m-stripe-gradient h-1 w-24 mb-6" />
-            <h1 className="text-6xl md:text-8xl font-[family-name:var(--font-display)] italic text-foreground tracking-tighter leading-[0.9]">
+            <h1 className="text-6xl md:text-8xl font-[family-name:var(--font-display)] font-black italic text-foreground tracking-tighter leading-[0.9]">
               QUIZ COMPLETE!
             </h1>
             <p className="font-mono text-xs tracking-[0.2em] text-primary-container mt-2 uppercase">
@@ -52,7 +52,7 @@ function ResultsContent() {
               <span className="text-[10px] font-mono text-muted-foreground tracking-[0.2em] uppercase">
                 Final Score
               </span>
-              <div className="text-4xl font-[family-name:var(--font-display)] italic text-foreground mt-4">
+              <div className="text-4xl font-[family-name:var(--font-display)] font-black italic text-foreground mt-4">
                 {score}/{total}
               </div>
             </div>
@@ -61,7 +61,7 @@ function ResultsContent() {
                 Efficiency
               </span>
               <div className={cn(
-                "text-4xl font-[family-name:var(--font-display)] italic mt-4",
+                "text-4xl font-[family-name:var(--font-display)] font-black italic mt-4",
                 percentage >= 70 ? "text-primary" : percentage >= 50 ? "text-secondary" : "text-destructive"
               )}>
                 {percentage}%
@@ -71,7 +71,7 @@ function ResultsContent() {
               <span className="text-[10px] font-mono text-muted-foreground tracking-[0.2em] uppercase">
                 Best Streak
               </span>
-              <div className="text-4xl font-[family-name:var(--font-display)] italic text-foreground mt-4">
+              <div className="text-4xl font-[family-name:var(--font-display)] font-black italic text-foreground mt-4">
                 {bestStreak}
               </div>
             </div>
@@ -88,7 +88,7 @@ function ResultsContent() {
                   Accuracy Rate
                 </span>
                 <div className="flex items-center gap-1">
-                  <span className="text-2xl font-bold font-[family-name:var(--font-display)] italic text-foreground">
+                  <span className="text-2xl font-bold font-[family-name:var(--font-display)] font-black italic text-foreground">
                     {(percentage / 20).toFixed(1)}
                   </span>
                   <span className="text-xs text-muted-foreground font-mono">/ 5.0</span>
@@ -101,7 +101,7 @@ function ResultsContent() {
                 <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-wider">
                   Difficulty
                 </span>
-                <span className="text-lg font-bold font-[family-name:var(--font-display)] italic text-foreground uppercase">
+                <span className="text-lg font-bold font-[family-name:var(--font-display)] font-black italic text-foreground uppercase">
                   {difficulty}
                 </span>
               </div>
@@ -109,7 +109,7 @@ function ResultsContent() {
                 <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-wider">
                   Game Mode
                 </span>
-                <span className="text-lg font-bold font-[family-name:var(--font-display)] italic text-foreground uppercase">
+                <span className="text-lg font-bold font-[family-name:var(--font-display)] font-black italic text-foreground uppercase">
                   {mode}
                 </span>
               </div>
