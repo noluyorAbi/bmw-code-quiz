@@ -267,47 +267,197 @@ export default function Home() {
             THE STORY BEHIND THE CODES
           </span>
           <h2 className="font-[family-name:var(--font-display)] font-black italic text-3xl md:text-4xl tracking-tighter text-foreground mt-2">
-            60 YEARS OF BMW CHASSIS CODES
+            60+ YEARS OF BMW CHASSIS CODES
           </h2>
+          <p className="text-on-surface-variant max-w-3xl mt-3 leading-relaxed">
+            Every BMW ever built carries an internal development code. To enthusiasts, these codes aren&apos;t just numbers —
+            they&apos;re identity. Here&apos;s how a simple engineering label became the language of an entire car culture.
+          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-on-surface-variant leading-relaxed">
-          <div className="space-y-4">
-            <p>
-              It started in 1962 with the <strong className="text-foreground">BMW 1500 (E115)</strong> — the &quot;Neue Klasse&quot; that saved BMW from bankruptcy.
-              The internal designation system using &quot;E&quot; for <em>Entwicklung</em> (development) became standard practice in Munich.
-              Every platform, every body variant, every generation received its own code.
-            </p>
-            <p>
-              By the time the legendary <strong className="text-foreground">E30 3 Series</strong> arrived in 1982, these codes had become part of BMW culture.
-              Enthusiasts didn&apos;t say &quot;I drive a 1990 BMW 325i&quot; — they said &quot;I drive an E30.&quot;
-              The <strong className="text-foreground">E36</strong>, <strong className="text-foreground">E46</strong>, <strong className="text-foreground">E90</strong> —
-              each generation of the 3 Series became its own icon.
-            </p>
-            <p>
-              The M Division added another layer. The <strong className="text-foreground">E30 M3</strong> with its S14 engine.
-              The <strong className="text-foreground">E46 M3</strong> and its screaming S54 inline-6.
-              The <strong className="text-foreground">E60 M5</strong> with the F1-derived V10.
-              Every M car earned its chassis code through sheer engineering excess.
-            </p>
+
+        {/* Chapter 1: Origins */}
+        <div className="space-y-4">
+          <h3 className="font-[family-name:var(--font-display)] font-bold italic text-xl text-foreground flex items-center gap-3">
+            <span className="font-mono text-xs text-primary-container bg-primary-container/10 px-2 py-1 rounded">01</span>
+            THE BIRTH OF &quot;E&quot; — ENTWICKLUNG
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-on-surface-variant leading-relaxed">
+            <div className="space-y-3">
+              <p>
+                In 1962, BMW was on the verge of bankruptcy. The company had luxury sedans nobody wanted and bubble cars they couldn&apos;t
+                keep making. Then came the <strong className="text-foreground">BMW 1500</strong> — internally designated <strong className="text-foreground">E115</strong>.
+                It was part of the <em>Neue Klasse</em> (New Class), a range of sporty sedans that quite literally saved the company.
+              </p>
+              <p>
+                The &quot;E&quot; stood for <em>Entwicklung</em> — German for &quot;development.&quot; Every new platform at BMW&apos;s
+                FIZ (Forschungs- und Innovationszentrum) research center in Munich received an E-number during its development phase.
+                The <strong className="text-foreground">E3</strong> was the 2500/2800 luxury sedan. The <strong className="text-foreground">E9</strong> was the gorgeous 3.0 CS coup&eacute;.
+                The <strong className="text-foreground">E10</strong> was the legendary 2002 — the car that introduced America to BMW.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <p>
+                As BMW grew, the numbering became systematic. The <strong className="text-foreground">E12</strong> was the first 5 Series (1972).
+                The <strong className="text-foreground">E21</strong> was the first 3 Series (1975). The <strong className="text-foreground">E23</strong> was the first 7 Series (1977).
+                The <strong className="text-foreground">E24</strong> was the first 6 Series (1976). Each number was sequential — simply the next available code in the development queue.
+              </p>
+              <p>
+                Then came the cars that would make these codes famous: the <strong className="text-foreground">E30 3 Series</strong> (1982) —
+                the car that defined &quot;the ultimate driving machine.&quot; The <strong className="text-foreground">E28 M5</strong> (1985) —
+                the world&apos;s fastest production sedan. The <strong className="text-foreground">E31 8 Series</strong> (1989) — BMW&apos;s V12 grand tourer.
+                By the late 1980s, enthusiasts didn&apos;t say &quot;I drive a 1988 BMW 325is&quot; — they said &quot;I drive an E30.&quot;
+              </p>
+            </div>
           </div>
-          <div className="space-y-4">
-            <p>
-              Around 2010, BMW transitioned to &quot;F&quot; codes. The <strong className="text-foreground">F30 3 Series</strong> and <strong className="text-foreground">F80 M3</strong> ushered in
-              the turbo era. Then came &quot;G&quot; — the <strong className="text-foreground">G20 3 Series</strong>, the polarizing <strong className="text-foreground">G82 M4</strong>,
-              the tech-laden <strong className="text-foreground">G70 7 Series</strong>.
-            </p>
-            <p>
-              BMW&apos;s SUVs — or &quot;Sports Activity Vehicles&quot; — brought the X lineup: <strong className="text-foreground">E53 X5</strong>,
-              <strong className="text-foreground">F15 X5</strong>, <strong className="text-foreground">G05 X5</strong>.
-              The Z roadsters: <strong className="text-foreground">E36/7 Z3</strong>, <strong className="text-foreground">E85 Z4</strong>, <strong className="text-foreground">G29 Z4</strong>.
-              And the electric future: <strong className="text-foreground">I01 i3</strong>, <strong className="text-foreground">I12 i8</strong>, <strong className="text-foreground">I20 iX</strong>.
-            </p>
-            <p>
-              Then there are the <strong className="text-foreground">LCI</strong> facelifts — <em>Life Cycle Impulse</em> — BMW&apos;s term for mid-cycle updates.
-              Can you spot an <strong className="text-foreground">E90 LCI</strong> vs a pre-facelift <strong className="text-foreground">E90</strong>?
-              What about an <strong className="text-foreground">F30 LCI</strong> vs the original <strong className="text-foreground">F30</strong>?
-              This quiz will find out.
-            </p>
+        </div>
+
+        {/* Chapter 2: Golden Era */}
+        <div className="space-y-4">
+          <h3 className="font-[family-name:var(--font-display)] font-bold italic text-xl text-foreground flex items-center gap-3">
+            <span className="font-mono text-xs text-primary-container bg-primary-container/10 px-2 py-1 rounded">02</span>
+            THE GOLDEN ERA — E36, E46, E39
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-on-surface-variant leading-relaxed">
+            <div className="space-y-3">
+              <p>
+                The 1990s were BMW&apos;s golden age. The <strong className="text-foreground">E36 3 Series</strong> (1990) modernized the lineup
+                with a sleeker design and new multi-link rear suspension. The <strong className="text-foreground">E36 M3</strong> with the S50/S52 engine
+                became the benchmark sports sedan of its era.
+              </p>
+              <p>
+                Then the <strong className="text-foreground">E46</strong> arrived in 1997 — and many enthusiasts still consider it the
+                finest 3 Series ever made. The <strong className="text-foreground">E46 M3</strong> with its 3.2-liter <strong className="text-foreground">S54</strong> inline-6
+                producing 343 HP remains one of the most celebrated M cars in history. The E46 sold over 3.2 million units.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <p>
+                Meanwhile, the <strong className="text-foreground">E39 5 Series</strong> (1995) was rewriting the rules of the executive sedan.
+                The <strong className="text-foreground">E39 M5</strong> — with its 4.9-liter S62 V8 producing 394 HP — is still called the
+                greatest M5 of all time by many. The <strong className="text-foreground">E38 7 Series</strong> became a pop culture icon (featured in
+                a certain James Bond film). And the <strong className="text-foreground">E34 M5</strong>, the last hand-built M5, became an instant collector&apos;s car.
+              </p>
+              <p>
+                It was during this period that body variant codes proliferated. The <strong className="text-foreground">E36/2</strong> was the coup&eacute;.
+                The <strong className="text-foreground">E36/3</strong> was the Touring wagon. The <strong className="text-foreground">E36/5</strong> was the Compact.
+                The <strong className="text-foreground">E36/7</strong>? That was the Z3 roadster. Each slash-variant identified a different body
+                built on the same platform.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Chapter 3: M Division */}
+        <div className="space-y-4">
+          <h3 className="font-[family-name:var(--font-display)] font-bold italic text-xl text-foreground flex items-center gap-3">
+            <span className="font-mono text-xs text-primary-container bg-primary-container/10 px-2 py-1 rounded">03</span>
+            THE M DIVISION — ENGINEERING EXCESS
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-on-surface-variant leading-relaxed">
+            <div className="space-y-3">
+              <p>
+                BMW M GmbH — the motorsport division — takes a standard platform and transforms it. Each M car gets its own chassis code,
+                its own engine code, and a completely different character. The <strong className="text-foreground">E30 M3</strong> (1986) had the S14
+                four-cylinder — a homologation special for Group A touring car racing. Only 17,970 were ever made.
+              </p>
+              <p>
+                The <strong className="text-foreground">E90 M3</strong> (2007) broke tradition with a V8 — the legendary S65 4.0-liter producing 414 HP
+                and revving to 8,300 RPM. The <strong className="text-foreground">E60 M5</strong> went even further with the S85 V10 — a 507 HP engine
+                derived from Formula 1 technology. It could rev to 8,250 RPM and remains the only V10-powered M car.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <p>
+                The modern era brought the <strong className="text-foreground">F80 M3</strong> and <strong className="text-foreground">F82 M4</strong> (2014) —
+                the first turbocharged M3/M4 with the S55 twin-turbo inline-6 producing 425 HP. The <strong className="text-foreground">F87 M2</strong> (2016)
+                became an instant cult classic — a compact, rear-wheel-drive coupe that many called the spiritual successor to the E30 M3.
+              </p>
+              <p>
+                Today&apos;s <strong className="text-foreground">G80 M3</strong> and <strong className="text-foreground">G82 M4</strong> with the
+                S58 engine produce up to 503 HP in Competition spec. The <strong className="text-foreground">G87 M2</strong> delivers 453 HP.
+                The <strong className="text-foreground">G90 M5</strong> (2024) is BMW&apos;s first hybrid M5 — combining a twin-turbo V8 with an
+                electric motor for 717 HP. And waiting in the wings: the <strong className="text-foreground">ZA0</strong> — the fully electric M3
+                on the Neue Klasse platform, rumored at 800+ HP with quad motors.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Chapter 4: F, G, U, and the Modern Era */}
+        <div className="space-y-4">
+          <h3 className="font-[family-name:var(--font-display)] font-bold italic text-xl text-foreground flex items-center gap-3">
+            <span className="font-mono text-xs text-primary-container bg-primary-container/10 px-2 py-1 rounded">04</span>
+            F, G, U — THE MODERN ERA
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-on-surface-variant leading-relaxed">
+            <div className="space-y-3">
+              <p>
+                By 2010, BMW had exhausted many E-numbers. The transition to &quot;F&quot; wasn&apos;t dramatic — it was simply the next letter.
+                The <strong className="text-foreground">F10 5 Series</strong> (2010) and <strong className="text-foreground">F30 3 Series</strong> (2011)
+                ushered in the turbo era. The &quot;F&quot; generation also brought BMW into the SUV age full force:
+                the <strong className="text-foreground">F15 X5</strong>, <strong className="text-foreground">F16 X6</strong>,
+                <strong className="text-foreground">F25 X3</strong>, <strong className="text-foreground">F48 X1</strong>.
+              </p>
+              <p>
+                &quot;G&quot; followed around 2017, built on BMW&apos;s CLAR (Cluster Architecture) platform. The
+                <strong className="text-foreground">G20 3 Series</strong>, <strong className="text-foreground">G05 X5</strong>,
+                <strong className="text-foreground">G70 7 Series</strong> with its controversial split headlights. The &quot;G&quot; era also brought
+                the <strong className="text-foreground">G42 2 Series Coup&eacute;</strong> and the <strong className="text-foreground">G60 5 Series</strong>.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <p>
+                &quot;U&quot; codes arrived for BMW&apos;s UKL/FAAR front-wheel-drive platform compact cars:
+                <strong className="text-foreground">U06</strong> (2 Series Active Tourer), <strong className="text-foreground">U10</strong> (X2),
+                <strong className="text-foreground">U11</strong> (X1). And &quot;I&quot; was reserved for the electric i sub-brand:
+                <strong className="text-foreground">I01</strong> (i3), <strong className="text-foreground">I12</strong> (i8),
+                <strong className="text-foreground">I20</strong> (iX).
+              </p>
+              <p>
+                Then there are the <strong className="text-foreground">LCI</strong> facelifts — <em>Life Cycle Impulse</em> — BMW&apos;s term
+                for mid-cycle updates. A typical BMW model runs 7 years; the LCI at year 3-4 brings updated headlights, taillights, bumpers,
+                and sometimes new engines. Telling an <strong className="text-foreground">E90</strong> from an
+                <strong className="text-foreground">E90 LCI</strong>, or an <strong className="text-foreground">F30</strong> from an
+                <strong className="text-foreground">F30 LCI</strong> — that&apos;s where this quiz separates the casual fans from the true enthusiasts.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Chapter 5: Neue Klasse */}
+        <div className="space-y-4">
+          <h3 className="font-[family-name:var(--font-display)] font-bold italic text-xl text-foreground flex items-center gap-3">
+            <span className="font-mono text-xs text-primary-container bg-primary-container/10 px-2 py-1 rounded">05</span>
+            NA — THE NEUE KLASSE REVOLUTION
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-on-surface-variant leading-relaxed">
+            <div className="space-y-3">
+              <p>
+                In 2025, BMW broke with 60 years of tradition. The new all-electric Neue Klasse platform introduced
+                a completely new naming scheme: <strong className="text-foreground">NA</strong>. The &quot;N&quot; stands for Neue Klasse,
+                &quot;A&quot; for the first generation, and the digit identifies the body style. M variants swap &quot;N&quot;
+                for &quot;Z&quot; — so the electric M3 becomes <strong className="text-foreground">ZA0</strong>.
+              </p>
+              <p>
+                The first Neue Klasse vehicle — the <strong className="text-foreground">NA5 iX3</strong> — entered production in October 2025
+                at BMW&apos;s new plant in Debrecen, Hungary. It features 800V architecture, a completely new cylindrical battery cell design
+                developed with Samsung SDI, up to 805 km WLTP range, and the ability to charge 372 km of range in just 10 minutes.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <p>
+                The <strong className="text-foreground">NA0 i3 sedan</strong> follows in July 2026, built at BMW&apos;s historic Munich plant —
+                the same factory that has produced BMWs since 1922. The NA0 features up to 108 kWh of battery capacity and
+                approximately 900 km of WLTP range. Other confirmed codes include <strong className="text-foreground">NA1</strong> (i3 Touring),
+                <strong className="text-foreground">NA6</strong> (iX3 Long Wheelbase for China),
+                <strong className="text-foreground">NA7</strong> (iX4), and <strong className="text-foreground">NA8</strong> (i3 Long Wheelbase sedan).
+              </p>
+              <p>
+                The M Division is already preparing: <strong className="text-foreground">ZA0</strong> (electric M3, quad-motor, ~800+ HP),
+                <strong className="text-foreground">ZA1</strong> (electric M3 Touring), and <strong className="text-foreground">ZA5</strong> (electric X3 M).
+                After 60 years of E, F, G, U, and I — the NA era has begun. And this quiz covers it all.
+              </p>
+            </div>
           </div>
         </div>
 
