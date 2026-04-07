@@ -401,6 +401,185 @@ export default function Home() {
           ))}
         </div>
 
+        {/* ──────────────── How to Read a BMW Code ──────────────── */}
+        <div>
+          <span className="font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.3em] text-primary uppercase">
+            DECODING THE SYSTEM
+          </span>
+          <h2 className="font-[family-name:var(--font-display)] font-black italic text-3xl md:text-4xl tracking-tighter text-foreground mt-2">
+            HOW TO READ A BMW CHASSIS CODE
+          </h2>
+          <p className="text-on-surface-variant max-w-3xl mt-3 leading-relaxed">
+            BMW chassis codes follow a consistent structure. Once you understand the pattern, you can decode any BMW
+            at a glance. Here&apos;s how each part works — broken down letter by letter, number by number.
+          </p>
+        </div>
+
+        {/* Visual code anatomy */}
+        <div className="space-y-10">
+          {/* Example 1: E46 */}
+          <div className="bg-surface-container-low p-6 sm:p-8 rounded-xl border border-border">
+            <p className="font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.2em] text-muted-foreground uppercase mb-4">
+              BASIC CODE — STANDARD MODEL
+            </p>
+            <div className="flex items-center gap-1 sm:gap-2 mb-6">
+              <span className="font-mono text-4xl sm:text-6xl font-bold text-primary">E</span>
+              <span className="font-mono text-4xl sm:text-6xl font-bold text-foreground">46</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+              <div className="flex items-start gap-3">
+                <span className="font-mono text-lg font-bold text-primary shrink-0 w-8">E</span>
+                <div>
+                  <p className="font-bold text-foreground">Generation Prefix</p>
+                  <p className="text-on-surface-variant">The letter indicates the era. <strong className="text-foreground">E</strong> = Entwicklung (1960s–2012), <strong className="text-foreground">F</strong> = 2010–2018, <strong className="text-foreground">G</strong> = 2017+, <strong className="text-foreground">U</strong> = FAAR platform, <strong className="text-foreground">I</strong> = electric i brand, <strong className="text-foreground">NA</strong> = Neue Klasse.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="font-mono text-lg font-bold text-foreground shrink-0 w-8">46</span>
+                <div>
+                  <p className="font-bold text-foreground">Platform Number</p>
+                  <p className="text-on-surface-variant">A sequential development number assigned at BMW&apos;s FIZ research center. The numbers are <em>not</em> related to the series — E46 is the 3 Series, not the 4 Series. Numbers were assigned in the order projects were started.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Example 2: E90 M3 LCI */}
+          <div className="bg-surface-container-low p-6 sm:p-8 rounded-xl border border-border">
+            <p className="font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.2em] text-muted-foreground uppercase mb-4">
+              EXTENDED CODE — M VARIANT WITH FACELIFT
+            </p>
+            <div className="flex items-center gap-1 sm:gap-3 mb-6 flex-wrap">
+              <span className="font-mono text-4xl sm:text-6xl font-bold text-primary">E</span>
+              <span className="font-mono text-4xl sm:text-6xl font-bold text-foreground">90</span>
+              <span className="font-mono text-3xl sm:text-5xl font-bold text-destructive ml-2">M3</span>
+              <span className="font-mono text-2xl sm:text-4xl font-bold text-secondary ml-2">LCI</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+              <div className="flex items-start gap-3">
+                <span className="font-mono text-lg font-bold text-primary shrink-0 w-14">E90</span>
+                <div>
+                  <p className="font-bold text-foreground">Base Platform</p>
+                  <p className="text-on-surface-variant">The fifth-generation 3 Series sedan (2005–2011). This is the platform all variants share — the sedan, Touring, Coup&eacute;, and M3 all start from the E90 architecture.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="font-mono text-lg font-bold text-destructive shrink-0 w-14">M3</span>
+                <div>
+                  <p className="font-bold text-foreground">M Division Variant</p>
+                  <p className="text-on-surface-variant">Denotes a high-performance M variant by BMW M GmbH. The M3 uses the S65 V8 engine (414 HP), upgraded brakes, suspension, aerodynamics, and a completely different character from the standard E90.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="font-mono text-lg font-bold text-secondary shrink-0 w-14">LCI</span>
+                <div>
+                  <p className="font-bold text-foreground">Life Cycle Impulse (Facelift)</p>
+                  <p className="text-on-surface-variant">BMW&apos;s term for a mid-cycle refresh, typically at year 3–4. Brings updated lights, bumpers, interior, and sometimes new engines. The E90 LCI (2008–2011) got LED taillights and a revised iDrive system.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="font-mono text-lg font-bold text-muted-foreground shrink-0 w-14">TIP</span>
+                <div>
+                  <p className="font-bold text-foreground">Reading It Together</p>
+                  <p className="text-on-surface-variant">&quot;E90 M3 LCI&quot; = fifth-gen 3 Series platform, M performance variant, post-facelift. In one glance, a BMW enthusiast knows the exact car: a 2008–2011 M3 sedan with the updated styling.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Example 3: E36/7 */}
+          <div className="bg-surface-container-low p-6 sm:p-8 rounded-xl border border-border">
+            <p className="font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.2em] text-muted-foreground uppercase mb-4">
+              SLASH NOTATION — BODY VARIANT
+            </p>
+            <div className="flex items-center gap-1 sm:gap-2 mb-6">
+              <span className="font-mono text-4xl sm:text-6xl font-bold text-primary">E</span>
+              <span className="font-mono text-4xl sm:text-6xl font-bold text-foreground">36</span>
+              <span className="font-mono text-4xl sm:text-6xl font-bold text-muted-foreground">/</span>
+              <span className="font-mono text-4xl sm:text-6xl font-bold text-secondary">7</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+              <div className="flex items-start gap-3">
+                <span className="font-mono text-lg font-bold text-foreground shrink-0 w-14">E36</span>
+                <div>
+                  <p className="font-bold text-foreground">Parent Platform</p>
+                  <p className="text-on-surface-variant">The third-generation 3 Series (1990–2000). All E36 variants — sedan, coup&eacute;, Touring, Compact, Convertible, and even the Z3 — share this base platform.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="font-mono text-lg font-bold text-secondary shrink-0 w-14">/7</span>
+                <div>
+                  <p className="font-bold text-foreground">Body Style Sub-Code</p>
+                  <p className="text-on-surface-variant">The slash number identifies a specific body variant built on the same platform. For the E36: <strong className="text-foreground">/2</strong> = Coup&eacute;, <strong className="text-foreground">/3</strong> = Touring, <strong className="text-foreground">/5</strong> = Compact, <strong className="text-foreground">/2C</strong> = Convertible, <strong className="text-foreground">/7</strong> = Z3 Roadster. The Z3 is mechanically an E36 but with a unique roadster body.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Example 4: NA5 */}
+          <div className="bg-surface-container-low p-6 sm:p-8 rounded-xl border border-primary-container/20">
+            <p className="font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.2em] text-primary uppercase mb-4">
+              NEUE KLASSE — THE NEW SYSTEM
+            </p>
+            <div className="flex items-center gap-1 sm:gap-2 mb-6">
+              <span className="font-mono text-4xl sm:text-6xl font-bold text-primary">N</span>
+              <span className="font-mono text-4xl sm:text-6xl font-bold text-foreground">A</span>
+              <span className="font-mono text-4xl sm:text-6xl font-bold text-secondary">5</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+              <div className="flex items-start gap-3">
+                <span className="font-mono text-lg font-bold text-primary shrink-0 w-8">N</span>
+                <div>
+                  <p className="font-bold text-foreground">Neue Klasse</p>
+                  <p className="text-on-surface-variant">&quot;N&quot; identifies the Neue Klasse (New Class) electric platform — BMW&apos;s clean-sheet EV architecture launched in 2025. For M variants, &quot;N&quot; becomes &quot;Z&quot; (e.g., ZA0 = electric M3).</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="font-mono text-lg font-bold text-foreground shrink-0 w-8">A</span>
+                <div>
+                  <p className="font-bold text-foreground">Generation</p>
+                  <p className="text-on-surface-variant">&quot;A&quot; means first generation of the Neue Klasse. Future generations may use B, C, etc. This replaces the old sequential numbering — the system is now more structured.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="font-mono text-lg font-bold text-secondary shrink-0 w-8">5</span>
+                <div>
+                  <p className="font-bold text-foreground">Body Style</p>
+                  <p className="text-on-surface-variant">The digit maps to a body type: <strong className="text-foreground">0</strong> = sedan, <strong className="text-foreground">1</strong> = Touring, <strong className="text-foreground">2</strong> = coup&eacute;, <strong className="text-foreground">3</strong> = convertible, <strong className="text-foreground">5</strong> = SUV (X3-class), <strong className="text-foreground">7</strong> = coup&eacute;-SUV (X4-class), <strong className="text-foreground">8</strong> = long-wheelbase sedan.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Quick reference table */}
+          <div>
+            <h3 className="font-[family-name:var(--font-display)] font-bold italic text-lg text-foreground mb-4">
+              Quick Reference: Number &rarr; Series Mapping
+            </h3>
+            <p className="text-on-surface-variant text-sm mb-4">
+              In the classic E/F/G system, the numbers are <em>not</em> intuitive — they were assigned sequentially as projects started, not by series.
+              Here are some key mappings to memorize:
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 text-sm">
+              {[
+                { codes: "E21 → E30 → E36 → E46 → E90 → F30 → G20", series: "3 Series Sedan" },
+                { codes: "E12 → E28 → E34 → E39 → E60 → F10 → G30 → G60", series: "5 Series Sedan" },
+                { codes: "E23 → E32 → E38 → E65 → F01 → G11 → G70", series: "7 Series" },
+                { codes: "E53 → E70 → F15 → G05", series: "X5" },
+                { codes: "E83 → F25 → G01 → G45", series: "X3" },
+                { codes: "E36/7 → E85 → E89 → G29", series: "Z Roadster" },
+                { codes: "E24 → E63 → F13", series: "6 Series Coupé" },
+                { codes: "E31 → G15", series: "8 Series Coupé" },
+              ].map((item) => (
+                <div key={item.series} className="bg-surface-container-high/50 p-3 rounded-lg border border-border">
+                  <p className="font-bold text-foreground text-xs mb-1">{item.series}</p>
+                  <p className="font-mono text-[10px] text-on-surface-variant leading-relaxed">{item.codes}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Featured Codes */}
         <div className="space-y-4">
           <span className="font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.2em] text-muted-foreground uppercase">
