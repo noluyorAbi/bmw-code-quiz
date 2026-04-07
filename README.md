@@ -1,5 +1,9 @@
 <div align="center">
 
+<img src="public/og-image.png" alt="BMW Code Quiz — Test your knowledge of BMW's internal chassis codes" width="100%" />
+
+<br />
+
 # BMW Code Quiz
 
 **Test your knowledge of BMW's internal chassis codes**

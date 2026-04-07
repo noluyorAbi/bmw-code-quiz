@@ -65,11 +65,13 @@ export const metadata: Metadata = {
     title: "BMW Code Quiz — Can You Identify Every BMW Generation?",
     description: "155 BMW vehicles. 5 chassis code generations. 3 difficulty levels. Test your knowledge of BMW internal codes from the E30 to the G87.",
     siteName: "BMW Code Quiz",
+    images: [{ url: "/og-image.png", width: 1280, height: 640, alt: "BMW Code Quiz — Test your knowledge of BMW's internal chassis codes" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "BMW Code Quiz — Can You Identify Every BMW Generation?",
     description: "155 BMW vehicles. 5 chassis code generations. From the E30 to the G87 — how well do you really know your BMWs?",
+    images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: siteUrl },
