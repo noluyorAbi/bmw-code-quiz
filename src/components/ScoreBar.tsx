@@ -1,7 +1,6 @@
 "use client";
 
 import { GameMode } from "@/lib/types";
-import { cn } from "@/lib/utils";
 import { Flame } from "lucide-react";
 
 interface ScoreBarProps {
@@ -12,51 +11,53 @@ interface ScoreBarProps {
   streak?: number;
 }
 
-export default function ScoreBar({
-  score,
-  total,
-  mode,
-  roundSize,
-  streak,
-}: ScoreBarProps) {
-  const progress = mode === "rounds" && roundSize ? (total / roundSize) * 100 : 0;
-
+export default function ScoreBar({ score, total, mode, roundSize, streak }: ScoreBarProps) {
   return (
-    <div className="flex items-center gap-3 flex-1 min-w-0">
+    <section className="grid grid-cols-1 md:grid-cols-3 gap-px bg-surface-container-low rounded overflow-hidden">
+      {/* Progress */}
+      <div className="p-5 bg-surface-container flex flex-col justify-center">
+        <span className="text-[10px] font-mono tracking-[0.2em] text-muted-foreground uppercase mb-1">
+          MISSION PROGRESS
+        </span>
+        <div className="flex items-baseline gap-3">
+          <span className="text-xl font-[family-name:var(--font-display)] italic font-bold tracking-tighter text-foreground">
+            Q.{String(total + 1).padStart(2, "0")}
+          </span>
+          {mode === "rounds" && roundSize && (
+            <div className="flex-1 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+              <div
+                className="h-full bg-primary-container transition-all duration-500 ease-out"
+                style={{ width: `${(total / roundSize) * 100}%` }}
+              />
+            </div>
+          )}
+        </div>
+      </div>
+
       {/* Score */}
-      <div className="flex items-center gap-1.5 shrink-0">
-        <span className="text-sm font-mono font-bold">
-          {score}
-          <span className="text-muted-foreground/50">/{total}</span>
+      <div className="p-5 bg-surface-container flex flex-col justify-center">
+        <span className="text-[10px] font-mono tracking-[0.2em] text-muted-foreground uppercase mb-1">
+          CURRENT SCORE
+        </span>
+        <span className="text-xl font-mono font-bold text-primary tracking-tight">
+          {score}/{total}
         </span>
       </div>
 
       {/* Streak */}
-      {mode === "endless" && streak !== undefined && streak > 0 && (
-        <div className="flex items-center gap-1 shrink-0 text-primary">
-          <Flame className="h-3.5 w-3.5" />
-          <span className="text-xs font-bold font-mono">{streak}</span>
+      <div className="p-5 bg-surface-container flex flex-col justify-center border-l border-border">
+        <span className="text-[10px] font-mono tracking-[0.2em] text-muted-foreground uppercase mb-1">
+          {mode === "endless" ? "WIN STREAK" : "ACCURACY"}
+        </span>
+        <div className="flex items-center gap-2">
+          <span className="text-xl font-mono font-bold text-foreground">
+            {mode === "endless" ? (streak ?? 0).toString().padStart(2, "0") : total > 0 ? `${Math.round((score / total) * 100)}%` : "—"}
+          </span>
+          {mode === "endless" && streak !== undefined && streak > 0 && (
+            <Flame className="h-4 w-4 text-destructive" />
+          )}
         </div>
-      )}
-
-      {/* Progress bar for rounds */}
-      {mode === "rounds" && roundSize && (
-        <div className="flex-1 min-w-0">
-          <div className="h-1 rounded-full bg-muted overflow-hidden">
-            <div
-              className={cn(
-                "h-full rounded-full bg-primary transition-all duration-500 ease-out"
-              )}
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-        </div>
-      )}
-
-      {/* Endless counter */}
-      {mode === "endless" && (
-        <span className="text-xs text-muted-foreground">{total} answered</span>
-      )}
-    </div>
+      </div>
+    </section>
   );
 }

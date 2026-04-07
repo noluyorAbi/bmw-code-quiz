@@ -3,15 +3,11 @@
 import { useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Difficulty, GameMode } from "@/lib/types";
-import {
-  qualifiesForLeaderboard,
-  addLeaderboardEntry,
-} from "@/lib/leaderboard";
+import { qualifiesForLeaderboard, addLeaderboardEntry } from "@/lib/leaderboard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import ThemeToggle from "@/components/ThemeToggle";
-import { RotateCcw, Trophy, Check, Flame } from "lucide-react";
+import { Save, RotateCcw, BarChart3, Check } from "lucide-react";
 
 function ResultsContent() {
   const searchParams = useSearchParams();
@@ -25,7 +21,6 @@ function ResultsContent() {
 
   const percentage = total > 0 ? Math.round((score / total) * 100) : 0;
   const qualifies = qualifiesForLeaderboard(score, difficulty);
-
   const [name, setName] = useState("");
   const [saved, setSaved] = useState(false);
 
@@ -35,132 +30,138 @@ function ResultsContent() {
     setSaved(true);
   }
 
-  function getMessage(): string {
-    if (percentage >= 90) return "BMW Master!";
-    if (percentage >= 70) return "Impressive knowledge!";
-    if (percentage >= 50) return "Solid effort!";
-    return "Room to grow!";
-  }
-
-  function getGradeColor(): string {
-    if (percentage >= 90) return "text-emerald-400";
-    if (percentage >= 70) return "text-primary";
-    if (percentage >= 50) return "text-yellow-400";
-    return "text-red-400";
-  }
-
-  function getBarColor(): string {
-    if (percentage >= 90) return "bg-emerald-500";
-    if (percentage >= 70) return "bg-primary";
-    if (percentage >= 50) return "bg-yellow-500";
-    return "bg-red-500";
-  }
-
   return (
-    <div className="flex flex-col items-center min-h-[calc(100vh-3px)] relative">
-      {/* Theme toggle */}
-      <div className="absolute top-4 right-0">
-        <ThemeToggle />
-      </div>
-
-      <div className="flex flex-col items-center gap-8 pt-16 sm:pt-24 w-full max-w-md">
-        {/* Message */}
-        <div className="text-center opacity-0 animate-fade-up">
-          <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-2">
-            Quiz Complete
-          </p>
-          <h1
-            className={cn(
-              "text-3xl sm:text-4xl font-extrabold tracking-tight",
-              getGradeColor()
-            )}
-            style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
-          >
-            {getMessage()}
-          </h1>
-        </div>
-
-        {/* Score display */}
-        <div className="flex items-end gap-8 opacity-0 animate-fade-up delay-1">
-          <div className="text-center">
-            <div className="text-6xl sm:text-7xl font-bold font-mono tracking-tighter animate-count-up">
-              {score}
-              <span className="text-muted-foreground/40">/{total}</span>
-            </div>
-            <p className="text-sm text-muted-foreground mt-1">{percentage}% correct</p>
+    <div className="px-6 lg:px-12 max-w-7xl mx-auto py-12">
+      <div className="lg:grid lg:grid-cols-12 gap-12 items-start">
+        {/* Left: Results */}
+        <div className="lg:col-span-8 space-y-8">
+          {/* Hero */}
+          <div className="animate-fade-up">
+            <div className="m-stripe-gradient h-1 w-24 mb-6" />
+            <h1 className="text-6xl md:text-8xl font-[family-name:var(--font-display)] italic text-foreground tracking-tighter leading-[0.9]">
+              QUIZ COMPLETE!
+            </h1>
+            <p className="font-mono text-xs tracking-[0.2em] text-primary-container mt-2 uppercase">
+              Analysis segment finalized // Module: BMW_QUIZ_01
+            </p>
           </div>
-          {mode === "endless" && bestStreak > 0 && (
-            <div className="text-center border-l border-border pl-8">
-              <div className="flex items-center justify-center gap-2">
-                <Flame className="h-6 w-6 text-primary" />
-                <span className="text-5xl sm:text-6xl font-bold font-mono tracking-tighter text-primary animate-count-up">
-                  {bestStreak}
+
+          {/* Bento Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 animate-fade-up delay-2">
+            <div className="bg-foreground/5 backdrop-blur-xl p-6 border border-border rounded-lg flex flex-col justify-between">
+              <span className="text-[10px] font-mono text-muted-foreground tracking-[0.2em] uppercase">
+                Final Score
+              </span>
+              <div className="text-4xl font-[family-name:var(--font-display)] italic text-foreground mt-4">
+                {score}/{total}
+              </div>
+            </div>
+            <div className="bg-foreground/5 backdrop-blur-xl p-6 border border-border rounded-lg flex flex-col justify-between">
+              <span className="text-[10px] font-mono text-muted-foreground tracking-[0.2em] uppercase">
+                Efficiency
+              </span>
+              <div className={cn(
+                "text-4xl font-[family-name:var(--font-display)] italic mt-4",
+                percentage >= 70 ? "text-primary" : percentage >= 50 ? "text-secondary" : "text-destructive"
+              )}>
+                {percentage}%
+              </div>
+            </div>
+            <div className="bg-foreground/5 backdrop-blur-xl p-6 border border-border rounded-lg flex flex-col justify-between col-span-2 md:col-span-1">
+              <span className="text-[10px] font-mono text-muted-foreground tracking-[0.2em] uppercase">
+                Best Streak
+              </span>
+              <div className="text-4xl font-[family-name:var(--font-display)] italic text-foreground mt-4">
+                {bestStreak}
+              </div>
+            </div>
+          </div>
+
+          {/* Telemetry Bar */}
+          <div className="bg-surface-container-low p-8 rounded-lg animate-fade-up delay-3">
+            <h3 className="font-mono text-xs tracking-[0.2em] text-muted-foreground mb-6 uppercase">
+              Technical Telemetry
+            </h3>
+            <div className="flex flex-col md:flex-row gap-12">
+              <div className="flex flex-col gap-2">
+                <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-wider">
+                  Accuracy Rate
+                </span>
+                <div className="flex items-center gap-1">
+                  <span className="text-2xl font-bold font-[family-name:var(--font-display)] italic text-foreground">
+                    {(percentage / 20).toFixed(1)}
+                  </span>
+                  <span className="text-xs text-muted-foreground font-mono">/ 5.0</span>
+                </div>
+                <div className="w-32 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+                  <div className="h-full bg-primary-container" style={{ width: `${percentage}%` }} />
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
+                <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-wider">
+                  Difficulty
+                </span>
+                <span className="text-lg font-bold font-[family-name:var(--font-display)] italic text-foreground uppercase">
+                  {difficulty}
                 </span>
               </div>
-              <p className="text-sm text-muted-foreground mt-1">best streak</p>
+              <div className="flex flex-col gap-2">
+                <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-wider">
+                  Game Mode
+                </span>
+                <span className="text-lg font-bold font-[family-name:var(--font-display)] italic text-foreground uppercase">
+                  {mode}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Leaderboard Entry */}
+          {qualifies && !saved && (
+            <div className="glass-panel p-6 rounded-xl animate-scale-in delay-4">
+              <h3 className="font-[family-name:var(--font-label-font)] text-xs tracking-[0.2em] text-primary uppercase mb-4">
+                TOP 10 — ENTER PILOT IDENTIFIER
+              </h3>
+              <div className="flex gap-3">
+                <Input
+                  placeholder="DRIVER_NAME"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handleSave()}
+                  maxLength={20}
+                  className="flex-1 h-12 font-mono bg-background/50 border-outline-variant rounded"
+                />
+                <Button onClick={handleSave} className="h-12 px-6 bg-primary-container text-white rounded gap-2">
+                  <Save className="h-4 w-4" />
+                  SAVE
+                </Button>
+              </div>
             </div>
           )}
-        </div>
-
-        {/* Progress bar */}
-        <div className="w-full opacity-0 animate-fade-up delay-2">
-          <div className="w-full h-1.5 rounded-full bg-muted overflow-hidden">
-            <div
-              className={cn("h-full rounded-full transition-all duration-1000 ease-out", getBarColor())}
-              style={{ width: `${percentage}%` }}
-            />
-          </div>
-        </div>
-
-        {/* Leaderboard entry */}
-        {qualifies && !saved && (
-          <div className="w-full glass rounded-2xl p-5 opacity-0 animate-scale-in delay-3">
-            <div className="flex items-center gap-2 mb-3">
-              <Trophy className="h-4 w-4 text-primary" />
-              <p className="text-sm font-semibold">
-                Top 10! Enter your name:
-              </p>
+          {saved && (
+            <div className="flex items-center gap-2 text-sm text-primary font-mono animate-scale-in">
+              <Check className="h-4 w-4" />
+              RECORD SAVED TO TELEMETRY DATABASE
             </div>
-            <div className="flex gap-2">
-              <Input
-                placeholder="Your name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && handleSave()}
-                maxLength={20}
-                className="flex-1 h-10 rounded-xl bg-background/50"
-              />
-              <Button onClick={handleSave} className="rounded-xl h-10 px-5">
-                Save
-              </Button>
-            </div>
-          </div>
-        )}
+          )}
 
-        {saved && (
-          <div className="inline-flex items-center gap-2 text-sm text-emerald-400 opacity-0 animate-scale-in">
-            <Check className="h-4 w-4" />
-            Saved to leaderboard!
+          {/* Actions */}
+          <div className="flex flex-wrap gap-4 pt-4 animate-fade-up delay-5">
+            <button
+              onClick={() => router.push("/")}
+              className="bg-primary-container text-white px-8 py-4 rounded font-[family-name:var(--font-label-font)] font-bold flex items-center gap-3 hover:brightness-110 transition-all uppercase tracking-[0.15em] text-sm"
+            >
+              <RotateCcw className="h-4 w-4" />
+              PLAY AGAIN
+            </button>
+            <button
+              onClick={() => router.push("/leaderboard")}
+              className="bg-foreground/5 backdrop-blur-md text-foreground border border-border px-8 py-4 rounded font-[family-name:var(--font-label-font)] font-bold hover:bg-foreground/10 transition-all uppercase tracking-[0.15em] text-sm flex items-center gap-3"
+            >
+              <BarChart3 className="h-4 w-4" />
+              LEADERBOARD
+            </button>
           </div>
-        )}
-
-        {/* Actions */}
-        <div className="flex gap-3 opacity-0 animate-fade-up delay-4">
-          <Button
-            onClick={() => router.push("/")}
-            className="rounded-xl gap-2"
-          >
-            <RotateCcw className="h-3.5 w-3.5" />
-            Play Again
-          </Button>
-          <Button
-            variant="outline"
-            onClick={() => router.push("/leaderboard")}
-            className="rounded-xl gap-2"
-          >
-            <Trophy className="h-3.5 w-3.5" />
-            Leaderboard
-          </Button>
         </div>
       </div>
     </div>
@@ -169,13 +170,11 @@ function ResultsContent() {
 
 export default function ResultsPage() {
   return (
-    <Suspense
-      fallback={
-        <div className="flex items-center justify-center min-h-[60vh]">
-          <div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent" />
-        </div>
-      }
-    >
+    <Suspense fallback={
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent" />
+      </div>
+    }>
       <ResultsContent />
     </Suspense>
   );

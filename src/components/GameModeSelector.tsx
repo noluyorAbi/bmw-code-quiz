@@ -2,7 +2,7 @@
 
 import { GameMode, RoundSize } from "@/lib/types";
 import { cn } from "@/lib/utils";
-import { IterationCcw, Infinity } from "lucide-react";
+import { Timer, Infinity } from "lucide-react";
 
 interface GameModeSelectorProps {
   mode: GameMode;
@@ -11,64 +11,74 @@ interface GameModeSelectorProps {
   onRoundSizeChange: (size: RoundSize) => void;
 }
 
-const modes: { value: GameMode; label: string; icon: typeof IterationCcw }[] = [
-  { value: "rounds", label: "Rounds", icon: IterationCcw },
-  { value: "endless", label: "Endless", icon: Infinity },
-];
-
-export default function GameModeSelector({
-  mode,
-  roundSize,
-  onModeChange,
-  onRoundSizeChange,
-}: GameModeSelectorProps) {
+export default function GameModeSelector({ mode, roundSize, onModeChange, onRoundSizeChange }: GameModeSelectorProps) {
   return (
-    <div className="space-y-2.5">
-      <label className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">
-        Mode
-      </label>
-      <div className="grid grid-cols-2 gap-2">
-        {modes.map((m) => {
-          const Icon = m.icon;
-          const active = mode === m.value;
-          return (
-            <button
-              key={m.value}
-              className={cn(
-                "group flex items-center justify-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-semibold transition-all",
-                active
-                  ? "border-primary/40 bg-primary/8 text-foreground shadow-sm shadow-primary/5"
-                  : "border-transparent bg-secondary/40 text-muted-foreground hover:bg-secondary/70 hover:text-foreground"
-              )}
-              onClick={() => onModeChange(m.value)}
-            >
-              <Icon
-                className={cn(
-                  "h-3.5 w-3.5 transition-colors",
-                  active ? "text-primary" : "text-muted-foreground/60"
-                )}
-              />
-              {m.label}
-            </button>
-          );
-        })}
+    <div className="space-y-6">
+      {/* Game Engine */}
+      <div className="space-y-3">
+        <label className="font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.2em] text-muted-foreground uppercase">
+          GAME ENGINE
+        </label>
+        <div className="flex gap-4">
+          <button
+            onClick={() => onModeChange("rounds")}
+            className={cn(
+              "flex-1 flex items-center gap-3 p-4 rounded cursor-pointer transition-all",
+              mode === "rounds"
+                ? "bg-surface-container-high border-b-2 border-primary-container"
+                : "bg-surface-container-low hover:bg-surface-container-high/50"
+            )}
+          >
+            <Timer className={cn("h-4 w-4", mode === "rounds" ? "text-primary" : "text-muted-foreground")} />
+            <span className={cn(
+              "font-[family-name:var(--font-label-font)] text-xs uppercase font-bold tracking-[0.15em]",
+              mode === "rounds" ? "text-foreground" : "text-muted-foreground"
+            )}>
+              ROUNDS
+            </span>
+          </button>
+          <button
+            onClick={() => onModeChange("endless")}
+            className={cn(
+              "flex-1 flex items-center gap-3 p-4 rounded cursor-pointer transition-all",
+              mode === "endless"
+                ? "bg-surface-container-high border-b-2 border-primary-container"
+                : "bg-surface-container-low hover:bg-surface-container-high/50"
+            )}
+          >
+            <Infinity className={cn("h-4 w-4", mode === "endless" ? "text-primary" : "text-muted-foreground")} />
+            <span className={cn(
+              "font-[family-name:var(--font-label-font)] text-xs uppercase tracking-[0.15em]",
+              mode === "endless" ? "text-foreground font-bold" : "text-muted-foreground"
+            )}>
+              ENDLESS
+            </span>
+          </button>
+        </div>
       </div>
+
+      {/* Telemetry Window (Round Size) */}
       {mode === "rounds" && (
-        <div className="grid grid-cols-2 gap-2">
-          {([10, 20] as const).map((size) => (
-            <button
-              key={size}
-              className={cn(
-                "rounded-lg border px-3 py-1.5 text-xs font-medium font-mono transition-all",
-                roundSize === size
-                  ? "border-primary/30 bg-primary/5 text-foreground"
-                  : "border-transparent bg-secondary/30 text-muted-foreground hover:text-foreground"
-              )}
-              onClick={() => onRoundSizeChange(size)}
-            >
-              {size} questions
-            </button>
-          ))}
+        <div className="space-y-3">
+          <label className="font-[family-name:var(--font-label-font)] text-[10px] tracking-[0.2em] text-muted-foreground uppercase">
+            TELEMETRY WINDOW
+          </label>
+          <div className="flex gap-2">
+            {([10, 20] as const).map((size) => (
+              <button
+                key={size}
+                className={cn(
+                  "flex-1 py-3 text-[10px] font-[family-name:var(--font-label-font)] font-bold rounded uppercase transition-all",
+                  roundSize === size
+                    ? "bg-secondary-foreground text-white"
+                    : "border border-outline-variant text-foreground hover:bg-foreground/5"
+                )}
+                onClick={() => onRoundSizeChange(size)}
+              >
+                {size} UNITS
+              </button>
+            ))}
+          </div>
         </div>
       )}
     </div>

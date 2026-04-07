@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { ChevronRight, Check, X } from "lucide-react";
 
 interface AnswerGridProps {
   options: string[];
@@ -10,15 +11,9 @@ interface AnswerGridProps {
   onAnswer: (answer: string) => void;
 }
 
-export default function AnswerGrid({
-  options,
-  correctAnswer,
-  answered,
-  selectedAnswer,
-  onAnswer,
-}: AnswerGridProps) {
+export default function AnswerGrid({ options, correctAnswer, answered, selectedAnswer, onAnswer }: AnswerGridProps) {
   return (
-    <div className="grid grid-cols-2 gap-2.5 w-full">
+    <div className="flex flex-col gap-2.5 w-full">
       {options.map((option) => {
         const isCorrect = option === correctAnswer;
         const isSelected = option === selectedAnswer;
@@ -28,21 +23,38 @@ export default function AnswerGrid({
           <button
             key={option}
             className={cn(
-              "relative h-12 rounded-xl border text-sm font-mono font-semibold transition-all duration-200",
+              "group p-4 rounded border text-left flex justify-between items-center transition-all duration-200",
               !answered &&
-                "border-border bg-secondary/30 text-foreground hover:border-primary/50 hover:bg-primary/5 hover:text-primary active:scale-[0.97]",
+                "bg-surface-container-highest/30 border-border hover:bg-surface-container-highest",
               answered && isCorrect &&
-                "border-emerald-500/40 bg-emerald-500/10 text-emerald-400",
+                "bg-primary-container/10 border-primary-container ring-1 ring-primary-container ring-offset-2 ring-offset-background",
               isWrong &&
-                "border-red-500/40 bg-red-500/10 text-red-400",
+                "bg-destructive/10 border-destructive/40",
               answered && !isCorrect && !isSelected &&
-                "border-border/30 bg-secondary/10 text-muted-foreground/30",
+                "border-border/30 bg-surface-container-highest/10 opacity-30",
               answered && "cursor-default"
             )}
             onClick={() => !answered && onAnswer(option)}
             disabled={answered}
           >
-            {option}
+            <span className={cn(
+              "font-mono text-lg font-bold tracking-tighter transition-colors",
+              !answered && "text-on-surface-variant group-hover:text-foreground",
+              answered && isCorrect && "text-foreground",
+              isWrong && "text-destructive",
+              answered && !isCorrect && !isSelected && "text-muted-foreground"
+            )}>
+              {option}
+            </span>
+            {!answered && (
+              <ChevronRight className="h-4 w-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+            )}
+            {answered && isCorrect && (
+              <Check className="h-4 w-4 text-primary-container" />
+            )}
+            {isWrong && (
+              <X className="h-4 w-4 text-destructive" />
+            )}
           </button>
         );
       })}
