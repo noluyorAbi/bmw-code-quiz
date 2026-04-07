@@ -30,7 +30,7 @@ function getCodeExplanation(code: string, series: string): string {
   const prefixMeaning: Record<string, string> = {
     E: '"E" (Entwicklung = Development) was used for BMW chassis codes from the 1960s to ~2012.',
     F: '"F" generation codes replaced "E" starting around 2010, marking BMW\'s modern era.',
-    G: '"G" is the current generation prefix, used since ~2017 for the latest BMW models.',
+    G: '"G" generation codes have been used since ~2017. With the arrival of the Neue Klasse (NA) platform, G-series models represent BMW\'s CLAR-based lineup.',
     U: '"U" is used for BMW\'s newer UKL/FAAR platform-based compact models.',
     I: '"I" prefix is reserved for BMW\'s fully electric "i" sub-brand vehicles.',
     NA: '"NA" is BMW\'s Neue Klasse (New Class) platform code for the next generation of electric vehicles, featuring 800V architecture and a completely new design language.',

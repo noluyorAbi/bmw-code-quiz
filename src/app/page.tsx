@@ -11,7 +11,7 @@ import { ChevronRight, Trophy } from "lucide-react";
 const CODE_GENERATIONS = [
   { prefix: "E", label: "Entwicklung", era: "1960s – 2012", example: "E30, E46, E90", color: "text-foreground" },
   { prefix: "F", label: "Next Generation", era: "2010 – 2018", example: "F30, F80, F82", color: "text-foreground" },
-  { prefix: "G", label: "Current Gen", era: "2017 – present", example: "G20, G80, G82", color: "text-primary" },
+  { prefix: "G", label: "7th Generation", era: "2017 – present", example: "G20, G80, G82", color: "text-foreground" },
   { prefix: "U", label: "FAAR Platform", era: "2022 – present", example: "U06, U10, U11", color: "text-foreground" },
   { prefix: "I", label: "Electric", era: "2013 – present", example: "I01, I12, I20", color: "text-foreground" },
   { prefix: "NA", label: "Neue Klasse", era: "2025 – future", example: "NA0, NA5", color: "text-primary" },
