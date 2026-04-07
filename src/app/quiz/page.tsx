@@ -11,6 +11,7 @@ import {
   getCurrentCar,
 } from "@/lib/quiz-engine";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import ImageCarousel from "@/components/ImageCarousel";
 import AnswerGrid from "@/components/AnswerGrid";
 import ScoreBar from "@/components/ScoreBar";
@@ -110,6 +111,20 @@ function QuizContent() {
         selectedAnswer={quizState.selectedAnswer}
         onAnswer={handleAnswer}
       />
+
+      {quizState.answered && (
+        <div className={cn(
+          "w-full max-w-lg mx-auto rounded-lg border px-4 py-3 text-sm transition-all animate-in fade-in slide-in-from-bottom-2 duration-300",
+          quizState.selectedAnswer === currentCar.internalCode
+            ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-300"
+            : "border-red-500/30 bg-red-500/10 text-red-300"
+        )}>
+          <p className="font-semibold">
+            {quizState.selectedAnswer === currentCar.internalCode ? "Correct!" : "Wrong!"}{" "}
+            <span className="text-foreground">The {currentCar.officialName} ({currentCar.years}) has the internal code <span className="font-mono font-bold">{currentCar.internalCode}</span>.</span>
+          </p>
+        </div>
+      )}
 
       {mode === "endless" && (
         <Button
